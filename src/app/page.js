@@ -1,113 +1,272 @@
+"use client";
 import Image from "next/image";
-
-export default function Home() {
+import ScrollAnimationComponent from "@/components/Testui";
+import { Button } from "@headlessui/react";
+import Link from "next/link";
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <div>
+      <div className="bg-custom-dark home">
+        <div className="relative isolate px-6 pt-14 lg:px-8">
+          {/* main cover content */}
+          <div className="mx-auto max-w-7xl py-16 sm:py-30 lg:py-40 flex justify-between flex-col md:flex-row text-white">
+            <div className="column-6 animate-fadeInUp">
+              <h1 className="text-4xl font-bold tracking-tight text-white-900  sm:text-6xl">
+                Affordable IT & <br /> Technology{" "}
+                <br className="hidden md:inline" /> Solutions
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-white-600">
+                Scale Your Business with FTS DevOps and Software Development{" "}
+                <br />
+                Services.
+              </p>
+              <Button className="rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700">
+                Let gets Started <span aria-hidden="true">&rarr;</span>
+              </Button>
+            </div>
+            <div className="column-6 ">
+              <form className="from-bg mt-6 md:mt-0">
+                {/* className="space-y-12" */}
+                <div>
+                  <div className="border-b border-gray-900/10 ">
+                    <h2 className="text-center text-3xl font-semibold leading-7 text-white">
+                      Get A Qoute
+                    </h2>
+                  </div>
+
+                  <div className="border-b border-gray-900/10 ">
+                    <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                      <div className="sm:col-span-3">
+                        <label
+                          htmlFor="first-name"
+                          className="block text-sm font-medium leading-6 text-white"
+                        >
+                          First name
+                        </label>
+                        <div className="mt-2">
+                          <input
+                            id="first-name"
+                            name="first-name"
+                            type="text"
+                            autoComplete="given-name"
+                            placeholder="First Name"
+                            className="block bg-transparent w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="sm:col-span-3">
+                        <label
+                          htmlFor="last-name"
+                          className="block text-sm font-medium leading-6 text-white"
+                        >
+                          Last name
+                        </label>
+                        <div className="mt-2">
+                          <input
+                            id="last-name"
+                            name="last-name"
+                            type="text"
+                            placeholder="Last Name"
+                            autoComplete="family-name"
+                            className="block bg-transparent w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="sm:col-span-3">
+                        <label
+                          htmlFor="email"
+                          className="block text-sm font-medium leading-6 text-white"
+                        >
+                          Email address
+                        </label>
+                        <div className="mt-2">
+                          <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autoComplete="email"
+                            placeholder="example@example.com"
+                            className="block bg-transparent w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="sm:col-span-3">
+                        <label
+                          htmlFor="Services"
+                          className="block text-sm font-medium leading-6 text-white"
+                        >
+                          Services
+                        </label>
+                        <div className="mt-2">
+                          <select
+                            id="Services"
+                            name="Services"
+                            autoComplete="Services-name"
+                            className="block bg-gray-900 w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                          >
+                            <option className=" py-1.5">
+                              --Choose A Service--
+                            </option>
+                            <option className=" py-1.5">Web Development</option>
+                            <option className=" py-1.5">App Development</option>
+                            <option className=" py-1.5">
+                              Graphic Designing
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 flex items-center justify-end gap-x-6">
+                  <button
+                    type="button"
+                    className="text-sm font-semibold leading-6 text-white"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div className="homeFormBack hidden md:block absolute right-0 bottom-0 max-w-2xl w-full h-full pb-[calc(100%*700/800)] md:pb-[calc(100%*600/800)] lg:pb-[calc(100%*500/800)]">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/Assets/Untitled (1).png"
+              alt="Fiber-tech-services"
+              layout="fill"
+              objectFit="contain"
             />
-          </a>
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* Global Partners World Wide Technology Partners */}
+
+      <div className="bg-white">
+        <div className="py-12  md:container md:mx-auto px-4 text-center">
+          <div>
+            <h2 className=" py-2 text-lg font-bold text-custom-blue">
+              Global Partners
+            </h2>
+            <p className="text-gray-900 font-bold text-2xl md:text-5xl pb-4">
+              World Wide Technology Partners
+            </p>
+          </div>
+          {/*  */}
+          <div>
+            <div className="flex flex-wrap justify-center items-center gap-4 partner-images">
+              <Link href="/contact" className="parter-link">
+                <Image
+                  className="partner-image  hover:scale-110"
+                  src={"/Assets/fiber-tech-partner-1.png"}
+                  width={150}
+                  height={150}
+                  alt="fiber-tech-serivices"
+                />
+              </Link>
+              <Link href="/contact" className="parter-link">
+                <Image
+                  className="partner-image hover:scale-110"
+                  src={"/Assets/fiber-tech-partner-2.png"}
+                  width={150}
+                  height={150}
+                  alt="fiber-tech-serivices"
+                />
+              </Link>
+              <Link href="/contact" className="parter-link">
+                <Image
+                  className="partner-image hover:scale-110"
+                  src={"/Assets/fiber-tech-partner-3.png"}
+                  width={150}
+                  height={150}
+                  alt="fiber-tech-serivices"
+                />
+              </Link>
+              <Link href="/contact" className="parter-link">
+                <Image
+                  className="partner-image hover:scale-110"
+                  src={"/Assets/fiber-tech-partner-4.png"}
+                  width={150}
+                  height={150}
+                  alt="fiber-tech-serivices"
+                />
+              </Link>
+              <Link href="/contact" className="parter-link">
+                <Image
+                  className="partner-image hover:scale-110"
+                  src={"/Assets/fiber-tech-partner-5.png"}
+                  width={150}
+                  height={150}
+                  alt="fiber-tech-serivices"
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* About Company */}
+      <div className="about-company ">
+        <div className="py-12  md:container md:mx-auto px-4 grid grid-cols-2 gap-4 place-content-between">
+          <div>
+            <h2 className=" py-2 text-lg font-bold text-custom-blue">
+              About Company
+            </h2>
+            <p className="text-gray-900 font-bold text-2xl md:text-5xl pb-4">
+              Small Enough to Care Big <br />
+              Enough to Success
+            </p>
+            <p className="text-gray-500 pb-4">
+              FTS is small enough to provide personalized attention and care to
+              its clients, but also has the resources and capabilities to be
+              successful in their operations. The balance of being approachable
+              and capable can make for a positive customer experience.
+            </p>
+          </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <div className="about-images">
+            <div className="top-part">
+              <img
+                className="wow fadeInRight delay-0-3s animated"
+                src="/Assets/fiber-tech-service-about1.jpg"
+                alt="About"
+                style={{ visibility: "visible", animationName: " fadeInRight" }}
+              />
+              <img
+                className="wow zoomIn delay-0-5s animated"
+                src="/Assets/fiber-tech-service-about-logo.png"
+                alt="About"
+                style={{ visibility: "visible", animationName: "zoomIn" }}
+              />
+            </div>
+            <div className="bottom-part">
+              <img
+                className="wow fadeInDown delay-0-5s animated"
+                src="/Assets/fiber-tech-service-about-dots.png"
+                alt="About"
+                style={{ visibility: "visible", animationName: "fadeInDown" }}
+              />
+              <img
+                className="wow fadeInDown delay-0-3s animated"
+                src="/Assets/fiber-tech-service-about2.jpg"
+                alt="About"
+                style={{ visibility: "visible", animationName: "fadeInDown" }}
+              />
+            </div>
+          </div>
+        </div>
       </div>
-    </main>
+      <ScrollAnimationComponent />
+    </div>
   );
 }

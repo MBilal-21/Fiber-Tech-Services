@@ -3,31 +3,216 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --nav-color: #0f1425;
+  --front-color: #1b1f2e;
+  --btn-color-1: #30f0b6;
+  --btn-color-2: #674df3;
+  --background: white;
+  --text: black;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
+
+/* common style */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: black;
+  background: white;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.linkhover {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.linkhover:hover {
+  color: var(--btn-color-1);
+  transform: scale(1.02);
+}
+
+.pageTop {
+  background: #00000080 url("../../public/Assets/banner.webp");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.button {
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  display: block;
+  color: var(--nav-color);
+  background: linear-gradient(to right, var(--btn-color-2) 50%, var(--btn-color-1) 50% );
+  background-size: 200% 100%;
+  background-position: right;
+  transition: all 2s ease-in-out;
+  &:hover{
+    color: white;
+    transform: scale(1.1);
+    animation: makeItfadeIn 2s 0s forwards;
+  }
+}
+
+@keyframes makeItfadeIn {
+ 
+  100% {
+    /* background-size: 100% 200%; */
+      background-position: left;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+
+/* home bg cover */
+
+@keyframes bounceBackground {
+
+  0%,
+  100% {
+    background-position-y: 10px, 90%, 5%;
+  }
+
+  50% {
+    background-position-y: -10px, 89%, 4%;
+  }
+}
+
+@keyframes bounceImage {
+
+  0%,
+  100% {
+    bottom: 6rem;
+  }
+
+  50% {
+    bottom: 4rem;
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.home {
+  background-image: url("../../public/Assets/design-images/home-bg-cover.png"),
+    url("../../public/Assets/design-images/2-plus.png"),
+    url("../../public/Assets/design-images/1-plus.png");
+  background-repeat: no-repeat;
+  background-size: contain, auto, auto;
+  background-position-x: 0, 30%, 50%;
+  animation: bounceBackground 5s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.087);
+  pointer-events: none;
+}
+
+.homeFormBack {
+  z-index: -6;
+  animation: bounceImage 5s ease-in-out infinite;
+
+}
+
+.from-bg {
+  background-color: #0f142565;
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  border: 2px solid var(--btn-color-2);
+  border-radius: 1rem;
+}
+
+/* global partner */
+.partner-images .parter-link {
+  padding: 0 10px;
+  background-color: rgba(0, 0, 0, 0.034);
+
+}
+
+.partner-images .partner-image {
+  object-fit: contain;
+  aspect-ratio: 3/2;
+  width: 150px;
+  height: 150px;
+}
+
+
+
+.about-images .top-part,
+.about-images .bottom-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.about-images .top-part img,
+.about-images .bottom-part img {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.about-images .top-part {
+  margin-bottom: 30px;
+}
+
+.about-images .top-part img:first-child {
+  max-width: calc(68% - 30px);
+}
+
+.about-images .top-part img:last-child {
+  margin-top: 50px;
+  margin-left: auto;
+  max-width: calc(30% - 30px);
+}
+
+.about-images .bottom-part img:first-child {
+  width: calc(33% - 30px);
+}
+
+.about-images .bottom-part img:last-child {
+  margin-top: -30%;
+  width: calc(67% - 30px);
 }
