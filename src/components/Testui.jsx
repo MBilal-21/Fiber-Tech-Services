@@ -4,7 +4,7 @@ import 'animate.css';
 const ScrollAnimationComponent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const a = useRef();
-
+// there is an problem
   useEffect(() => {
     const handleScroll = () => {
       const element = a.current;

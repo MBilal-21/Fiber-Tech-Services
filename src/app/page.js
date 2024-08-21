@@ -285,7 +285,7 @@ export default function HomePage() {
                     business growth. IT consultants assess the current
                     technology infrastructure, identify areas for improvement,
                     and provide recommendations and solutions that align with
-                    the company's goals and objectives.
+                    the company{"'s"} goals and objectives.
                   </p>
                 </div>
               </div>
