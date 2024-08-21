@@ -47,16 +47,18 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .button {
   border-radius: 3px;
   padding: 0.5rem 1rem;
   display: block;
   color: var(--nav-color);
-  background: linear-gradient(to right, var(--btn-color-2) 50%, var(--btn-color-1) 50% );
+  background: linear-gradient(to right, var(--btn-color-2) 50%, var(--btn-color-1) 50%);
   background-size: 200% 100%;
   background-position: right;
   transition: all 2s ease-in-out;
-  &:hover{
+
+  &:hover {
     color: white;
     transform: scale(1.1);
     animation: makeItfadeIn 2s 0s forwards;
@@ -64,10 +66,10 @@ body {
 }
 
 @keyframes makeItfadeIn {
- 
+
   100% {
     /* background-size: 100% 200%; */
-      background-position: left;
+    background-position: left;
   }
 }
 
@@ -92,13 +94,21 @@ body {
 
 @keyframes bounceBackground {
 
-  0%,
-  100% {
-    background-position-y: 10px, 90%, 5%;
+  0% {
+    background-position-x: 0, 10%, 50%, 40%;
+    background-position-y: 10px, 90%, 5%, 70%;
   }
 
+
   50% {
-    background-position-y: -10px, 89%, 4%;
+    background-position-x: 0, 10%, 50%, 35%;
+    background-position-y: -10px, 89%, 4%, 65%;
+  }
+
+
+  100% {
+    background-position-x: 0, 10%, 50%, 40%;
+    background-position-y: -10px, 89%, 4%, 70%;
   }
 }
 
@@ -127,15 +137,16 @@ body {
 .home {
   background-image: url("../../public/Assets/design-images/home-bg-cover.png"),
     url("../../public/Assets/design-images/2-plus.png"),
+    url("../../public/Assets/design-images/2-plus.png"),
     url("../../public/Assets/design-images/1-plus.png");
   background-repeat: no-repeat;
-  background-size: contain, auto, auto;
-  background-position-x: 0, 30%, 50%;
+  background-size: contain, auto, auto, auto;
+  background-position-x: 0, 10%, 50%, 45%;
   animation: bounceBackground 5s ease-in-out infinite;
   overflow: hidden;
 }
 
-.home::before {
+/* .home::before {
   content: "";
   position: absolute;
   top: 0;
@@ -144,7 +155,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.087);
   pointer-events: none;
-}
+} */
 
 .homeFormBack {
   z-index: -6;
@@ -152,9 +163,13 @@ body {
 
 }
 
+.homeFormBack img {
+  width: 100%;
+  height: auto;
+}
+
 .from-bg {
   background-color: #0f142565;
-  backdrop-filter: blur(5px);
   padding: 1rem;
   border: 2px solid var(--btn-color-2);
   border-radius: 1rem;
@@ -162,8 +177,10 @@ body {
 
 /* global partner */
 .partner-images .parter-link {
-  padding: 0 10px;
-  background-color: rgba(0, 0, 0, 0.034);
+  /* padding: 0 10px; */
+  /* background-color: rgba(0, 0, 0, 0.034); */
+  width: max-content;
+  height: max-content;
 
 }
 
@@ -173,7 +190,9 @@ body {
   width: 150px;
   height: 150px;
 }
-
+.partner-image:hover{
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.112);
+}
 
 
 .about-images .top-part,
@@ -216,3 +235,73 @@ body {
   margin-top: -30%;
   width: calc(67% - 30px);
 }
+
+
+
+
+.footer-shapes .shape {
+  position: absolute;
+  z-index: 0;
+  max-width: 50%;
+}
+
+.footer-shapes .shape.one {
+  left: 0;
+  bottom: 0;
+}
+
+.footer-shapes .shape.two {
+  right: 0;
+  bottom: -2%;
+}
+
+.footer-shapes .shape.three {
+  right: -50px;
+  bottom: 5%;
+  z-index: 0;
+}
+
+.footer-btn span,.footer-btn{
+  transition: all 1s ease-in-out;
+ 
+  
+}
+.footer-btn:hover,.footer-btn:hover span{
+  text-underline-offset: 3px;
+  color: var(--btn-color-1);
+}
+.footer-btn:hover > span{
+  padding-left: 10px;
+  padding-right: -10px;
+}
+.footer-btn-2{
+  display: flex;
+  align-items: center;
+  transition: all 1s ease-in-out;
+  &>span{
+    transition: all 1s ease-in-out;
+    max-width: 0px;
+    overflow: hidden;
+  }
+}
+.footer-btn-2:hover{
+  color: var(--btn-color-1);
+  &>span{
+    max-width: 1.5rem;
+    opacity: 1;
+  }
+}
+/* .footer-btn-2:before{
+  content: "\f101";
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  font-family: "Font Awesome 5 Pro"; 
+}
+.footer-btn-2:hover{
+  padding-left: 20px;
+  text-decoration: underline;
+} */

@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import 'animate.css';
 
 const ScrollAnimationComponent = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const a = useRef();
 
   useEffect(() => {
     const handleScroll = () => {
-      const element = document.getElementById('scroll-element');
+      const element = a.current;
       const rect = element.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
 
@@ -31,7 +32,7 @@ const ScrollAnimationComponent = () => {
   }, []);
 
   return (
-    <div id="scroll-element" className={isVisible ? 'animate__animated animate__fadeInUp' : ''}>
+    <div  ref={a} className={isVisible ? 'animate__animated animate__fadeInUp' : ''}>
       <div>I will animate each time you scroll into view</div>
     </div>
   );
