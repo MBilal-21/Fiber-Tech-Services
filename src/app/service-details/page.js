@@ -67,7 +67,7 @@ const Page = () => {
                     style={{ visibility: "visible", animationName: "fadeInUp" }}
                   >
                     <img
-                      src="/Assets/services/service-details.jpg"
+                      src="/Assets/service-details.jpg"
                       alt="Service Details"
                     />
                   </div>
@@ -142,7 +142,7 @@ const Page = () => {
                     >
                       <div className="image">
                         <img
-                          src="/Assets/services/service-middle.jpg"
+                          src="/Assets/service-middle.jpg"
                           alt="Service"
                         />
                       </div>
