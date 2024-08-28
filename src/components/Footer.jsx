@@ -23,7 +23,7 @@ const Footer = () => {
               </h2>
             </div>
             <div className="w-full md:w-5/12 lg:w-4/12">
-              <div className="flex gap-4 justify-center items-center">
+              <div className="flex flex-wrap gap-4 justify-center items-center">
                 <Link
                   href="/contact"
                   className="theme-btn bg-custom-blue text-gray-50 after:bg-black hover:text-white  animate__fadeInRight animate__animated p-4 "
