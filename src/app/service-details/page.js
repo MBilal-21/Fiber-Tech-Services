@@ -189,7 +189,7 @@ const Page = () => {
                       }}
                     >
                       <div className="image">
-                        <img src="/Assets/services/2.png" alt="Service" />
+                        <img src="/Assets/fiber-tech-partner-2.png" alt="fiber-tech-service-global" />
                       </div>
                     </div>
                   </div>

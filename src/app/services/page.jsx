@@ -63,7 +63,7 @@ const Services = () => {
                 </div>
             </div>
             <div className="servcies-bg-shape">
-                <Image className="w-6/12 h-full absolute top-0 right-0" src="/Assets/services/services-bg-shape.png" width={100} height={100} alt="Shape"/>
+                <Image className="w-6/12 h-auto absolute top-0 right-0" src="/Assets/services/services-bg-shape.png" width={100} height={100} alt="Shape"/>
             </div>
         </section>
      {/* service area section end */}
