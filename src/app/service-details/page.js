@@ -1,9 +1,9 @@
 "use client";
 import TopPage from "@/components/TopPage";
-import React from "react";
+import React, { useState } from "react";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import { PhoneIcon, ChevronDoubleRightIcon } from "@heroicons/react/20/solid";
-import { useState } from "react";
+
 
 const AccordionItem = ({ title, children, isOpen, onToggle }) => {
   return (
@@ -26,7 +26,7 @@ const AccordionItem = ({ title, children, isOpen, onToggle }) => {
   );
 };
 
-const page = () => {
+const Page = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -101,7 +101,7 @@ const page = () => {
                         </li>
                         <li className="flex gap-2">
                           <CheckCircleIcon className="h-6 w-6 text-custom-blue" />
-                          Wireframe's &amp; Prototyping
+                          Wireframe{"\'"}s &amp; Prototyping
                         </li>
                       </ul>
                     </div>
@@ -119,7 +119,7 @@ const page = () => {
                         Our IT services refer to a wide range of services
                         offered by information technology (IT) companies and
                         professionals that support and maintain an
-                        organization's technology infrastructure. These services
+                        organization{"\'"}s technology infrastructure. These services
                         can include network and server management, cloud
                         computing, software development, cyber security, data
                         management and backup, and technical support. IT
@@ -130,7 +130,7 @@ const page = () => {
                         management and maintenance of their technology to
                         experienced professionals. IT services are essential for
                         businesses of all sizes and industries, as technology
-                        plays a critical role in today's digital economy.
+                        plays a critical role in today{"\'"}s digital economy.
                       </p>
                     </div>
                     <div
@@ -253,13 +253,13 @@ const page = () => {
                             </li>
                             <li>
                               Up-to-date technology: Your IT services keep
-                              customers' technology up-to-date, ensuring that
+                              customers technology up-to-date, ensuring that
                               they stay ahead of the competition and meet the
                               latest industry standards.
                             </li>
                             <li>
                               Customized solutions: Your IT services can be
-                              tailored to meet each customer's unique needs,
+                              tailored to meet each customer{"\'"}s unique needs,
                               providing customized solutions that fit their
                               business and budget.
                             </li>
@@ -283,7 +283,7 @@ const page = () => {
                             their IT needs. Customers are more likely to choose
                             a provider that can offer a highly skilled,
                             experienced, and reliable team. To attract and
-                            retain customers, it's important to consistently
+                            retain customers, it{"\'"}s important to consistently
                             deliver high-quality services and team members that
                             meet the specific needs of each customer. Strong
                             communication and collaboration, flexible solutions,
@@ -315,7 +315,7 @@ const page = () => {
                             We are dedicated to providing a high level of
                             customer service, working closely with each customer
                             to understand their unique needs and deliver the
-                            right solution for their business. Whether you're
+                            right solution for their business. Whether you{"\'"}re
                             looking to improve productivity, stay ahead of the
                             competition, or simply keep your technology
                             infrastructure running smoothly, FTS has the
@@ -359,7 +359,7 @@ const page = () => {
                             <li>
                               Bank transfers: Bank transfers allow customers
                               to directly transfer funds from their bank account
-                              to the business's account
+                              to the business{"\'"}s account
                             </li>
                             <li>
                               Digital wallets: Digital wallets, such as Apple
@@ -375,8 +375,8 @@ const page = () => {
                             </li>
                           </ol>
                           <p>
-                            It's important for businesses to choose the payment
-                            methods that best meet their customers' needs, while
+                            It{"\'"}s important for businesses to choose the payment
+                            methods that best meet their customers needs, while
                             also considering factors such as cost, security, and
                             ease of use. Implementing multiple payment options
                             can increase customer satisfaction and drive sales
@@ -425,7 +425,7 @@ const page = () => {
                       backdropFilter: "brightness(0.3)",
                     }}
                   >
-                    <span className="h5">Let's Work Together</span>
+                    <span className="h5">Let{"\'"}s Work Together</span>
                     <h2>IT Service Agency</h2>
                     <a
                       href="contact.php"
@@ -456,4 +456,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -500,7 +500,7 @@ export default function HomePage() {
                 </h4>
                 <p className="text-gray-200">
                   The goal of a mobile app solution is to provide a convenient
-                  and accessible way for users to interact with a company's
+                  and accessible way for users to interact with a company{"\'"} s
                   products or services. This can help businesses improve
                   customer engagement, increase brand awareness, and drive
                   revenue growth.

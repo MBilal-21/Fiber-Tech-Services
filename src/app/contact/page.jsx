@@ -163,12 +163,12 @@ const Contact = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="flex flex-wrap">
             {["name", "email", "phone", "subject", "message"].map((field) => (
-              <div
+              <div  key={field}
                 className={
                   field === "message" ? "w-full p-2" : "w-full lg:w-1/2 p-2"
                 }
               >
-                <div key={field} className="flex flex-col">
+                <div className="flex flex-col">
                   <label
                     htmlFor={field}
                     className="mb-1 font-medium text-gray-700 capitalize"
