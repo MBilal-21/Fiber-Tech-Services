@@ -16,7 +16,9 @@ module.exports = {
       colors: {
         'nav-color': '#0f1425',
         'custom-dark': '#1b1f2e',
-        'custom-blue': '#265fa6',
+        // 'custom-blue': '#674df3',
+        // 'custom-blue': '#265fa6',
+        'custom-blue': '#2563eb',
         'custom-green': '#30f0b6',
         'custom-lighter': '#f7f7f9',
       },

@@ -27,7 +27,7 @@
   --nav-color: #0f1425;
   --primary-color: #1b1f2e;
   --secondray-color: #30f0b6;
-  --secondary-color-2: #674df3;
+  --secondary-color-2: #2563eb;
   --text: rgb(56, 56, 56);
   --base-color: #838694;
   --lighter-color: #f7f7f9;
@@ -121,11 +121,12 @@ body {
 
 .linkhover {
   transition: transform 0.3s ease, color 0.3s ease;
+ 
 }
 
 
 .linkhover:hover {
-  color: var(--secondray-color);
+  color: #333437;
   transform: scale(1.02);
 }
 

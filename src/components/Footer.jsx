@@ -331,9 +331,7 @@ const Footer = () => {
 
               <form className="mt-4">
                 <div className="flex flex-col gap-4 sm:flex-row lg:flex-col lg:items-start">
-                  <label htmlFor="email" className="sr-only">
-                    Email
-                  </label>
+                  
 
                   <input
                     className="w-full rounded-full border-gray-200 bg-white px-6 py-3 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-white"

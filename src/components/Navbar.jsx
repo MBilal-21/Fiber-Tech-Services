@@ -78,13 +78,6 @@ const products = [
     href: "/services",
     icon: ArrowPathIcon,
   },
-  {
-    name: "Business Analysis",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, beatae.",
-    href: "/services",
-    icon: ArrowPathIcon,
-  },
 ];
 const callsToAction = [
   { name: "view all serices", href: "/services", icon: PlayCircleIcon },
@@ -93,6 +86,7 @@ const callsToAction = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
@@ -185,89 +179,83 @@ export default function Navbar() {
               <Bars3Icon aria-hidden="true" className="h-6 w-6" />
             </button>
           </div>
-          <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-            <Link
-              href="/"
-              className="text-sm font-semibold leading-6 text-white linkhover"
-            >
+          <PopoverGroup className="hidden lg:flex lg:gap-4">
+            <Link href="/"  className="text-sm font-semibold leading-6 text-white linkhover p-4" >
               Home
             </Link>
-            <Popover>
-              <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white linkhover">
+            <div>
+              <div
+                className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white linkhover p-4"
+                onMouseEnter={() => setIsOpen(true)}
+                onMouseLeave={() => setIsOpen(false)}
+              >
                 Services
                 <ChevronDownIcon
                   aria-hidden="true"
                   className="h-5 w-5 flex-none text-gray-400"
                 />
-              </PopoverButton>
+              </div>
 
-              <PopoverPanel
-                transition
-                className=" absolute left-20 top-full z-10 mt-3 w-10/12  rounded-3xl bg-custom-dark shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-              >
-                <div className="p-4 grid grid-cols-3 gap-4">
-                  {products.map((item) => (
-                    <div  key={item.name}
-                      className="  group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 min-w-2xl"
-                    >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 ">
-                        <item.icon
-                          aria-hidden="true"
-                          className="h-6 w-6 text-gray-600 "
-                        />
-                      </div>
-                      <div className="flex-auto">
-                        <Link
-                          href={item.href}
-                          className="block font-semibold text-white hover:text-custom-green"
-                        >
+              {isOpen && (
+                <div
+                  transition
+                  onMouseEnter={() => setIsOpen(true)}
+                  onMouseLeave={() => setIsOpen(false)}
+                  className=" absolute left-2/4 pb-4 -translate-x-2/4 top-14 z-10 mt-3 rounded bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                >
+                  <div className="p-4 grid grid-cols-3 gap-2">
+                    {products.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="border-2 border-gray-300  hover:bg-custom-blue/30 relative flex items-center gap-2 rounded-lg p-4 text-sm leading-6 "
+                      >
+                        <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg  ">
+                          <item.icon
+                            aria-hidden="true"
+                            className="h-6 w-6 text-custom-dark "
+                          />
+                        </div>
+                        <div className=" block font-semibold text-custom-dark">
                           {item.name}
-                          <span className="absolute inset-0" />
-                        </Link>
-                        <p className="mt-1 text-gray-100">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="grid grid-cols-1 divide-x divide-gray-900/5 bg-gray-200 rounded-b-lg">
-                  {callsToAction.map((item) => (
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                  <div className=" bg-white rounded-b-lg py-4 text-center">
                     <Link
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:text-custom-blue"
+                      type="button"
+                      href={"/services"}
+                      className="rounded bg-blue-600 p-3 text-sm font-semibold leading-6 text-white hover:bg-blue-500"
                     >
-                      <item.icon
-                        aria-hidden="true"
-                        className="h-5 w-5 flex-none text-gray-600"
-                      />
-                      {item.name}
+                      view all serices
                     </Link>
-                  ))}
+                  </div>
                 </div>
-              </PopoverPanel>
-            </Popover>
+              )}
+            </div>
 
             <Link
               href="/projects"
-              className="text-sm font-semibold leading-6 text-white linkhover"
+              className="text-sm font-semibold leading-6 text-white linkhover p-4"
             >
               Projects
             </Link>
             <Link
               href="/about"
-              className="text-sm font-semibold leading-6 text-white linkhover"
+              className="text-sm font-semibold leading-6 text-white linkhover p-4"
             >
               About Us
             </Link>
             <Link
               href="/contact"
-              className="text-sm font-semibold leading-6 text-white linkhover"
+              className="text-sm font-semibold leading-6 text-white linkhover p-4"
             >
               Contact Us
             </Link>
             <Link
               href="/blogs"
-              className="text-sm font-semibold leading-6 text-white linkhover"
+              className="text-sm font-semibold leading-6 text-white linkhover p-4"
             >
               Blogs
             </Link>
@@ -276,10 +264,11 @@ export default function Navbar() {
             <Link
               href="/contact"
               className="text-sm font-semibold leading-6 text-white "
-             
             >
               <Button
-                className={"theme-btn bg-custom-blue text-gray-900 after:bg-custom-green hover:text-white"}
+                className={
+                  "theme-btn bg-custom-blue text-gray-900 after:bg-custom-green hover:text-white"
+                }
                 // className={"rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700"}
               >
                 {" "}

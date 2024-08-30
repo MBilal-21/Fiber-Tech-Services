@@ -21,12 +21,12 @@ export default function HomePage() {
                 Affordable IT & <br /> Technology{" "}
                 <br className="hidden md:inline" /> Solutions
               </h1>
-              <p className="mt-6 text-lg leading-8 text-white-600">
+              <p className="mt-6 mb-2 text-lg leading-8 text-white-600">
                 Scale Your Business with FTS DevOps and Software Development{" "}
                 <br />
                 Services.
               </p>
-              <Button className="rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700">
+              <Button className="block rounded bg-indigo-500 px-8 py-3 font-medium text-white transition hover:bg-indigo-600">
                 Let gets Started <span aria-hidden="true">&rarr;</span>
               </Button>
             </div>
@@ -35,7 +35,7 @@ export default function HomePage() {
                 {/* className="space-y-12" */}
                 <div>
                   <div className="border-b border-custom-blue pb-4">
-                    <h2 className="text-center text-3xl font-semibold leading-7 text-custom-green">
+                    <h2 className="text-center text-3xl font-semibold leading-7 text-white">
                       Get A Qoute
                     </h2>
                   </div>
@@ -111,7 +111,7 @@ export default function HomePage() {
                             id="Services"
                             name="Services"
                             autoComplete="Services-name"
-                            className="block bg-gray-900 w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                            className="block bg-gray-900/40 w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                           >
                             <option className=" py-1.5">
                               --Choose A Service--
@@ -145,87 +145,6 @@ export default function HomePage() {
         </div>
       </section>
       {/* cover section end */}
-
-      {/* Global Partners section start */}
-
-      <section className="bg-white">
-        <div className="py-12  mx-auto  max-w-7xl  px-6  lg:px-8 text-center">
-          <div>
-            <h2 className=" py-2 text-lg font-bold text-custom-blue">
-              Global Partners
-            </h2>
-            <p className="text-gray-900 font-bold text-2xl md:text-5xl pb-4">
-              World Wide Technology Partners
-            </p>
-          </div>
-          {/*  */}
-          <div>
-            <div className="flex flex-wrap justify-center partner-images gap-4">
-              <Link
-                href="/contact"
-                className="parter-link w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
-              >
-                <Image
-                  className="partner-image  hover:scale-110"
-                  src={"/Assets/fiber-tech-partner-1.png"}
-                  width={150}
-                  height={150}
-                  alt="fiber-tech-serivices"
-                />
-              </Link>
-              <Link
-                href="/contact"
-                className="parter-link w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
-              >
-                <Image
-                  className="partner-image hover:scale-110"
-                  src={"/Assets/fiber-tech-partner-2.png"}
-                  width={150}
-                  height={150}
-                  alt="fiber-tech-serivices"
-                />
-              </Link>
-              <Link
-                href="/contact"
-                className="parter-link w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
-              >
-                <Image
-                  className="partner-image hover:scale-110"
-                  src={"/Assets/fiber-tech-partner-3.png"}
-                  width={150}
-                  height={150}
-                  alt="fiber-tech-serivices"
-                />
-              </Link>
-              <Link
-                href="/contact"
-                className="parter-link w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
-              >
-                <Image
-                  className="partner-image hover:scale-110"
-                  src={"/Assets/fiber-tech-partner-4.png"}
-                  width={150}
-                  height={150}
-                  alt="fiber-tech-serivices"
-                />
-              </Link>
-              <Link
-                href="/contact"
-                className="parter-link w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
-              >
-                <Image
-                  className="partner-image hover:scale-110"
-                  src={"/Assets/fiber-tech-partner-5.png"}
-                  width={150}
-                  height={150}
-                  alt="fiber-tech-serivices"
-                />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Global Partners section end */}
 
       {/* About Company section start */}
       <section className="about-company ">
@@ -411,32 +330,37 @@ export default function HomePage() {
       {/* About Company section end */}
 
       {/* Services area start */}
-      <section className=" bg-custom-dark text-white pt-16 ">
+      <section className=" bg-white pt-16 ">
+        <div
+          className="section-title text-center py-16  animate__fadeInUp animate__delay-2s animate__animated"
+          style={{ visibility: "visible", animationName: "fadeInUp" }}
+        >
+          <span className="sub-title py-2 text-lg font-bold text-custom-blue">
+            Latest Services
+          </span>
+          <h2 className="text-gray-900 font-bold text-2xl md:text-5xl py-4">
+            We Provide Best IT Services
+          </h2>
+        </div>
         <div className="flex flex-wrap justify-center  mx-auto  max-w-7xl  px-6  lg:px-8">
-          <div className="md:w-1/2 lg:w-1/3 px-2 py-3">
+          <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
             <div
-              className=" animate__fadeInUp animate__delay-2s animate__animated"
+              className=" animate__fadeInUp animate__delay-2s animate__animated border-2 border-custom-blue rounded p-6 h-full flex flex-col items-center"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
-              <span className=" py-2 text-lg font-bold text-custom-blue">
-                Latest Services
-              </span>
-              <h2 className="text-white font-bold text-2xl md:text-5xl pb-4">
-                We Provide Best IT Services
-              </h2>
-            </div>
-          </div>
-          <div className="md:w-1/2 lg:w-1/3 px-2 py-3">
-            <div
-              className=" animate__fadeInUp animate__delay-2s animate__animated  md:flex gap-2"
-              style={{ visibility: "visible", animationName: "fadeInUp" }}
-            >
-               <div className="icon md:w-3/12 px-2"  style={{width:"64px", height:"64px"}}>
-              <Image src={"/Assets/icons/png/001-networking.png"} width={64} height={64}/>
-
+              <div
+                className="icon px-2"
+                style={{ width: "64px", height: "64px" }}
+              >
+                <Image
+                  src={"/Assets/icons/png/001-networking.png"}
+                  width={64}
+                  height={64}
+                  alt="icon"
+                />
               </div>
-              <div className="content md:w-9/12">
-                <h4>
+              <div>
+                <h4 className="text-center">
                   <Link
                     href="/service-details"
                     className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
@@ -444,7 +368,7 @@ export default function HomePage() {
                     Digital Consulting
                   </Link>
                 </h4>
-                <p className="text-gray-200">
+                <p className="text-gray-800 text-justify">
                   Digital consulting covers a wide range of services, including
                   website design and development, advertising, social media
                   marketing, content creation, and email marketing. By providing
@@ -455,17 +379,24 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 lg:w-1/3 px-2 py-3">
+          <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
             <div
-              className="animate__delay-2s animate__fadeInUp animate__animated  md:flex"
+              className="animate__delay-2s animate__fadeInUp animate__animated border-2 border-custom-blue rounded p-6 h-full flex flex-col items-center"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
-              <div className="icon md:w-3/12 px-2" style={{width:"64px", height:"64px"}}>
-              <Image src={"/Assets/icons/png/002-coding.png"} width={64} height={64}/>
-
+              <div
+                className="icon px-2"
+                style={{ width: "64px", height: "64px" }}
+              >
+                <Image
+                  src={"/Assets/icons/png/002-coding.png"}
+                  width={64}
+                  height={64}
+                  alt="icon"
+                />
               </div>
-              <div className="content md:w-9/12">
-                <h4>
+              <div>
+                <h4 className="text-center">
                   <Link
                     href="/service-details"
                     className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
@@ -473,7 +404,7 @@ export default function HomePage() {
                     Design &amp; Development
                   </Link>
                 </h4>
-                <p className="text-gray-200">
+                <p className="text-gray-800 text-justify">
                   Design &amp; Development is a collaborative process that
                   involves close communication and coordination between the
                   design and development teams to ensure that the end product
@@ -483,17 +414,23 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 lg:w-1/3 px-2 py-3">
+          <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
             <div
-              className="animate__delay-2s animate__fadeInUp animate__animated md:flex"
+              className="animate__delay-2s animate__fadeInUp animate__animated border-2 border-custom-blue rounded p-6 h-full flex flex-col items-center"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
-              <div className="icon md:w-3/12 px-2"  style={{width:"64px", height:"64px"}}>
-
-                <Image src={"/Assets/icons/png/003-app-development.png"} width={64} height={64}/>
+              <div
+                className="icon px-2"
+                style={{ width: "64px", height: "64px" }}
+              >
+                <Image
+                  src={"/Assets/icons/png/003-app-development.png"}
+                  width={64}
+                  height={64}
+                />
               </div>
-              <div className="content md:w-9/12">
-                <h4>
+              <div>
+                <h4 className="text-center">
                   <Link
                     href="/service-details"
                     className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
@@ -501,9 +438,9 @@ export default function HomePage() {
                     Mobile App Solutions
                   </Link>
                 </h4>
-                <p className="text-gray-200">
+                <p className="text-gray-800 text-justify">
                   The goal of a mobile app solution is to provide a convenient
-                  and accessible way for users to interact with a company{"\'"} s
+                  and accessible way for users to interact with a company{"'"} s
                   products or services. This can help businesses improve
                   customer engagement, increase brand awareness, and drive
                   revenue growth.
@@ -511,17 +448,23 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 lg:w-1/3 px-2 py-3">
+          <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
             <div
-              className="animate__delay-2s animate__fadeInUp animate__animated md:flex gap-2"
+              className="animate__delay-2s animate__fadeInUp animate__animated border-2 border-custom-blue rounded p-6 h-full flex flex-col items-center"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
-                 <div className="icon md:w-3/12 px-2"  style={{width:"64px", height:"64px"}}>
-                 <Image src={"/Assets/icons/png/logo.png"} width={64} height={64}/>
-                {/* <i className="flaticon-logo">hello</i> */}
+              <div  style={{ width: "64px", height: "64px" }}>
+                <Image
+                  src={"/Assets/icons/png/logo.png"}
+                  width={64}
+                  height={64}
+                  class="w-full h-auto"
+                  // style={{filter: "invert(33%) sepia(50%) saturate(600%) hue-rotate(220deg) brightness(95%) contrast(90%)"}}
+                />
+             
               </div>
-              <div className="content md:w-9/12 ">
-                <h4>
+              <div>
+                <h4 className="text-center">
                   <Link
                     href="/service-details"
                     className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
@@ -529,7 +472,7 @@ export default function HomePage() {
                     UX/UI Design Strategy
                   </Link>
                 </h4>
-                <p className="text-gray-200">
+                <p className="text-gray-800 text-justify">
                   The goal of UX/UI design strategy is to create a product that
                   is easy to use, visually appealing, and provides a positive
                   user experience.
@@ -537,33 +480,15 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 lg:w-1/3 px-2 py-3">
-            <div
-              className="animate__fadeInUp animate__delay-2s animate__animated md:flex gap-2"
-              style={{ visibility: "visible", animationName: "fadeInUp" }}
-            >
-                <div className="icon md:w-3/12 px-2"  style={{width:"64px", height:"64px"}}>
-                <Image src={"/Assets/icons/png/seo.png"} width={64} height={64}/>
-                {/* <i className="flaticon-seo">hello</i> */}
-              </div>
-              <div className="content md:w-9/12 ">
-                <h4>
-                  <Link
-                    href="/service-details"
-                    className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
-                  >
-                    SEO Optimization
-                  </Link>
-                </h4>
-                <p className="text-gray-200">
-                  The goal of SEO optimization is to increase the quantity and
-                  quality of organic traffic to a website, making it easier for
-                  users to find the site and increasing the chances of
-                  attracting potential customers.
-                </p>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div className="flex justify-center pt-12">
+          <Link
+          href={"/services"}
+            className="block w-max rounded-full bg-indigo-500 border-2 border-indigo-500 px-8 py-3 font-medium text-white transition hover:bg-transparent hover:text-gray-900"
+            type="submit"
+          >
+            View All Services
+          </Link>
         </div>
       </section>
       {/* Services area end */}
@@ -690,12 +615,92 @@ export default function HomePage() {
       {/* Work process section end */}
 
       {/* company statistic section start */}
-      <CompanyStatistic/>
+      <CompanyStatistic />
       {/* company statistic section end */}
       {/* pricing plan section end */}
-     <PricingPlan/>
+      <PricingPlan />
 
       {/* pricing plan section end */}
+      {/* Global Partners section start */}
+
+      <section className="bg-white">
+        <div className="py-12  mx-auto  max-w-7xl  px-6  lg:px-8 text-center">
+          <div>
+            <h2 className=" py-2 text-lg font-bold text-custom-blue">
+              Global Partners
+            </h2>
+            <p className="text-gray-900 font-bold text-2xl md:text-5xl pb-4">
+              World Wide Technology Partners
+            </p>
+          </div>
+          {/*  */}
+          <div>
+            <div className="flex flex-wrap justify-center partner-images gap-4">
+              <Link
+                href="/contact"
+                className="parter-link w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+              >
+                <Image
+                  className="partner-image  hover:scale-110"
+                  src={"/Assets/fiber-tech-partner-1.png"}
+                  width={150}
+                  height={150}
+                  alt="fiber-tech-serivices"
+                />
+              </Link>
+              <Link
+                href="/contact"
+                className="parter-link w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+              >
+                <Image
+                  className="partner-image hover:scale-110"
+                  src={"/Assets/fiber-tech-partner-2.png"}
+                  width={150}
+                  height={150}
+                  alt="fiber-tech-serivices"
+                />
+              </Link>
+              <Link
+                href="/contact"
+                className="parter-link w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+              >
+                <Image
+                  className="partner-image hover:scale-110"
+                  src={"/Assets/fiber-tech-partner-3.png"}
+                  width={150}
+                  height={150}
+                  alt="fiber-tech-serivices"
+                />
+              </Link>
+              <Link
+                href="/contact"
+                className="parter-link w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+              >
+                <Image
+                  className="partner-image hover:scale-110"
+                  src={"/Assets/fiber-tech-partner-4.png"}
+                  width={150}
+                  height={150}
+                  alt="fiber-tech-serivices"
+                />
+              </Link>
+              <Link
+                href="/contact"
+                className="parter-link w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+              >
+                <Image
+                  className="partner-image hover:scale-110"
+                  src={"/Assets/fiber-tech-partner-5.png"}
+                  width={150}
+                  height={150}
+                  alt="fiber-tech-serivices"
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Global Partners section end */}
 
       {/* Testimonial section section start */}
       <section className="testimonials-area py-16">
@@ -747,7 +752,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-     
+
       {/* Testimonial section section end */}
 
       {/* <ScrollAnimationComponent /> */}
