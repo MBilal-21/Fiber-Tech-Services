@@ -12,7 +12,7 @@ const Services = () => {
       <TopPage cureentText={"Services"} />
       {/* service area section start */}
       <section className="services-area-three overflow-hidden py-16 relative z-1">
-        <div className="md:container md:mx-auto px-4">
+        <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
           <div className="flex flex-wrap  items-center">
             <div className="w-full lg:w-5/12 ">
               <div

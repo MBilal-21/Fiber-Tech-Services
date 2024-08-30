@@ -81,7 +81,7 @@ const WritePost = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="md:container mx-auto p-4 flex flex-wrap py-16">
+      <div className="mx-auto  max-w-7xl  px-6  lg:px-8 flex flex-wrap py-16">
         <div className="w-full md:w-8/12 p-2 flex flex-col">
           <input
             type="text"

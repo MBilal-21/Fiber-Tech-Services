@@ -84,7 +84,7 @@ const Footer = () => {
           style={{ visibility: " visible", animationName: "fadeInRight" }}
         />
       </div>
-      <div className="md:container md:mx-auto px-4 pb-6  sm:px-6 lg:px-8 relative z-3">
+      <div className="mx-auto  max-w-7xl  px-6  lg:px-8 pb-6  sm:px-6 lg:px-8 relative z-3">
         <div className="mt-16 grid grid-cols-1 gap-8  pt-16 md:grid-cols-4 lg:grid-cols-7 dark:border-gray-800">
           <div className="text-left md:col-span-4 lg:col-span-2 order-1">
             {/* fiber tech logo svg */}

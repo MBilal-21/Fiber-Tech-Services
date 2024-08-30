@@ -13,7 +13,7 @@ const AboutPage = () => {
 
       {/* About Area start */}
 
-      <section className="about-area-five relative z-10 md:container md:mx-auto px-4">
+      <section className="about-area-five relative z-10 mx-auto  max-w-7xl  px-6  lg:px-8">
         <div className="flex flex-wrap items-center py-24">
           <div className="w-full lg:w-1/2 p-4">
             <div
@@ -127,7 +127,7 @@ const AboutPage = () => {
       {/* About Area end */}
       {/* service area section three start */}
       <section className="relation z-10">
-        <div className="md:container mx-auto px-4">
+        <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
           <div className="flex flex-wrap">
             <div className="w-full md:w-1/2 lg:w-4/12 p-2 ">
               <div
@@ -248,7 +248,7 @@ const AboutPage = () => {
       {/* team area section three start */}
 
       <section className="team-area-two relative pt-24">
-        <div className="md:container mx-auto px-4">
+        <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
           <div
             className="section-title text-center mb-24 wow fadeInUp delay-0-2s"
             style={{ visibility: "visible" }}
@@ -682,7 +682,7 @@ const AboutPage = () => {
       {/* why choose us start */}
 
       <section>
-        <div className="md:container mx-auto py-12 px-4">
+        <div className="mx-auto  max-w-7xl  px-6  lg:px-8 py-12 ">
           <Tabs>
             <Tab iconName={"ui.png"} label={"UX/UI Design"}>
               <div className="py-4 flex flex-wrap justify-center items-center">

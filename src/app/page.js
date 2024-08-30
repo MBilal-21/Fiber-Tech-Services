@@ -149,7 +149,7 @@ export default function HomePage() {
       {/* Global Partners section start */}
 
       <section className="bg-white">
-        <div className="py-12  md:container md:mx-auto px-4 text-center">
+        <div className="py-12  mx-auto  max-w-7xl  px-6  lg:px-8 text-center">
           <div>
             <h2 className=" py-2 text-lg font-bold text-custom-blue">
               Global Partners
@@ -229,7 +229,7 @@ export default function HomePage() {
 
       {/* About Company section start */}
       <section className="about-company ">
-        <div className="py-12  md:container md:mx-auto px-4 grid md:grid-cols-2 gap-4 place-content-between">
+        <div className="py-12  mx-auto  max-w-7xl  px-6  lg:px-8 grid md:grid-cols-2 gap-4 place-content-between">
           <div>
             <h2 className=" py-2 text-lg font-bold text-custom-blue">
               About Company
@@ -270,7 +270,7 @@ export default function HomePage() {
             {/* ---------------------------------------- */}
             <div className="grid grid-cols-1 sm:grid-cols-2 for-active gap-4 mt-6">
               {/* --------------------------------------- */}
-              <div className="p-2 text-justify hover:shadow-2xl">
+              <div className="p-2 hover:shadow-2xl">
                 <div className="service-item active">
                   <div className="icon">
                     <Image
@@ -303,7 +303,7 @@ export default function HomePage() {
                 </div>
               </div>
               {/* ---------------------------- */}
-              <div className="p-2 text-justify hover:shadow-2xl">
+              <div className="p-2 hover:shadow-2xl">
                 <div className="service-item">
                   <div className="icon">
                     <Image
@@ -412,7 +412,7 @@ export default function HomePage() {
 
       {/* Services area start */}
       <section className=" bg-custom-dark text-white pt-16 ">
-        <div className="flex flex-wrap justify-center  md:container md:mx-auto px-4">
+        <div className="flex flex-wrap justify-center  mx-auto  max-w-7xl  px-6  lg:px-8">
           <div className="md:w-1/2 lg:w-1/3 px-2 py-3">
             <div
               className=" animate__fadeInUp animate__delay-2s animate__animated"
@@ -588,7 +588,7 @@ export default function HomePage() {
             alt="fiber-tech-serce-work-line"
           />
         </div>
-        <div className="md:container md:mx-auto px-4 ">
+        <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
           <div className="flex flex-wrap justify-center">
             <div className="w-full sm:w-1/2 md:w-1/3 xl:w-1/5 px-2 mt-8">
               <div
@@ -699,7 +699,7 @@ export default function HomePage() {
 
       {/* Testimonial section section start */}
       <section className="testimonials-area py-16">
-        <div className="md:container mx-auto px-6 md:px-0">
+        <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
           <div className="flex flex-wrap items-center justify-center lg:justify-between">
             <div className="w-full xl:w-5/12 lg:w-1/2">
               <div

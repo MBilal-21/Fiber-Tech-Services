@@ -51,7 +51,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-32 relative z-1 bg-gray-50">
-      <div className="md:container mx-auto px-4">
+      <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
         <div className="flex justify-between items-end mb-8">
           <div className="text-center">
             <h2 className="text-md font-semibold mb-4 text-custom-blue">What Our Clients Say</h2>

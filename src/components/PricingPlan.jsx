@@ -7,7 +7,7 @@ import Link from "next/link";
 const PricingPlan = () => {
   return (
     <section className="price-plan-area  relative overflow-hidden">
-      <div className="pt-24 md:container md:mx-auto px-4">
+      <div className="pt-24 mx-auto  max-w-7xl  px-6  lg:px-8">
         <div
           className="section-title text-center wow fadeInUp delay-0-2s animated"
           style={{ visibility: "visible", animationName: "fadeInUp" }}

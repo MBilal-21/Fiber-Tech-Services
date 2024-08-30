@@ -81,7 +81,7 @@ const Blogs = () => {
   return (
     <div>
       <TopPage cureentText={"Blogs"} />
-      <div className="md:container md:mx-auto px-4">
+      <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
         <div className="py-12">
           <h1 className="text-2xl font-bold border-solid border-b-4 border-custom-green w-max pb-1">Latest Blogs</h1>
         </div>

@@ -41,7 +41,7 @@ const Page = () => {
       <div>
         {/* service details section start */}
         <section className="service-details-area pt-130 rpt-100 pb-115 rpb-85">
-          <div className="md:container md:mx-auto px-4">
+          <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
             <div className="flex flex-wrap">
               <div className="w-full lg:w-8/12 p-4">
                 <div className="service-details-content">

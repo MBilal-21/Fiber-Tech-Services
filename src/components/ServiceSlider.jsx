@@ -72,7 +72,7 @@
 
 //   return (
 //     <section className="what-we-provide overflow-hidden py-32 md:py-24 relative z-1">
-//       <div className="md:container mx-auto px-4">
+//       <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
 //         <div className="section-title text-center mb-14">
 //           <span className="py-2 text-lg font-bold text-custom-blue">
 //             What We Provide
@@ -170,7 +170,7 @@ import { PlusIcon } from "@heroicons/react/24/outline";
 const WhatWeProvide = () => {
   return (
     <section className="what-we-provide overflow-hidden py-32 md:py-24 relative z-1">
-      <div className="md:container mx-auto px-4">
+      <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
         <div className="section-title text-center mb-14">
           <span className=" py-2 text-lg font-bold text-custom-blue">What We Provide</span>
           <h2 className='text-gray-900 font-bold text-2xl md:text-5xl pb-4'>Digital Core Services</h2>

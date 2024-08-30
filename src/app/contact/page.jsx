@@ -65,7 +65,7 @@ const Contact = () => {
       <TopPage cureentText={"Contact"} />
 
       <section className="py-16 relative z-1">
-        <div className="md:container md:mx-auto px-4">
+        <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
           <div
             className="flex flex-wrap text-center justify-center wow fadeInUp delay-0-2s animated"
             style={{ visibility: "visible", animationName: "fadeInUp" }}
@@ -145,7 +145,7 @@ const Contact = () => {
       </section>
       {/* google map end */}
       {/* contact form start */}
-      <section className="md:container mx-auto px-4 py-16 bg-gray-100 relative -top-8">
+      <section className="mx-auto  max-w-7xl  px-6  lg:px-8 py-16 bg-gray-100 relative -top-8">
         <div className="text-center pb-12">
           <h2 className=" py-2 text-lg font-bold text-custom-blue">
             {" "}

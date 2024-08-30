@@ -8,7 +8,7 @@ const Projects = () => {
       <TopPage cureentText={"Projects"} />
       <div>
         <section className="project-grid-area relative z-1 pt-32">
-          <div className="md:container md:mx-auto px-4">
+          <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
             <div className="flex flex-wrap justify-center pb-16">
               <div className="w-full lg:w-10/12 xl:w-8/12">
                 <div

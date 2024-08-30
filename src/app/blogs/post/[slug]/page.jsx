@@ -56,7 +56,7 @@ export default function Page({ params }) {
             </div>
           </div>
         </header>
-        <section className="flex flex-wrap md:container px-4 mx-auto relative">
+        <section className="flex flex-wrap mx-auto  max-w-7xl  px-6  lg:px-8 relative">
           <div className="w-full lg:w-9/12 p-2">
             <div className=" p-4">
               <div className="relative w-full max-w-lg mx-auto">
