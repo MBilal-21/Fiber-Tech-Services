@@ -79,7 +79,7 @@ const Footer = () => {
         />
         <img
           className="shape three wow fadeInRight delay-0-8s animated"
-          src="Assets/design-images/footer-right.png"
+          src="/Assets/design-images/footer-right.png"
           alt="Shape"
           style={{ visibility: " visible", animationName: "fadeInRight" }}
         />

@@ -3,13 +3,15 @@ import TopPage from "@/components/TopPage";
 import React, { useState } from "react";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import { PhoneIcon, ChevronDoubleRightIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
+import Link from "next/link";
 
 
 const AccordionItem = ({ title, children, isOpen, onToggle }) => {
   return (
     <div className="border border-gray-300 rounded-md mb-2 shadow-lg">
       <button
-        className="flex justify-between items-center w-full p-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none"
+        className="flex justify-between rounded-md items-center w-full p-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none"
         onClick={onToggle}
       >
         <span className="text-lg font-semibold">{title}</span>
@@ -43,10 +45,10 @@ const Page = () => {
             <div className="flex flex-wrap">
               <div className="w-full lg:w-8/12 p-4">
                 <div className="service-details-content">
-                  <div className="section-title mb-30">
-                    <h2>Web Design &amp; Development</h2>
+                  <div className="py-6">
+                    <h2 className="text-gray-900 font-bold text-2xl md:text-5xl pb-4">Web Design &amp; Development</h2>
                   </div>
-                  <p>
+                  <p className="text-gray-600 text-justify font-medium">
                     Web design and development is the process of creating and
                     maintaining websites. It involves a combination of creative
                     and technical skills, such as graphic design, HTML, CSS,
@@ -63,12 +65,15 @@ const Page = () => {
                     grow their brand.
                   </p>
                   <div
-                    className="image my-40 wow fadeInUp delay-0-2s animated"
+                    className="my-6 wow fadeInUp delay-0-2s animated"
                     style={{ visibility: "visible", animationName: "fadeInUp" }}
                   >
-                    <img
+                    <Image
                       src="/Assets/service-details.jpg"
-                      alt="Service Details"
+                      alt="fiber-tech-Service-Details"
+                      width={770}
+                      height={520}
+                      layout="responsive"
                     />
                   </div>
                   <div className="flex flex-wrap">
@@ -79,7 +84,7 @@ const Page = () => {
                         animationName: "fadeInRight",
                       }}
                     >
-                      <h3>
+                      <h3 className="text-gray-900 font-bold text-xl md:text-3xl pb-4">
                         We Provide Best IT Services to Growth you Business
                       </h3>
                     </div>
@@ -91,15 +96,15 @@ const Page = () => {
                       }}
                     >
                       <ul className="list-style-one">
-                        <li className="flex gap-2">
+                        <li className="flex gap-2 text-gray-600 text-lg font-medium">
                           <CheckCircleIcon className="h-6 w-6 text-custom-blue" />
                           Comprehensive UI/UX Assessment
                         </li>
-                        <li className="flex gap-2">
+                        <li className="flex gap-2 text-gray-600 text-lg font-medium">
                           <CheckCircleIcon className="h-6 w-6 text-custom-blue" />
                           Deep Contextual Research &amp; Planning
                         </li>
-                        <li className="flex gap-2">
+                        <li className="flex gap-2 text-gray-600 text-lg font-medium">
                           <CheckCircleIcon className="h-6 w-6 text-custom-blue" />
                           Wireframe{"\'"}s &amp; Prototyping
                         </li>
@@ -107,14 +112,13 @@ const Page = () => {
                     </div>
                   </div>
                   <div className="flex flex-wrap pb-16">
-                    <div
-                      className="w-full md:w-1/2 mb-16 wow fadeInLeft delay-0-2s animated"
+                    <div className="w-full md:w-1/2 mb-16 px-2 wow fadeInLeft delay-0-2s animated"
                       style={{
                         visibility: "visible",
                         animationName: "fadeInLeft",
                       }}
                     >
-                      <p>
+                      <p className="text-gray-600 font-medium leading-6 text-justify">
                         {" "}
                         Our IT services refer to a wide range of services
                         offered by information technology (IT) companies and
@@ -133,8 +137,7 @@ const Page = () => {
                         plays a critical role in today{"\'"}s digital economy.
                       </p>
                     </div>
-                    <div
-                      className="w-full md:w-1/2 mb-16 wow fadeInRight delay-0-2s animated"
+                    <div className="w-full md:w-1/2 mb-16 px-4 wow fadeInRight delay-0-2s animated"
                       style={{
                         visibility: "visible",
                         animationName: "fadeInRight",
@@ -157,8 +160,8 @@ const Page = () => {
                         animationName: "fadeInLeft",
                       }}
                     >
-                      <h3>Odoo Implementation</h3>
-                      <p>
+                      <h3 className="text-gray-900 font-bold text-xl md:text-3xl pb-4">Odoo Implementation</h3>
+                      <p className="text-gray-600 text-justify font-medium">
                         Odoo is a popular open-source enterprise resource
                         planning (ERP) software that provides businesses with a
                         comprehensive suite of tools for managing various
@@ -194,8 +197,8 @@ const Page = () => {
                     </div>
                   </div>
 
-                  <h3>Service Management</h3>
-                  <p>
+                  <h3 className="text-gray-900 font-bold text-xl md:text-3xl pb-4">Service Management</h3>
+                  <p className="text-gray-600 text-justify font-medium">
                     We provide a systematic approach to delivering and managing
                     services in a customer-centric and efficient manner. It
                     encompasses a set of processes, practices, and tools that
@@ -389,63 +392,69 @@ const Page = () => {
                   
                 </div>
               </div>
-              <div className="w-full lg:w-4/12 p-4">
-                <div className="service-sidebar">
+              <div className="w-full lg:w-4/12 p-8">
+               
                   <div
-                    className="widget widget-category wow fadeInUp delay-0-2s animated"
+                    className="text-center bg-gray-100 mb-6 py-4 wow fadeInUp delay-0-2s animated"
                     style={{ visibility: "visible", animationName: "fadeInUp" }}
                   >
-                    <h4 className="widget-title">Services Category</h4>
-                    <ul>
-                      <li>
-                        <a href="/services">IT Consulting</a>
+                    <h4 className="text-gray-900 font-bold text-xl  pb-4">Services Category</h4>
+                    <ul className="px-16 md:px-8">
+                      <li className="flex justify-between items-center bg-white mb-2 px-4 py-4 group hover:bg-custom-blue">
+                        <Link className="group-hover:text-white font-bold" href="/services">IT Consulting</Link>
+                        <ChevronDoubleRightIcon className="h-6 w-6  group-hover:text-white text-gray-500" />
                       </li>
-                      <li>
-                        <a href="/services">Product Design</a>
+                      <li className="flex justify-between items-center bg-white mb-2 px-4 py-4 group hover:bg-custom-blue">
+                        <Link className="group-hover:text-white font-bold" href="/services">Product Design</Link>
+                         <ChevronDoubleRightIcon className="h-6 w-6 group-hover:text-white text-gray-500" />
                       </li>
-                      <li>
-                        <a href="/services">Web Design</a>
+                      <li className="flex justify-between items-center bg-white mb-2 px-4 py-4 group hover:bg-custom-blue">
+                        <Link className="group-hover:text-white font-bold" href="/services">Web Design</Link>
+                         <ChevronDoubleRightIcon className="h-6 w-6 group-hover:text-white text-gray-500" />
                       </li>
-                      <li>
-                        <a href="/services">SEO Optimization</a>
+                      <li className="flex justify-between items-center bg-white mb-2 px-4 py-4 group hover:bg-custom-blue">
+                        <Link className="group-hover:text-white font-bold" href="/services">SEO Optimization</Link>
+                         <ChevronDoubleRightIcon className="h-6 w-6 group-hover:text-white text-gray-500" />
                       </li>
-                      <li>
-                        <a href="/services">Web Development</a>
+                      <li className="flex justify-between items-center bg-white mb-2 px-4 py-4 group hover:bg-custom-blue">
+                        <Link className="group-hover:text-white font-bold" href="/services">Web Development</Link>
+                         <ChevronDoubleRightIcon className="h-6 w-6 group-hover:text-white text-gray-500" />
                       </li>
-                      <li>
-                        <a href="/services">UI/UX Strategy</a>
+                      <li className="flex justify-between items-center bg-white mb-2 px-4 py-4 group hover:bg-custom-blue">
+                        <Link className="group-hover:text-white font-bold" href="/services">UI/UX Strategy</Link>
+                         <ChevronDoubleRightIcon className="h-6 w-6 group-hover:text-white text-gray-500" />
                       </li>
                     </ul>
                   </div>
-                  <div
-                    className="widget widget-cta"
-                    style={{
-                      backgroundImage:
-                        "url(/Assets/services/cta-widget-bg.jpg)",
-                      backdropFilter: "brightness(0.3)",
+                  <div className="overflow-hidden mx-auto relative my-8 bg-no-repeat  text-center"
+                    style={{ backgroundImage:
+                        "url(/Assets/cta-widget-bg.jpg)",
+                        backgroundSize: "cover",
                     }}
                   >
-                    <span className="h5">Let{"\'"}s Work Together</span>
-                    <h2>IT Service Agency</h2>
+                    <div className="bg-black/40 py-16 relative z-10">
+                    <p className="text-lg text-gray-50 font-semibold ">Let{"\'"}s Work Together</p>
+                    <h2 className=" text-3xl md:text-2xl text-gray-50  font-bold py-2">IT Service Agency</h2>
                     <a
                       href="contact.php"
-                      className="theme-btn style-four flex gap-4"
+                      className="group theme-btn bg-transparent border-2 border-black text-gray-100 after:bg-black hover:text-white my-4 flex gap-4"
                     >
                       Contact Us{" "}
-                      <ChevronDoubleRightIcon className="h-6 w-6 text-gray-500" />
+                      <ChevronDoubleRightIcon className="h-6 w-6 text-gray-100 group-hover:text-white" />
                     </a>
                     <br />
-                    <a href="callto:888 572 9311" className="number flex gap-4">
+                    <a href="callto:888 572 9311" className="text-lg font-bold text-white py-4 hover:text-custom-blue flex justify-center gap-4">
                       <PhoneIcon className="h-6 w-6 text-custom-green" /> 888
                       572 9311
                     </a>
                     <img
-                      className="bg-shape"
+                      className="absolute top-8 -right-16 -z-10"
                       src="/Assets/design-images/footer-bg-line-shape.png"
                       alt="Shape"
                     />
                   </div>
-                </div>
+                  </div>
+                
               </div>
             </div>
           </div>

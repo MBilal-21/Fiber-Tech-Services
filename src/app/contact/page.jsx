@@ -64,7 +64,7 @@ const Contact = () => {
     <div>
       <TopPage cureentText={"Contact"} />
 
-      <section className="pt-32 pb-16 relative z-1">
+      <section className="py-16 relative z-1">
         <div className="md:container md:mx-auto px-4">
           <div
             className="flex flex-wrap text-center justify-center wow fadeInUp delay-0-2s animated"
@@ -75,7 +75,7 @@ const Contact = () => {
                 <span className=" py-2 text-lg font-bold text-custom-blue">Need any Helps</span>
                 <h2 className="text-gray-900 font-bold text-2xl md:text-5xl pb-4">Contact Information</h2>
               </div>
-              <p className="text-gray-500">
+              <p className="text-gray-500 pb-4">
                 customers can reach out for support, ask questions, or provide
                 feedback
               </p>

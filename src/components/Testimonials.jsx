@@ -16,6 +16,7 @@ const testimonials = [
   },
   {
     id: 2,
+    // image: "/Assets/about/testimonials/testi-author2.jpg",
     title: "Excellent Works",
     rating: 4.5,
     text: "They work on all trending mobile app technologies which include Native Android App Development, Native IOS App Development, React Native App Development, Ionic App Development, Hybrid App Development and Flutter App Development.",
@@ -71,79 +72,85 @@ const Testimonials = () => {
             </button>
           </div>
         </div>
-        <div className="flex gap-4 justify-center">
-        <div className="bg-gray-100  p-6 rounded-lg shadow-md w-full max-w-2xl mx-auto">
-          <div className="flex gap-4">
-            {testimonials[currentIndex].image && (
-              <div className="mb-4">
-                <Image
-                  src={testimonials[currentIndex].image}
-                  alt={testimonials[currentIndex].author}
-                  width={100}
-                  height={100}
-                  className="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md"
-                />
+
+        {/* Slider Content */}
+        <div className="flex gap-4 overflow-hidden">
+          {testimonials.slice(currentIndex, currentIndex + 2).map((testimonial, index) => (
+            <div key={testimonial.id} className="bg-gray-100 flex-shrink-0 w-full md:w-1/2 p-6 rounded-lg shadow-md">
+              <div className="flex gap-4">
+                {testimonial.image && (
+                  <div className="mb-4">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.author}
+                      width={100}
+                      height={100}
+                      className="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md"
+                    />
+                  </div>
+                )}
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">
+                    {testimonial.title}
+                  </h4>
+                  <div className="flex mb-4">
+                    {[...Array(Math.floor(testimonial.rating))].map(
+                      (_, index) => (
+                        <StarIcon key={index} className="h-6 w-6 text-yellow-500" />
+                      )
+                    )}
+                    {testimonial.rating % 1 !== 0 && (
+                      <svg
+                        data-slot="icon"
+                        className="h-6 w-6 text-yellow-500"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <defs>
+                          <linearGradient id="halfGradient">
+                            <stop offset="50%" stopColor="currentColor" />
+                            <stop offset="50%" stopColor="transparent" />
+                          </linearGradient>
+                        </defs>
+                        <path
+                          clipRule="evenodd"
+                          fillRule="evenodd"
+                          fill="url(#halfGradient)"
+                          d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                        ></path>
+                      </svg>
+                    )}
+                  </div>
+                </div>
               </div>
-            )}
-            <div>
-              <h4 className="text-xl font-semibold mb-2">
-                {testimonials[currentIndex].title}
-              </h4>
-              <div className="flex mb-4">
-                {[...Array(Math.floor(testimonials[currentIndex].rating))].map(
-                  (_, index) => (
-                    <StarIcon key={index} className="h-6 w-6 text-yellow-500" />
-                  )
-                )}
-                {testimonials[currentIndex].rating % 1 !== 0 && (
-                  <svg
-                    data-slot="icon"
-                    className="h-6 w-6 text-yellow-500"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <defs>
-                      <linearGradient id="halfGradient">
-                        <stop offset="50%" stop-color="currentColor" />
-                        <stop offset="50%" stop-color="transparent" />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      clip-rule="evenodd"
-                      fill-rule="evenodd"
-                      fill="url(#halfGradient)"
-                      d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
-                    ></path>
-                  </svg>
-                )}
+              <p className="text-gray-700 mb-6">
+                {testimonial.text}
+              </p>
+              <div className="flex items-center">
+                <div className="text-gray-700">
+                  <h4 className="font-semibold">
+                    {testimonial.author}
+                  </h4>
+                  <span className="text-sm">
+                    {testimonial.designation}
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-          <p className="text-gray-700 mb-6">
-            {testimonials[currentIndex].text}
-          </p>
-          <div className="flex items-center">
-            <div className="text-gray-700">
-              <h4 className="font-semibold">
-                {testimonials[currentIndex].author}
-              </h4>
-              <span className="text-sm">
-                {testimonials[currentIndex].designation}
-              </span>
-            </div>
-          </div>
-        </div>
-        
+          ))}
         </div>
 
+        {/* Dots Navigation */}
         <div className="flex justify-center mt-6 space-x-2">
           {testimonials.map((_, index) => (
             <button
               key={index}
               className={`w-4 h-4 rounded-full ${
-                currentIndex === index ? "bg-blue-500" : "bg-gray-300"
+                currentIndex === index 
+                  ? "bg-blue-500"
+                  : "bg-gray-300"
               }`}
               onClick={() => setCurrentIndex(index)}
             ></button>

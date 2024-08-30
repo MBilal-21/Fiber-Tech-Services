@@ -431,10 +431,11 @@ export default function HomePage() {
               className=" animate__fadeInUp animate__delay-2s animate__animated  md:flex gap-2"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
-              <div className="icon">
-                <i className="flaticon-networking">hello</i>
+               <div className="icon md:w-3/12 px-2"  style={{width:"64px", height:"64px"}}>
+              <Image src={"/Assets/icons/png/001-networking.png"} width={64} height={64}/>
+
               </div>
-              <div className="content">
+              <div className="content md:w-9/12">
                 <h4>
                   <Link
                     href="/service-details"
@@ -456,13 +457,14 @@ export default function HomePage() {
           </div>
           <div className="md:w-1/2 lg:w-1/3 px-2 py-3">
             <div
-              className="animate__delay-2s animate__fadeInUp animate__animated  md:flex gap-2"
+              className="animate__delay-2s animate__fadeInUp animate__animated  md:flex"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
-              <div className="icon">
-                <i className="flaticon-coding">hello</i>
+              <div className="icon md:w-3/12 px-2" style={{width:"64px", height:"64px"}}>
+              <Image src={"/Assets/icons/png/002-coding.png"} width={64} height={64}/>
+
               </div>
-              <div className="content">
+              <div className="content md:w-9/12">
                 <h4>
                   <Link
                     href="/service-details"
@@ -483,13 +485,14 @@ export default function HomePage() {
           </div>
           <div className="md:w-1/2 lg:w-1/3 px-2 py-3">
             <div
-              className="animate__delay-2s animate__fadeInUp animate__animated md:flex gap-2"
+              className="animate__delay-2s animate__fadeInUp animate__animated md:flex"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
-              <div className="icon">
-                <i className="flaticon-app-development">hello</i>
+              <div className="icon md:w-3/12 px-2"  style={{width:"64px", height:"64px"}}>
+
+                <Image src={"/Assets/icons/png/003-app-development.png"} width={64} height={64}/>
               </div>
-              <div className="content">
+              <div className="content md:w-9/12">
                 <h4>
                   <Link
                     href="/service-details"
@@ -513,10 +516,11 @@ export default function HomePage() {
               className="animate__delay-2s animate__fadeInUp animate__animated md:flex gap-2"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
-              <div className="icon">
-                <i className="flaticon-logo">hello</i>
+                 <div className="icon md:w-3/12 px-2"  style={{width:"64px", height:"64px"}}>
+                 <Image src={"/Assets/icons/png/logo.png"} width={64} height={64}/>
+                {/* <i className="flaticon-logo">hello</i> */}
               </div>
-              <div className="content">
+              <div className="content md:w-9/12 ">
                 <h4>
                   <Link
                     href="/service-details"
@@ -538,10 +542,11 @@ export default function HomePage() {
               className="animate__fadeInUp animate__delay-2s animate__animated md:flex gap-2"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
-              <div className="icon">
-                <i className="flaticon-seo">hello</i>
+                <div className="icon md:w-3/12 px-2"  style={{width:"64px", height:"64px"}}>
+                <Image src={"/Assets/icons/png/seo.png"} width={64} height={64}/>
+                {/* <i className="flaticon-seo">hello</i> */}
               </div>
-              <div className="content">
+              <div className="content md:w-9/12 ">
                 <h4>
                   <Link
                     href="/service-details"

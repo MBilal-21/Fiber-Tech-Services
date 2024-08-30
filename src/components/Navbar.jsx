@@ -192,7 +192,7 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <Popover className="">
+            <Popover>
               <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white linkhover">
                 Services
                 <ChevronDownIcon
@@ -207,8 +207,7 @@ export default function Navbar() {
               >
                 <div className="p-4 grid grid-cols-3 gap-4">
                   {products.map((item) => (
-                    <div
-                      key={item.name}
+                    <div  key={item.name}
                       className="  group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 min-w-2xl"
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 ">
@@ -220,7 +219,7 @@ export default function Navbar() {
                       <div className="flex-auto">
                         <Link
                           href={item.href}
-                          className="block font-semibold text-white linkhover"
+                          className="block font-semibold text-white hover:text-custom-green"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
@@ -230,12 +229,12 @@ export default function Navbar() {
                     </div>
                   ))}
                 </div>
-                <div className="grid grid-cols-1 divide-x divide-gray-900/5 bg-gray-50 rounded-b-lg">
+                <div className="grid grid-cols-1 divide-x divide-gray-900/5 bg-gray-200 rounded-b-lg">
                   {callsToAction.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 linkhover"
+                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:text-custom-blue"
                     >
                       <item.icon
                         aria-hidden="true"
@@ -277,6 +276,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               className="text-sm font-semibold leading-6 text-white "
+             
             >
               <Button
                 className={"theme-btn bg-custom-blue text-gray-900 after:bg-custom-green hover:text-white"}

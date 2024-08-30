@@ -8,7 +8,8 @@ const Blogs = () => {
         "Scope of Medical Billing in Pakistan: Advantages and Disadvantages",
       category: "Uncategorized",
       date: "July 13, 2024",
-      author: "shams",
+      author: "name",
+      imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
     },
     {
@@ -16,7 +17,8 @@ const Blogs = () => {
         "Scope of Medical Billing in Pakistan: Advantages and Disadvantages",
       category: "Uncategorized",
       date: "July 13, 2024",
-      author: "shams",
+      author: "name",
+      imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
     },
     {
@@ -24,7 +26,8 @@ const Blogs = () => {
         "Scope of Medical Billing in Pakistan: Advantages and Disadvantages",
       category: "Uncategorized",
       date: "July 13, 2024",
-      author: "shams",
+      author: "name",
+      imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
     },
     {
@@ -32,7 +35,8 @@ const Blogs = () => {
         "Scope of Medical Billing in Pakistan: Advantages and Disadvantages",
       category: "Uncategorized",
       date: "July 13, 2024",
-      author: "shams",
+      author: "name",
+      imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
     },
     {
@@ -40,7 +44,8 @@ const Blogs = () => {
         "Scope of Medical Billing in Pakistan: Advantages and Disadvantages",
       category: "Uncategorized",
       date: "July 13, 2024",
-      author: "shams",
+      author: "name",
+      imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
     },
     {
@@ -48,7 +53,8 @@ const Blogs = () => {
         "Scope of Medical Billing in Pakistan: Advantages and Disadvantages",
       category: "Uncategorized",
       date: "July 13, 2024",
-      author: "shams",
+      author: "name",
+      imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
     },
     {
@@ -56,7 +62,8 @@ const Blogs = () => {
         "Scope of Medical Billing in Pakistan: Advantages and Disadvantages",
       category: "Uncategorized",
       date: "July 13, 2024",
-      author: "shams",
+      author: "name",
+      imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
     },
     {
@@ -64,7 +71,8 @@ const Blogs = () => {
         "Scope of Medical Billing in Pakistan: Advantages and Disadvantages",
       category: "Uncategorized",
       date: "July 13, 2024",
-      author: "shams",
+      author: "name",
+      imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
     },
     // Add more blog entries...

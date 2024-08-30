@@ -6,11 +6,7 @@ import { Tabs, Tab } from "@/components/Tabs";
 import { CheckIcon } from "@heroicons/react/24/outline";
 import Testimonials from "@/components/Testimonials";
 
-
 const AboutPage = () => {
-
-
-
   return (
     <div>
       <TopPage cureentText={"About us"} />
@@ -55,14 +51,17 @@ const AboutPage = () => {
                 <div className="w-full md:w-1/2 p-2">
                   <div className="service-item style-three">
                     <div className="icon">
-                      <i className="flaticon-trophy">icon</i>
+                    <Image src={"/Assets/icons/png/trophy.png"} width={64} height={64} alt="trophy-icon"/>
                     </div>
-                    <h4>
-                      <Link href="/service-details">
+                      <Link
+                        href="/service-details"
+                        className="text-gray-900 font-bold text-xl pb-4 hover:text-custom-green"
+                        >
+                        <h4 className="py-2">
                         Awards Winning Company
-                      </Link>
                     </h4>
-                    <p>
+                      </Link>
+                    <p className="text-gray-600 text-justify">
                       Receiving awards can be a significant accomplishment for a
                       company and a recognition of its achievements and efforts.
                       Awards can provide valuable exposure and help increase
@@ -72,7 +71,10 @@ const AboutPage = () => {
                       to strive for even greater success. Congratulations on
                       being an award-winning company!
                     </p>
-                    <Link href="/service-details" className="read-more">
+                    <Link
+                      href="/service-details"
+                      className="footer-btn rounded-full mt-6 font-semibold text-gray-900 transition "
+                    >
                       Read More <span aria-hidden="true">&rarr;</span>
                     </Link>
                   </div>
@@ -80,14 +82,18 @@ const AboutPage = () => {
                 <div className="w-full md:w-1/2 p-2">
                   <div className="service-item style-three">
                     <div className="icon">
-                      <i className="flaticon-pie-chart">icon</i>
+                      <Image src={"/Assets/icons/png/pie-chart.png"} width={64} height={64} alt="pie-chart"/>
+           
                     </div>
-                    <h4>
-                      <Link href="/service-details">
+                    <Link
+                      href="/service-details"
+                      className="text-gray-900 font-bold text-xl pb-4 hover:text-custom-green py-2"
+                    >
+                      <h4 className="py-2">
                         Startup IT Solution &amp; Business Dev
-                      </Link>
-                    </h4>
-                    <p>
+                      </h4>
+                    </Link>
+                    <p className="text-gray-600 text-justify">
                       FTS company focuses on developing and delivering
                       innovative technology solutions for new and emerging
                       businesses. It provides a wide range of services to
@@ -104,7 +110,10 @@ const AboutPage = () => {
                       business development company takes care of the technology
                       and business development aspects.
                     </p>
-                    <Link href="/service-details" className="read-more">
+                    <Link
+                      href="/service-details"
+                      className="footer-btn rounded-full mt-6 font-semibold text-gray-900 transition "
+                    >
                       Read More <span aria-hidden="true">&rarr;</span>
                     </Link>
                   </div>
@@ -126,7 +135,8 @@ const AboutPage = () => {
                 style={{ visibility: "visible" }}
               >
                 <div className="icon">
-                  <i className="flaticon-agile"></i>
+                <Image src={"/Assets/icons/png/agile.png"} width={64} height={64} alt="agile"/>
+                
                 </div>
                 <h4>
                   <Link
@@ -159,7 +169,8 @@ const AboutPage = () => {
                 style={{ visibility: "visible" }}
               >
                 <div className="icon">
-                  <i className="flaticon-mission"></i>
+                <Image src={"/Assets/icons/png/target.png"} width={64} height={64} alt="target"/>
+                
                 </div>
                 <h4>
                   <Link
@@ -195,7 +206,8 @@ const AboutPage = () => {
                 style={{ visibility: "visible" }}
               >
                 <div className="icon">
-                  <i className="flaticon-mission-1"></i>
+                <Image src={"/Assets/icons/png/goal.png"} width={64} height={64} alt="goal icon"/>
+                 
                 </div>
                 <h4>
                   <Link
@@ -668,12 +680,11 @@ const AboutPage = () => {
       </section>
       {/* team area section three end */}
       {/* why choose us start */}
-      
 
       <section>
-        <div className="md:container mx-auto px-4">
+        <div className="md:container mx-auto py-12 px-4">
           <Tabs>
-            <Tab label={"UX/UI Design"}>
+            <Tab iconName={"ui.png"} label={"UX/UI Design"}>
               <div className="py-4 flex flex-wrap justify-center items-center">
                 <div className="w-full lg:w-1/2 relative mb-12 flex justify-center items-center">
                   <Image
@@ -701,15 +712,23 @@ const AboutPage = () => {
                     responsive performance
                   </p>
                   <ul>
-
-                    <li className="py-1 text-gray-700 font-bold text-medium"><CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" /> Comprehensive UI/UX Assessment</li>
-                    <li className="py-1 text-gray-700 font-bold text-medium"><CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" /> Deep Contextual Research and 360° Planning</li>
-                    <li className="py-1 text-gray-700 font-bold text-medium"><CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" /> Wireframing & Prototyping</li>
+                    <li className="py-1 text-gray-700 font-bold text-medium">
+                      <CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" />{" "}
+                      Comprehensive UI/UX Assessment
+                    </li>
+                    <li className="py-1 text-gray-700 font-bold text-medium">
+                      <CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" />{" "}
+                      Deep Contextual Research and 360° Planning
+                    </li>
+                    <li className="py-1 text-gray-700 font-bold text-medium">
+                      <CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" />{" "}
+                      Wireframing & Prototyping
+                    </li>
                   </ul>
                 </div>
               </div>
             </Tab>
-            <Tab label="App Development">
+            <Tab iconName={"mobile-app.png"} label="App Development">
               <div className="py-4 flex flex-wrap flex-row-reverse justify-center items-center">
                 <div className="w-full lg:w-1/2 relative mb-12 flex justify-center items-center">
                   <Image
@@ -737,15 +756,23 @@ const AboutPage = () => {
                     responsive performance
                   </p>
                   <ul>
-
-                    <li className="py-1 text-gray-700 font-bold text-medium"><CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" /> Comprehensive UI/UX Assessment</li>
-                    <li className="py-1 text-gray-700 font-bold text-medium"><CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" /> Deep Contextual Research and 360° Planning</li>
-                    <li className="py-1 text-gray-700 font-bold text-medium"><CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" /> Wireframing & Prototyping</li>
+                    <li className="py-1 text-gray-700 font-bold text-medium">
+                      <CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" />{" "}
+                      Comprehensive UI/UX Assessment
+                    </li>
+                    <li className="py-1 text-gray-700 font-bold text-medium">
+                      <CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" />{" "}
+                      Deep Contextual Research and 360° Planning
+                    </li>
+                    <li className="py-1 text-gray-700 font-bold text-medium">
+                      <CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" />{" "}
+                      Wireframing & Prototyping
+                    </li>
                   </ul>
                 </div>
               </div>
             </Tab>
-            <Tab label="Cyber Security">
+            <Tab iconName={"cyber-security.png"} label="Cyber Security">
               <div className="py-4 flex flex-wrap justify-center items-center">
                 <div className="w-full lg:w-1/2 relative mb-12 flex justify-center items-center">
                   <Image
@@ -773,15 +800,23 @@ const AboutPage = () => {
                     responsive performance
                   </p>
                   <ul>
-
-                    <li className="py-1 text-gray-700 font-bold text-medium"><CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" /> Comprehensive UI/UX Assessment</li>
-                    <li className="py-1 text-gray-700 font-bold text-medium"><CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" /> Deep Contextual Research and 360° Planning</li>
-                    <li className="py-1 text-gray-700 font-bold text-medium"><CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" /> Wireframing & Prototyping</li>
+                    <li className="py-1 text-gray-700 font-bold text-medium">
+                      <CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" />{" "}
+                      Comprehensive UI/UX Assessment
+                    </li>
+                    <li className="py-1 text-gray-700 font-bold text-medium">
+                      <CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" />{" "}
+                      Deep Contextual Research and 360° Planning
+                    </li>
+                    <li className="py-1 text-gray-700 font-bold text-medium">
+                      <CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" />{" "}
+                      Wireframing & Prototyping
+                    </li>
                   </ul>
                 </div>
               </div>
             </Tab>
-            <Tab label="Tech Support">
+            <Tab iconName={"tech-support.png"} label="Tech Support">
               <div className="py-4 flex flex-wrap flex-row-reverse justify-center items-center">
                 <div className="w-full lg:w-1/2 relative mb-12 flex justify-center items-center">
                   <Image
@@ -809,10 +844,18 @@ const AboutPage = () => {
                     responsive performance
                   </p>
                   <ul>
-
-                    <li className="py-1 text-gray-700 font-bold text-medium"><CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" /> Comprehensive UI/UX Assessment</li>
-                    <li className="py-1 text-gray-700 font-bold text-medium"><CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" /> Deep Contextual Research and 360° Planning</li>
-                    <li className="py-1 text-gray-700 font-bold text-medium"><CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" /> Wireframing & Prototyping</li>
+                    <li className="py-1 text-gray-700 font-bold text-medium">
+                      <CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" />{" "}
+                      Comprehensive UI/UX Assessment
+                    </li>
+                    <li className="py-1 text-gray-700 font-bold text-medium">
+                      <CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" />{" "}
+                      Deep Contextual Research and 360° Planning
+                    </li>
+                    <li className="py-1 text-gray-700 font-bold text-medium">
+                      <CheckIcon className="h-6 w-6 stroke-[3px] bg-custom-blue mr-2 rounded-full p-1 inline font-bold text-lg text-gray-50" />{" "}
+                      Wireframing & Prototyping
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -821,7 +864,7 @@ const AboutPage = () => {
         </div>
       </section>
       {/* why choose us end */}
-      <Testimonials/>
+      <Testimonials />
     </div>
   );
 };
