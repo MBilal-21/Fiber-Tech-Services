@@ -188,7 +188,7 @@ body {
 
 }
 
-.homeFormBack img {
+.homeFormBack .img {
   width: 100%;
   height: auto;
 }
@@ -2093,26 +2093,26 @@ body {
 }
 
 /* About Page */
-.about-five-images img {
+.about-five-images .img {
   width: 60%;
-  display: block;
+  display: block !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .about-five-images img {
-    width: 70%;
+  .about-five-images .img {
+    width: 70% !important;
   }
 }
 
 @media only screen and (max-width: 375px) {
-  .about-five-images img {
-    width: 80%;
+  .about-five-images .img {
+    width: 80% !important;
   }
 }
 
-.about-five-images img:nth-child(2) {
-  margin-top: -25%;
-  margin-left: auto;
+.about-five-images .img:nth-child(2) {
+  margin-top: -25% !important;
+  margin-left: auto !important;
 }
 
 .about-five-images .experience-years {

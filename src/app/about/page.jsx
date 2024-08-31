@@ -20,16 +20,18 @@ const AboutPage = () => {
               className="about-five-images relative z-10 wow fadeInRight delay-0-2s animated"
               style={{ visibility: "visible", animationName: "fadeInRight" }}
             >
-              <img src="/Assets/about/about-five1.jpg" alt="About" />
-              <img src="/Assets/about/about-five2.jpg" alt="About" />
+              <Image  className="img" src="/Assets/about/about-five1.jpg" alt="fiber-tech-services-about" width={380} height={480} />
+              <Image className="img" src="/Assets/about/about-five2.jpg" alt="fiber-tech-services-about" width={380} height={380} />
               <div className="experience-years">
                 <span className="years">25</span>
-                <h4>Years Of ExperienceIT Solutions</h4>
+                <h4>Years Of Experience IT Solutions</h4>
               </div>
-              <img
+              <Image
                 className="abut-bg-shape"
                 src="/Assets/about/about-five-bg.png"
-                alt="Shape"
+                alt="fiber-tech-services-about-background"
+                width={721}
+                height={681}
               />
             </div>
           </div>
@@ -138,10 +140,10 @@ const AboutPage = () => {
                 <Image src={"/Assets/icons/png/agile.png"} width={64} height={64} alt="agile"/>
                 
                 </div>
-                <h4>
+                <h4 className="py-4">
                   <Link
                     href="/service-details"
-                    className="hover:text-custom-green font-bold text-2xl text-black"
+                    className="hover:text-custom-green font-bold text-2xl text-black py-4"
                   >
                     Simplicity
                   </Link>
@@ -172,7 +174,7 @@ const AboutPage = () => {
                 <Image src={"/Assets/icons/png/target.png"} width={64} height={64} alt="target"/>
                 
                 </div>
-                <h4>
+                <h4 className="py-4">
                   <Link
                     href="/service-details"
                     className="hover:text-custom-green font-bold text-2xl text-black"
@@ -209,7 +211,7 @@ const AboutPage = () => {
                 <Image src={"/Assets/icons/png/goal.png"} width={64} height={64} alt="goal icon"/>
                  
                 </div>
-                <h4>
+                <h4 className="py-4">
                   <Link
                     href="/service-details"
                     className="hover:text-custom-green font-bold text-2xl text-black"
@@ -269,7 +271,7 @@ const AboutPage = () => {
                 <Image
                   className="img"
                   src="/Assets/about/team/member1.jpg"
-                  alt="Team"
+                  alt="fiber-tech-service-team"
                   width={230}
                   height={230}
                 />
@@ -370,7 +372,7 @@ const AboutPage = () => {
                 <Image
                   className="img"
                   src="/Assets/about/team/member2.jpg"
-                  alt="Team"
+                  alt="fiber-tech-service-team"
                   width={230}
                   height={230}
                 />
@@ -469,7 +471,7 @@ const AboutPage = () => {
                 <Image
                   className="img"
                   src="/Assets/about/team/member3.jpg"
-                  alt="Team"
+                  alt="fiber-tech-service-team"
                   width={230}
                   height={230}
                 />
@@ -570,7 +572,7 @@ const AboutPage = () => {
                 <Image
                   className="img"
                   src="/Assets/about/team/member4.jpg"
-                  alt="Team"
+                  alt="fiber-tech-service-team"
                   width={230}
                   height={230}
                 />
@@ -666,15 +668,19 @@ const AboutPage = () => {
           </div>
         </div>
         <div className="team-shapes">
-          <img
+          <Image
             className="shape one"
             src="/Assets/about/team/team-shape-one.png"
-            alt="Shape"
+            alt="fiber-tech-service-team-shape"
+            width={571}
+            height={749}
           />
-          <img
+          <Image
             className="shape two"
             src="/Assets/about/team/team-shape-two.png"
-            alt="Shape"
+            alt="fiber-tech-service-team-shape"
+            width={853}
+            height={906}
           />
         </div>
       </section>
@@ -690,12 +696,14 @@ const AboutPage = () => {
                   <Image
                     className="why-choose-img-dots"
                     src={"/Assets/about/why-choose-image-bg-dots.png"}
+                    alt="fiber-tech-service-bg-dots"
                     width={86}
                     height={186}
                   />
                   <Image
                     className="why-choose-img"
                     src={"/Assets/about/why-choose1.jpg"}
+                    alt="fiber-tech-service-why-choose-img"
                     width={400}
                     height={300}
                   />
@@ -734,12 +742,14 @@ const AboutPage = () => {
                   <Image
                     className="why-choose-img-dots"
                     src={"/Assets/about/why-choose-image-bg-dots.png"}
+                    alt="fiber-tech-service-why-choose-img-dots"
                     width={86}
                     height={186}
                   />
                   <Image
                     className="why-choose-img"
                     src={"/Assets/about/why-choose1.jpg"}
+                    alt="fiber-tech-service-why-choose-us"
                     width={400}
                     height={300}
                   />
@@ -778,12 +788,14 @@ const AboutPage = () => {
                   <Image
                     className="why-choose-img-dots"
                     src={"/Assets/about/why-choose-image-bg-dots.png"}
+                    alt="fiber-tech-service-why-choose-us-dots"
                     width={86}
                     height={186}
                   />
                   <Image
                     className="why-choose-img"
                     src={"/Assets/about/why-choose1.jpg"}
+                    alt="fiber-tech-service-why-choose-us"
                     width={400}
                     height={300}
                   />
@@ -822,12 +834,14 @@ const AboutPage = () => {
                   <Image
                     className="why-choose-img-dots"
                     src={"/Assets/about/why-choose-image-bg-dots.png"}
+                    alt="fiber-tech-service-why-choose-us"
                     width={86}
                     height={186}
                   />
                   <Image
                     className="why-choose-img"
                     src={"/Assets/about/why-choose1.jpg"}
+                    alt="fiber-tech-service-why-choose-us"
                     width={400}
                     height={300}
                   />

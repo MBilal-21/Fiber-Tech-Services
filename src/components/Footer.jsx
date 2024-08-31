@@ -50,17 +50,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              {/* <div
-              className="hotline wow fadeInRight delay-0-2s animated"
-              style={{ visibility: "visible", animationName: "fadeInRight" }}
-            >
-              <i className="fas fa-phone"></i>
-              <div className="content">
-                <span>Hotline</span>
-                <br />
-                <a href="callto:888 572 9311">888 572 9311</a>
-              </div>
-            </div> */}
+              
             </div>
           </div>
         </div>
@@ -362,7 +352,7 @@ const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-teal-700 transition hover:text-teal-700/75 "
+                className="text-indigo-600 transition hover:text-indigo-600/75 "
               >
                 <span className="sr-only">Facebook</span>
                 <svg
@@ -385,7 +375,7 @@ const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-teal-700 transition hover:text-teal-700/75 "
+                className="text-indigo-600 transition hover:text-indigo-600/75 "
               >
                 <span className="sr-only">Instagram</span>
                 <svg
@@ -408,7 +398,7 @@ const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-teal-700 transition hover:text-teal-700/75 "
+                className="text-indigo-600 transition hover:text-indigo-600/75 "
               >
                 <span className="sr-only">Twitter</span>
                 <svg
@@ -427,7 +417,7 @@ const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-teal-700 transition hover:text-teal-700/75 "
+                className="text-indigo-600 transition hover:text-indigo-600/75 "
               >
                 <span className="sr-only">GitHub</span>
                 <svg
@@ -450,7 +440,7 @@ const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-teal-700 transition hover:text-teal-700/75 "
+                className="text-indigo-600 transition hover:text-indigo-600/75 "
               >
                 <span className="sr-only">Dribbble</span>
                 <svg

@@ -131,7 +131,7 @@ export default function HomePage() {
                 <div className="mt-6 flex items-center justify-center w-full">
                   <button
                     type="submit"
-                    className=" rounded-md bg-custom-blue px-8 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className=" rounded-md bg-custom-blue px-8 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Send
                   </button>
@@ -140,7 +140,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="homeFormBack block absolute bottom-0 right-0  sm:max-w-2xl w-full sm:h-full">
-            <img src="/Assets/Untitled1.png" alt="Fiber-tech-services-bg" />
+            <Image className="img" width={672} height={463} src="/Assets/fiber-tech-service-home-bg.png" alt="Fiber-tech-services-bg" />
           </div>
         </div>
       </section>
@@ -320,8 +320,8 @@ export default function HomePage() {
               and capable can make for a positive customer experience.
             </p>
             {/* ----------------------------------------- */}
-            <div className="grid grid-cols-2 gap-4">
-              <button className="block rounded bg-custom-blue px-8 py-3 font-medium text-white transition hover:bg-indigo-700 w-max mx-auto">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <button className="block rounded bg-custom-blue px-8 py-3 font-medium text-white transition hover:bg-indigo-700">
                 {" "}
                 Learn More <span aria-hidden="true">&rarr;</span>{" "}
               </button>
@@ -388,7 +388,6 @@ export default function HomePage() {
                       width={60}
                       height={60}
                     />
-                    {/* <img src="Assets/fiber-tech-bussiness-growth.png" alt="fiber-tech-bussiness-growth" /> */}
                   </div>
                   <h4 className="pt-4">
                     <Link
@@ -414,43 +413,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* <div className="about-images py-6 m-auto">
-            <div className="flex justify-center items-center gap-4">
-              <Image 
-                src="/Assets/fiber-tech-service-about1.jpg"
-                alt="fiber-tech-service-about1"
-                layout="intrinsic"
-                width={410}
-                height={495}
-                style={{ visibility: "visible", animationName: " fadeInRight" }}/>
-              <Image  
-                src="/Assets/design-images/fiber-tech-service-about-logo.png"
-                alt="fiber-tech-service-about-logo"
-                layout="intrinsic"
-                width={176}
-                height={184}
-                style={{ visibility: "visible", animationName: "zoomIn" }}/>
-            </div>
-            <div className="flex justify-center items-center gap-4">
-            <Image  
-                src="/Assets/design-images/fiber-tech-service-about-dots.png"
-                alt="fiber-tech-service-about-dots"
-                style={{ visibility: "visible", animationName: "fadeInDown" }}
-                width={187}
-                height={86}
-                layout="intrinsic"
-                />
-            <Image   
-                className="-mt-16"
-                src="/Assets/fiber-tech-service-about2.jpg"
-                alt="fiber-tech-service-about2"
-                style={{ visibility: "visible", animationName: "fadeInDown" }}
-                width={410}
-                height={310}
-                layout="intrinsic"
-                />
-            </div>
-          </div> */}
+        
           <div className="about-images p-6 m-auto">
             <div className="top-part">
               <img
