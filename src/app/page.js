@@ -174,7 +174,9 @@ export default function HomePage() {
                   src={"/Assets/icons/png/001-networking.png"}
                   width={64}
                   height={64}
-                  alt="icon"
+                  alt="Digital Consulting"
+                  style={{filter:" brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)"}}
+
                 />
               </div>
               <div>
@@ -205,7 +207,9 @@ export default function HomePage() {
                   src={"/Assets/icons/png/002-coding.png"}
                   width={64}
                   height={64}
-                  alt="icon"
+                  alt="Design & Development"
+                  style={{filter:" brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)"}}
+
                 />
               </div>
               <div>
@@ -236,6 +240,8 @@ export default function HomePage() {
                   src={"/Assets/icons/png/003-app-development.png"}
                   width={64}
                   height={64}
+                  alt="app-development"
+                  style={{filter:" brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)"}}
                 />
               </div>
               <div>
@@ -263,7 +269,9 @@ export default function HomePage() {
                   width={64}
                   height={64}
                   class="w-full h-auto"
-                  // style={{filter: "invert(33%) sepia(50%) saturate(600%) hue-rotate(220deg) brightness(95%) contrast(90%)"}}
+                  style={{filter:" brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)"}}
+
+                 
                 />
              
               </div>

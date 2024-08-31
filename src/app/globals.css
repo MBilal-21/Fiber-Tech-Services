@@ -128,7 +128,7 @@ body {
 
 
 .linkhover:hover {
-  color: #333437;
+  color: var(--logo-color-1);
   transform: scale(1.02);
 }
 
