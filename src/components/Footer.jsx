@@ -11,14 +11,14 @@ const Footer = () => {
     <footer className=" z-10">
       <div className=" mx-auto  max-w-9xl px-6 lg:px-8 relative -mb-16 z-20">
         <div className="bg-cover  bg-[url('/Assets/design-images/footer-cta-bg.jpg')]">
-          <div className=" bg-custom-green/90 px-8 py-8 md:py-16 flex flex-wrap justify-center items-center">
+          <div className=" bg-custom-blue/90 px-8 py-8 md:py-16 flex flex-wrap justify-center items-center">
             <div className="fadeInLeft animate__animated text-center md:text-left w-full md:w-7/12 lg:w-8/12"
               style={{ visibility: "visible", animationName: "fadeInLeft" }}
             >
-              <span className="text-lg font-semibold text-gray-700">
+              <span className="text-lg font-semibold text-white">
                 Need Any Consultations ?
               </span>
-              <h2 className="text-gray-700 font-bold text-2xl md:text-5xl py-2">
+              <h2 className="text-white font-bold text-2xl md:text-5xl py-2">
                 We’re Ready to Growth IT Business
               </h2>
             </div>
@@ -26,7 +26,7 @@ const Footer = () => {
               <div className="flex flex-wrap gap-4 justify-center items-center">
                 <Link
                   href="/contact"
-                  className="theme-btn bg-custom-blue text-gray-50 after:bg-black hover:text-white  animate__fadeInRight animate__animated p-4 "
+                  className="theme-btn bg-transparent border-2 border-black text-white after:bg-black hover:text-white  animate__fadeInRight animate__animated p-4 "
                   style={{
                     visibility: "visible",
                     animationName: "fadeInRight",
@@ -36,13 +36,13 @@ const Footer = () => {
                 </Link>
                 <div className="flex gap-4">
                   <PhoneIcon
-                    className="h-12 w-12 text-custom-blue border-2 border-gray-500  "
+                    className="h-12 w-12 text-white border-2 border-white "
                     style={{ borderRadius: "50%", padding: "5px" }}
                   />
                   <div>
-                    <p>Hotline</p>
+                    <p className="text-white font-semibold">Hotline</p>
                     <a
-                      className="text-gray-500 hover:text-custom-blue transition-all ease-in-out font-bold  duration-300"
+                      className="text-white hover:text-black transition-all ease-in-out font-bold  duration-300"
                       href="callto:888 572 9311"
                     >
                       888 572 9311
@@ -85,7 +85,7 @@ const Footer = () => {
         />
       </div>
       <div className="mx-auto  max-w-7xl  px-6  lg:px-8 pb-6  sm:px-6 lg:px-8 relative z-3">
-        <div className="mt-16 grid grid-cols-1 gap-8  pt-16 md:grid-cols-4 lg:grid-cols-7 dark:border-gray-800">
+        <div className="mt-16 grid grid-cols-1 gap-8  pt-16 md:grid-cols-4 lg:grid-cols-7 ">
           <div className="text-left md:col-span-4 lg:col-span-2 order-1">
             {/* fiber tech logo svg */}
             <span className="sr-only">Fiber tech Logo</span>
@@ -126,7 +126,7 @@ const Footer = () => {
             </svg>
 
             <div className=" mt-8 max-w-md sm:ms-0">
-              <p className="text-left leading-relaxed text-gray-500  dark:text-gray-400">
+              <p className="text-left leading-relaxed text-gray-400  ">
                 Hold tight as we get our working robots together and produce the
                 most astonishing product ever.
               </p>
@@ -143,7 +143,7 @@ const Footer = () => {
           </div>
 
           <div className="text-left order-3">
-            <p className="text-lg font-medium text-gray-900 dark:text-white">
+            <p className="text-lg font-medium text-white">
               Quick Links
             </p>
 
@@ -203,7 +203,7 @@ const Footer = () => {
           </div>
 
           <div className="text-left order-4">
-            <p className="text-lg font-medium text-gray-900 dark:text-white">
+            <p className="text-lg font-medium text-white ">
               Our Services
             </p>
 
@@ -299,7 +299,7 @@ const Footer = () => {
           </div>
 
           <div className="text-left order-5">
-            <p className="text-lg font-medium text-gray-900 dark:text-white">
+            <p className="text-lg font-medium text-white ">
               Support
             </p>
 
@@ -320,12 +320,12 @@ const Footer = () => {
           </div>
 
           <div className="text-left md:col-span-4 lg:col-span-2 order-2 md:order-last">
-            <p className="text-lg font-medium text-gray-900 dark:text-white">
+            <p className="text-lg font-medium text-white ">
               Stay in Touch
             </p>
 
             <div className=" mt-8 max-w-md sm:ms-0">
-              <p className="text-start leading-relaxed text-gray-500 ltr:sm:text-left rtl:sm:text-right dark:text-gray-400">
+              <p className="text-start leading-relaxed text-gray-400 ">
                 Enter you e-mail to get latest updates
               </p>
 
@@ -334,7 +334,7 @@ const Footer = () => {
                   
 
                   <input
-                    className="w-full rounded-full border-gray-200 bg-white px-6 py-3 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+                    className="w-full rounded-full border-gray-200 bg-white px-6 py-3 shadow-sm  "
                     type="email"
                     placeholder="Enter your email"
                     name="email"
@@ -351,8 +351,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-gray-100 pt-6 sm:flex sm:items-center sm:justify-between dark:border-gray-800">
-          <p className="text-center text-sm text-gray-500 sm:text-left dark:text-gray-400">
+        <div className="mt-16 border-t border-gray-100 pt-6 sm:flex sm:items-center sm:justify-between ">
+          <p className="text-center text-sm text-gray-500 sm:text-left ">
             Copyright &copy; {2024}. All rights reserved.
           </p>
 
@@ -362,7 +362,7 @@ const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-teal-700 transition hover:text-teal-700/75 dark:text-teal-500 dark:hover:text-teal-500/75"
+                className="text-teal-700 transition hover:text-teal-700/75 "
               >
                 <span className="sr-only">Facebook</span>
                 <svg
@@ -385,7 +385,7 @@ const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-teal-700 transition hover:text-teal-700/75 dark:text-teal-500 dark:hover:text-teal-500/75"
+                className="text-teal-700 transition hover:text-teal-700/75 "
               >
                 <span className="sr-only">Instagram</span>
                 <svg
@@ -408,7 +408,7 @@ const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-teal-700 transition hover:text-teal-700/75 dark:text-teal-500 dark:hover:text-teal-500/75"
+                className="text-teal-700 transition hover:text-teal-700/75 "
               >
                 <span className="sr-only">Twitter</span>
                 <svg
@@ -427,7 +427,7 @@ const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-teal-700 transition hover:text-teal-700/75 dark:text-teal-500 dark:hover:text-teal-500/75"
+                className="text-teal-700 transition hover:text-teal-700/75 "
               >
                 <span className="sr-only">GitHub</span>
                 <svg
@@ -450,7 +450,7 @@ const Footer = () => {
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-teal-700 transition hover:text-teal-700/75 dark:text-teal-500 dark:hover:text-teal-500/75"
+                className="text-teal-700 transition hover:text-teal-700/75 "
               >
                 <span className="sr-only">Dribbble</span>
                 <svg

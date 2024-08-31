@@ -267,7 +267,7 @@ export default function Navbar() {
             >
               <Button
                 className={
-                  "theme-btn bg-custom-blue text-gray-900 after:bg-custom-green hover:text-white"
+                  "block rounded bg-custom-blue px-8 py-3 font-medium text-white transition hover:bg-indigo-700"
                 }
                 // className={"rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700"}
               >

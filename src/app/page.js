@@ -26,7 +26,7 @@ export default function HomePage() {
                 <br />
                 Services.
               </p>
-              <Button className="block rounded bg-indigo-500 px-8 py-3 font-medium text-white transition hover:bg-indigo-600">
+              <Button className="block rounded bg-custom-blue px-8 py-3 font-medium text-white transition hover:bg-indigo-700">
                 Let gets Started <span aria-hidden="true">&rarr;</span>
               </Button>
             </div>
@@ -131,7 +131,7 @@ export default function HomePage() {
                 <div className="mt-6 flex items-center justify-center w-full">
                   <button
                     type="submit"
-                    className="w-full  mx-12 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className=" rounded-md bg-custom-blue px-8 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Send
                   </button>
@@ -145,6 +145,154 @@ export default function HomePage() {
         </div>
       </section>
       {/* cover section end */}
+
+
+       {/* Services area start */}
+       <section className=" bg-white pt-16 ">
+        <div
+          className="section-title text-center py-16  animate__fadeInUp animate__delay-2s animate__animated"
+          style={{ visibility: "visible", animationName: "fadeInUp" }}
+        >
+          <span className="sub-title py-2 text-lg font-bold text-custom-blue">
+            Latest Services
+          </span>
+          <h2 className="text-gray-900 font-bold text-2xl md:text-5xl py-4">
+            We Provide Best IT Services
+          </h2>
+        </div>
+        <div className="flex flex-wrap justify-center  mx-auto  max-w-7xl  px-6  lg:px-8">
+          <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
+            <div
+              className=" animate__fadeInUp animate__delay-2s animate__animated border-2 border-custom-blue/80 rounded-xl p-6 h-full flex flex-col items-center"
+              style={{ visibility: "visible", animationName: "fadeInUp" }}
+            >
+              <div
+                className="icon px-2"
+                style={{ width: "64px", height: "64px" }}
+              >
+                <Image
+                  src={"/Assets/icons/png/001-networking.png"}
+                  width={64}
+                  height={64}
+                  alt="icon"
+                />
+              </div>
+              <div>
+                <h4 className="text-center">
+                  <Link
+                    href="/service-details"
+                    className="leading-8 text-lg font-semibold hover:text-custom-blue transition-all duration-1000"
+                  >
+                    Digital Consulting
+                  </Link>
+                </h4>
+                <p className="text-gray-800 text-start">
+                Digital consulting encompasses a diverse array of services, including website design and development, advertising, social media marketing, content creation, and email marketing. These services empower companies to establish a strong online presence, effectively engage their target audience, and drive significant business growth.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
+            <div
+              className="animate__delay-2s animate__fadeInUp animate__animated border-2 border-custom-blue/80 rounded-xl p-6 h-full flex flex-col items-center"
+              style={{ visibility: "visible", animationName: "fadeInUp" }}
+            >
+              <div
+                className="icon px-2"
+                style={{ width: "64px", height: "64px" }}
+              >
+                <Image
+                  src={"/Assets/icons/png/002-coding.png"}
+                  width={64}
+                  height={64}
+                  alt="icon"
+                />
+              </div>
+              <div>
+                <h4 className="text-center">
+                  <Link
+                    href="/service-details"
+                    className="leading-8 text-lg font-semibold hover:text-custom-blue transition-all duration-1000"
+                  >
+                    Design &amp; Development
+                  </Link>
+                </h4>
+                <p className="text-gray-800 text-start">
+                Design & Development is a collaborative process that requires seamless communication and coordination between design and development teams. The focus is on creating a final product that not only meets client expectations but also delivers an outstanding user experience, ensuring both functionality and visual appeal.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
+            <div
+              className="animate__delay-2s animate__fadeInUp animate__animated border-2 border-custom-blue/80 rounded-xl p-6 h-full flex flex-col items-center"
+              style={{ visibility: "visible", animationName: "fadeInUp" }}
+            >
+              <div
+                className="icon px-2"
+                style={{ width: "64px", height: "64px" }}
+              >
+                <Image
+                  src={"/Assets/icons/png/003-app-development.png"}
+                  width={64}
+                  height={64}
+                />
+              </div>
+              <div>
+                <h4 className="text-center">
+                  <Link
+                    href="/service-details"
+                    className="leading-8 text-lg font-semibold hover:text-custom-blue transition-all duration-1000"
+                  >
+                    Mobile App Solutions
+                  </Link>
+                </h4>
+                <p className="text-gray-800 text-start">
+                Mobile app solutions aim to provide users with a convenient and accessible way to interact with a company{"\’"}s products or services. These solutions are essential for enhancing customer engagement, increasing brand visibility, and driving revenue growth by offering a user-friendly mobile experience.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
+            <div className="animate__delay-2s animate__fadeInUp animate__animated border-2 border-custom-blue/80 rounded-xl p-6 h-full flex flex-col items-center"
+              style={{ visibility: "visible", animationName: "fadeInUp" }}
+            >
+              <div  style={{ width: "64px", height: "64px" }}>
+                <Image
+                  src={"/Assets/icons/png/logo.png"}
+                  width={64}
+                  height={64}
+                  class="w-full h-auto"
+                  // style={{filter: "invert(33%) sepia(50%) saturate(600%) hue-rotate(220deg) brightness(95%) contrast(90%)"}}
+                />
+             
+              </div>
+              <div>
+                <h4 className="text-center">
+                  <Link
+                    href="/service-details"
+                    className="leading-8 text-lg font-semibold hover:text-custom-blue transition-all duration-1000"
+                  >
+                    UX/UI Design Strategy
+                  </Link>
+                </h4>
+                <p className="text-gray-800 text-start">
+                UX/UI design strategy is dedicated to crafting products that are intuitive, visually appealing, and provide a seamless user experience. The ultimate goal is to ensure that users find the product easy to navigate and enjoyable to use, leading to higher satisfaction and continued engagement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center pt-12">
+          <Link
+          href={"/services"} className="block w-max rounded-full bg-custom-blue border-2 border-custom-blue px-8 py-3 font-medium text-white transition hover:bg-transparent hover:text-gray-900"
+            type="submit"
+          >
+            View All Services
+          </Link>
+        </div>
+      </section>
+      {/* Services area end */}
 
       {/* About Company section start */}
       <section className="about-company ">
@@ -165,7 +313,7 @@ export default function HomePage() {
             </p>
             {/* ----------------------------------------- */}
             <div className="grid grid-cols-2 gap-4">
-              <button className="button">
+              <button className="block rounded bg-custom-blue px-8 py-3 font-medium text-white transition hover:bg-indigo-700 w-max mx-auto">
                 {" "}
                 Learn More <span aria-hidden="true">&rarr;</span>{" "}
               </button>
@@ -190,7 +338,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 for-active gap-4 mt-6">
               {/* --------------------------------------- */}
               <div className="p-2 hover:shadow-2xl">
-                <div className="service-item active">
+                <div className="p-4">
                   <div className="icon">
                     <Image
                       src="/Assets/fiber-tech-it-consultant.png"
@@ -200,7 +348,7 @@ export default function HomePage() {
                       layout="intrinsic"
                     />
                   </div>
-                  <h4>
+                  <h4 className="pt-4">
                     <Link
                       href="/service-details"
                       className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
@@ -223,7 +371,7 @@ export default function HomePage() {
               </div>
               {/* ---------------------------- */}
               <div className="p-2 hover:shadow-2xl">
-                <div className="service-item">
+                <div className="p-4">
                   <div className="icon">
                     <Image
                       src="/Assets/fiber-tech-bussiness-growth.png"
@@ -234,7 +382,7 @@ export default function HomePage() {
                     />
                     {/* <img src="Assets/fiber-tech-bussiness-growth.png" alt="fiber-tech-bussiness-growth" /> */}
                   </div>
-                  <h4>
+                  <h4 className="pt-4">
                     <Link
                       href="/service-details"
                       className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
@@ -329,169 +477,7 @@ export default function HomePage() {
       </section>
       {/* About Company section end */}
 
-      {/* Services area start */}
-      <section className=" bg-white pt-16 ">
-        <div
-          className="section-title text-center py-16  animate__fadeInUp animate__delay-2s animate__animated"
-          style={{ visibility: "visible", animationName: "fadeInUp" }}
-        >
-          <span className="sub-title py-2 text-lg font-bold text-custom-blue">
-            Latest Services
-          </span>
-          <h2 className="text-gray-900 font-bold text-2xl md:text-5xl py-4">
-            We Provide Best IT Services
-          </h2>
-        </div>
-        <div className="flex flex-wrap justify-center  mx-auto  max-w-7xl  px-6  lg:px-8">
-          <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
-            <div
-              className=" animate__fadeInUp animate__delay-2s animate__animated border-2 border-custom-blue rounded p-6 h-full flex flex-col items-center"
-              style={{ visibility: "visible", animationName: "fadeInUp" }}
-            >
-              <div
-                className="icon px-2"
-                style={{ width: "64px", height: "64px" }}
-              >
-                <Image
-                  src={"/Assets/icons/png/001-networking.png"}
-                  width={64}
-                  height={64}
-                  alt="icon"
-                />
-              </div>
-              <div>
-                <h4 className="text-center">
-                  <Link
-                    href="/service-details"
-                    className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
-                  >
-                    Digital Consulting
-                  </Link>
-                </h4>
-                <p className="text-gray-800 text-justify">
-                  Digital consulting covers a wide range of services, including
-                  website design and development, advertising, social media
-                  marketing, content creation, and email marketing. By providing
-                  these services, digital consultants help companies build a
-                  strong online presence, reach and engage their target
-                  audience, and drive business growth.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
-            <div
-              className="animate__delay-2s animate__fadeInUp animate__animated border-2 border-custom-blue rounded p-6 h-full flex flex-col items-center"
-              style={{ visibility: "visible", animationName: "fadeInUp" }}
-            >
-              <div
-                className="icon px-2"
-                style={{ width: "64px", height: "64px" }}
-              >
-                <Image
-                  src={"/Assets/icons/png/002-coding.png"}
-                  width={64}
-                  height={64}
-                  alt="icon"
-                />
-              </div>
-              <div>
-                <h4 className="text-center">
-                  <Link
-                    href="/service-details"
-                    className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
-                  >
-                    Design &amp; Development
-                  </Link>
-                </h4>
-                <p className="text-gray-800 text-justify">
-                  Design &amp; Development is a collaborative process that
-                  involves close communication and coordination between the
-                  design and development teams to ensure that the end product
-                  meets the needs of the client and delivers a positive user
-                  experience.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
-            <div
-              className="animate__delay-2s animate__fadeInUp animate__animated border-2 border-custom-blue rounded p-6 h-full flex flex-col items-center"
-              style={{ visibility: "visible", animationName: "fadeInUp" }}
-            >
-              <div
-                className="icon px-2"
-                style={{ width: "64px", height: "64px" }}
-              >
-                <Image
-                  src={"/Assets/icons/png/003-app-development.png"}
-                  width={64}
-                  height={64}
-                />
-              </div>
-              <div>
-                <h4 className="text-center">
-                  <Link
-                    href="/service-details"
-                    className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
-                  >
-                    Mobile App Solutions
-                  </Link>
-                </h4>
-                <p className="text-gray-800 text-justify">
-                  The goal of a mobile app solution is to provide a convenient
-                  and accessible way for users to interact with a company{"'"} s
-                  products or services. This can help businesses improve
-                  customer engagement, increase brand awareness, and drive
-                  revenue growth.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
-            <div
-              className="animate__delay-2s animate__fadeInUp animate__animated border-2 border-custom-blue rounded p-6 h-full flex flex-col items-center"
-              style={{ visibility: "visible", animationName: "fadeInUp" }}
-            >
-              <div  style={{ width: "64px", height: "64px" }}>
-                <Image
-                  src={"/Assets/icons/png/logo.png"}
-                  width={64}
-                  height={64}
-                  class="w-full h-auto"
-                  // style={{filter: "invert(33%) sepia(50%) saturate(600%) hue-rotate(220deg) brightness(95%) contrast(90%)"}}
-                />
-             
-              </div>
-              <div>
-                <h4 className="text-center">
-                  <Link
-                    href="/service-details"
-                    className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
-                  >
-                    UX/UI Design Strategy
-                  </Link>
-                </h4>
-                <p className="text-gray-800 text-justify">
-                  The goal of UX/UI design strategy is to create a product that
-                  is easy to use, visually appealing, and provides a positive
-                  user experience.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center pt-12">
-          <Link
-          href={"/services"}
-            className="block w-max rounded-full bg-indigo-500 border-2 border-indigo-500 px-8 py-3 font-medium text-white transition hover:bg-transparent hover:text-gray-900"
-            type="submit"
-          >
-            View All Services
-          </Link>
-        </div>
-      </section>
-      {/* Services area end */}
+     
 
       {/* Work process section start */}
 
@@ -508,41 +494,44 @@ export default function HomePage() {
           </h2>
         </div>
         <div className="work-process-line text-center">
-          <img
+          <Image
             src="/Assets/work-process-line.png"
             alt="fiber-tech-serce-work-line"
+            width={1500}
+            height={64}
+            layout="responsive"
           />
         </div>
         <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
           <div className="flex flex-wrap justify-center">
-            <div className="w-full sm:w-1/2 md:w-1/3 xl:w-1/5 px-2 mt-8">
+            <div className="w-full sm:w-1/2 md:w-1/3 xl:w-1/5 px-2 mt-8 overflow-hidden">
               <div
-                className="work-process-item  animate__fadeInUp animate__delay-2s animate__animated"
+                className="work-process-item h-full  animate__fadeInUp animate__delay-2s animate__animated"
                 style={{ visibility: "visible", animationName: "fadeInUp" }}
               >
                 <div className="number">01</div>
-                <div className="content">
+                <div className="content h-full">
                   <h4 className="leading-8 text-2xl font-semibold mb-2">
                     Discover
                   </h4>
-                  <p className="text-gray-500">
+                  <p className="text-gray-600">
                     We emphasize planning get everything documented and nothing
                     is assumed.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="w-full sm:w-1/2 md:w-1/3 xl:w-1/5 px-2 sm:mt-4 md:mt-2">
+            <div className="w-full sm:w-1/2 md:w-1/3 xl:w-1/5 px-2 sm:mt-4 md:mt-2 overflow-hidden">
               <div
-                className="work-process-item animate__fadeInDown animate__delay-2s animate__animated"
+                className="work-process-item h-full animate__fadeInDown animate__delay-2s animate__animated"
                 style={{ visibility: "visible", animationName: "fadeInDown" }}
               >
                 <div className="number">02</div>
-                <div className="content">
+                <div className="content h-full">
                   <h4 className="leading-8 text-2xl font-semibold mb-2">
                     Planning
                   </h4>
-                  <p className="text-gray-500">
+                  <p className="text-gray-600">
                     Creating a roadmap or blueprint for achieving a specific
                     goal or objective. It involves defining the desired outcome,
                     identifying the steps needed to achieve it, and organizing
@@ -551,18 +540,17 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="w-full sm:w-1/2 md:w-1/3 xl:w-1/5 px-2 mt-8">
-              <div
-                className="work-process-item  animate__fadeInUp animate__delay-2s animate__animated"
+            <div className="w-full sm:w-1/2 md:w-1/3 xl:w-1/5 px-2 mt-8 overflow-hidden">
+              <div  className="work-process-item h-full animate__fadeInUp animate__delay-2s animate__animated"
                 style={{ visibility: "visible", animationName: "fadeInUp" }}
               >
                 <div className="number">03</div>
-                <div className="content">
+                <div className="content h-full">
                   <h4 className="leading-8 text-2xl font-semibold mb-2">
                     Design &amp; Dev
                   </h4>
-                  <p className="text-gray-500">
-                    It’s a collaborative process that involves close
+                  <p className="text-gray-600">
+                    It{"\’"}s a collaborative process that involves close
                     communication and coordination between the design and
                     development teams to ensure that the end product meets the
                     needs of the client and delivers a positive user experience.
@@ -570,17 +558,17 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="w-full sm:w-1/2 md:w-1/3 xl:w-1/5 px-2">
+            <div className="w-full sm:w-1/2 md:w-1/3 xl:w-1/5 px-2 overflow-hidden">
               <div
-                className="work-process-item wow animate__fadeInDown animate__delay-2s animate__animated"
+                className="work-process-item h-full wow animate__fadeInDown animate__delay-2s animate__animated"
                 style={{ visibility: "visible", animationName: "fadeInDown" }}
               >
                 <div className="number">04</div>
-                <div className="content">
+                <div className="content h-full">
                   <h4 className="leading-8 text-2xl font-semibold mb-2">
                     Testing
                   </h4>
-                  <p className="text-gray-500">
+                  <p className="text-gray-600">
                     Testing is the process of evaluating a product or system to
                     determine if it meets the specified requirements and quality
                     standards. It is a critical step in the product development
@@ -590,17 +578,17 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="w-full sm:w-1/2 md:w-1/3 xl:w-1/5 px-2 mt-8">
+            <div className="w-full sm:w-1/2 md:w-1/3 xl:w-1/5 px-2 mt-8 overflow-hidden">
               <div
-                className="work-process-item mt-50  animate__fadeInUp animate__delay-2s animate__animated"
+                className="work-process-item mt-50  animate__fadeInUp animate__delay-2s animate__animated h-full"
                 style={{ visibility: "visible", animationName: "fadeInUp" }}
               >
                 <div className="number">05</div>
-                <div className="content">
+                <div className="content h-full">
                   <h4 className="leading-8 text-2xl font-semibold mb-2">
                     Project Deliver
                   </h4>
-                  <p className="text-gray-500">
+                  <p className="text-gray-600">
                     Project delivery is an important aspect of the project
                     lifecycle and plays a critical role in ensuring that the
                     project is completed on time, within budget, and to the

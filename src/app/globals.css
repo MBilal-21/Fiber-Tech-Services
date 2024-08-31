@@ -27,11 +27,13 @@
   --nav-color: #0f1425;
   --primary-color: #1b1f2e;
   --secondray-color: #30f0b6;
-  --secondary-color-2: #2563eb;
+  --secondary-color-2: #265fa6;
   --text: rgb(56, 56, 56);
   --base-color: #838694;
   --lighter-color: #f7f7f9;
   --border-color: rgba(21, 16, 31, 0.1);
+  --logo-color-2:#333437;
+  --logo-color-1:#265fa6;
 
 }
 
@@ -308,8 +310,8 @@ body {
   text-align: center;
   border-radius: 50%;
   margin-bottom: 30px;
-  -webkit-box-shadow: 3px 0 60px rgba(103, 77, 243, 0.2);
-  box-shadow: 3px 0 60px rgba(103, 77, 243, 0.2);
+  /* -webkit-box-shadow: 3px 0 60px rgba(103, 77, 243, 0.2);*/
+  box-shadow: 0px 0 10px rgba(103, 77, 243, 0.2); 
   border: 10px solid white;
   font-family: "Poppins", sans-serif;
   background: var(--secondary-color-2);

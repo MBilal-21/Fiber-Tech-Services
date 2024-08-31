@@ -7,7 +7,7 @@ import Link from "next/link";
 const PricingPlan = () => {
   return (
     <section className="price-plan-area  relative overflow-hidden">
-      <div className="pt-24 mx-auto  max-w-7xl  px-6  lg:px-8">
+      <div className="pt-24 mx-auto  max-w-7xl py-6 px-6  lg:px-8">
         <div
           className="section-title text-center wow fadeInUp delay-0-2s animated"
           style={{ visibility: "visible", animationName: "fadeInUp" }}
@@ -22,7 +22,7 @@ const PricingPlan = () => {
         <div className="flex flex-wrap justify-center">
           <div className="w-full md:w-1/2 xl:w-1/3 p-2">
             <div
-              className="pricing-plan-item wow fadeInUp delay-0-2s animated"
+              className="pricing-plan-item h-full wow fadeInUp delay-0-2s animated"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
               <span className="badge">Best Package</span>
@@ -35,7 +35,7 @@ const PricingPlan = () => {
               </p>
               <Link
                 href="/contact"
-                className="theme-btn bg-custom-green text-gray-50 after:bg-custom-blue hover:text-black"
+                className="theme-btn bg-transparent border-2 border-custom-blue text-gray-50 after:bg-custom-blue hover:text-black"
               >
                 Choose Package <span aria-hidden="true">&rarr;</span>
               </Link>
@@ -68,7 +68,7 @@ const PricingPlan = () => {
           </div>
           <div className="w-full md:w-1/2 xl:w-1/3 p-2">
             <div
-              className="pricing-plan-item wow fadeInUp delay-0-4s animated"
+              className="pricing-plan-item h-full wow fadeInUp delay-0-4s animated"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
               <span className="badge">Best Package</span>
@@ -83,7 +83,7 @@ const PricingPlan = () => {
               </p>
               <Link
                 href="/contact"
-                className="theme-btn bg-custom-green text-gray-50 after:bg-custom-blue hover:text-black"
+                className="theme-btn bg-transparent border-2 border-custom-blue text-gray-50 after:bg-custom-blue hover:text-black"
               >
                 Choose Package <span aria-hidden="true">&rarr;</span>
               </Link>
@@ -124,7 +124,7 @@ const PricingPlan = () => {
           </div>
           <div className="w-full md:w-1/2 xl:w-1/3 p-2">
             <div
-              className="pricing-plan-item wow fadeInUp delay-0-6s animated"
+              className="pricing-plan-item h-full wow fadeInUp delay-0-6s animated"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
               <span className="badge">Best Package</span>
@@ -139,7 +139,7 @@ const PricingPlan = () => {
               </p>
               <Link
                 href="/contact"
-                className="theme-btn bg-custom-green text-gray-50 after:bg-custom-blue hover:text-black"
+                className="theme-btn bg-transparent border-2 border-custom-blue text-gray-50 after:bg-custom-blue hover:text-black"
               >
                 Choose Package <span aria-hidden="true">&rarr;</span>
               </Link>
