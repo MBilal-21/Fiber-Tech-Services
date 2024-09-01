@@ -4,11 +4,98 @@ import Image from "next/image";
 import { Button } from "@headlessui/react";
 import Link from "next/link";
 import { PhoneIcon } from "@heroicons/react/20/solid";
+import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
+
 import ImageSlider from "@/components/test-slide";
 import CompanyStatistic from "@/components/CompanyStatistic";
 import PricingPlan from "@/components/PricingPlan";
-
+import QuoteForm from "@/components/QuoteForm";
+import { useState } from "react";
+import clsx from "clsx";
 export default function HomePage() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    services: '',
+  });
+  
+  const [errors, setErrors] = useState({});
+  const [isShaking, setIsShaking] = useState(false);
+  const [sentSuccess, setSentSuccess] = useState(false);
+  const [sentError, setSentError] = useState(null);
+  
+  const validate = () => {
+    const errors = {};
+  
+    if (!formData.firstName.trim()) {
+      errors.firstName = 'First name is required';
+    }
+  
+    if (!formData.lastName.trim()) {
+      errors.lastName = 'Last name is required';
+    }
+  
+    if (!formData.email) {
+      errors.email = 'Email address is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = 'Email address is invalid';
+    }
+  
+    if (!formData.services || formData.services === '--Choose A Service--') {
+      errors.services = 'Please select a service';
+    }
+  
+    return errors;
+  };
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    setErrors(validationErrors);
+  
+    if (Object.keys(validationErrors).length === 0) {
+      try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+  
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Form submitted successfully:', data);
+          setSentSuccess(true); 
+        setTimeout(() => setSentSuccess(false), 4000);
+
+          setSentError(null);
+          setFormData({ firstName: '', lastName: '', email: '', services: '' });
+        } else {
+          setSentError('Failed to submit the form. Please try again.');
+          setTimeout(() => setSentError(null), 4000);
+
+          setSentSuccess(false);
+        }
+      } catch (error) {
+        setSentError('An unexpected error occurred. Please try again.');
+        setTimeout(() => setSentError(null), 4000);
+        setSentSuccess(false);
+      }
+    } else {
+      setIsShaking(true);
+      setTimeout(() => setIsShaking(false), 500);
+    }
+  };
+  
   return (
     <div>
       {/* cover section start */}
@@ -31,99 +118,129 @@ export default function HomePage() {
               </Button>
             </div>
             <div className="column-6 backdrop-blur-sm animate__animated animate__lightSpeedInRight">
-              <form className="from-bg mt-6 md:mt-0">
-                {/* className="space-y-12" */}
-                <div>
-                  <div className="border-b border-custom-blue pb-4">
-                    <h2 className="text-center text-3xl font-semibold leading-7 text-white">
-                      Get A Qoute
-                    </h2>
+              <form onSubmit={handleSubmit} className="from-bg mt-6 md:mt-0">
+                <div className="border-b border-custom-blue pb-4">
+                  <h2 className="text-center text-3xl font-semibold leading-7 text-white">
+                    Get A Quote
+                  </h2>
+                </div>
+
+                <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                  <div className="sm:col-span-3">
+                    <label
+                      htmlFor="firstName"
+                      className="block text-sm font-medium leading-6 text-white"
+                    >
+                      First name
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        id="first-name"
+                        name="firstName"
+                        type="text"
+                        autoComplete="given-name"
+                        placeholder="First Name"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        className={clsx(
+                          "block bg-transparent w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6",
+                          errors.firstName && "border-red-500 bg-red-100"
+                        )}
+                      />
+                      {errors.firstName && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.firstName}
+                        </p>
+                      )}
+                    </div>
                   </div>
 
-                  <div>
-                    <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                      <div className="sm:col-span-3">
-                        <label
-                          htmlFor="first-name"
-                          className="block text-sm font-medium leading-6 text-white"
-                        >
-                          First name
-                        </label>
-                        <div className="mt-2">
-                          <input
-                            id="first-name"
-                            name="first-name"
-                            type="text"
-                            autoComplete="given-name"
-                            placeholder="First Name"
-                            className="block bg-transparent w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                          />
-                        </div>
-                      </div>
+                  <div className="sm:col-span-3">
+                    <label
+                      htmlFor="lastName"
+                      className="block text-sm font-medium leading-6 text-white"
+                    >
+                      Last name
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        id="last-name"
+                        name="lastName"
+                        type="text"
+                        placeholder="Last Name"
+                        autoComplete="family-name"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        className={clsx(
+                          "block bg-transparent w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6",
+                          errors.lastName && "border-red-500 bg-red-100"
+                        )}
+                      />
+                      {errors.lastName && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.lastName}
+                        </p>
+                      )}
+                    </div>
+                  </div>
 
-                      <div className="sm:col-span-3">
-                        <label
-                          htmlFor="last-name"
-                          className="block text-sm font-medium leading-6 text-white"
-                        >
-                          Last name
-                        </label>
-                        <div className="mt-2">
-                          <input
-                            id="last-name"
-                            name="last-name"
-                            type="text"
-                            placeholder="Last Name"
-                            autoComplete="family-name"
-                            className="block bg-transparent w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                          />
-                        </div>
-                      </div>
+                  <div className="sm:col-span-3">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium leading-6 text-white"
+                    >
+                      Email address
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autoComplete="email"
+                        placeholder="example@example.com"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={clsx(
+                          "block bg-transparent w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6",
+                          errors.email && "border-red-500 bg-red-100"
+                        )}
+                      />
+                      {errors.email && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.email}
+                        </p>
+                      )}
+                    </div>
+                  </div>
 
-                      <div className="sm:col-span-3">
-                        <label
-                          htmlFor="email"
-                          className="block text-sm font-medium leading-6 text-white"
-                        >
-                          Email address
-                        </label>
-                        <div className="mt-2">
-                          <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            autoComplete="email"
-                            placeholder="example@example.com"
-                            className="block bg-transparent w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="sm:col-span-3">
-                        <label
-                          htmlFor="Services"
-                          className="block text-sm font-medium leading-6 text-white"
-                        >
-                          Services
-                        </label>
-                        <div className="mt-2">
-                          <select
-                            id="Services"
-                            name="Services"
-                            autoComplete="Services-name"
-                            className="block bg-gray-900/40 w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                          >
-                            <option className=" py-1.5">
-                              --Choose A Service--
-                            </option>
-                            <option className=" py-1.5">Web Development</option>
-                            <option className=" py-1.5">App Development</option>
-                            <option className=" py-1.5">
-                              Graphic Designing
-                            </option>
-                          </select>
-                        </div>
-                      </div>
+                  <div className="sm:col-span-3">
+                    <label
+                      htmlFor="services"
+                      className="block text-sm font-medium leading-6 text-white"
+                    >
+                      Services
+                    </label>
+                    <div className="mt-2">
+                      <select
+                        id="services"
+                        name="services"
+                        value={formData.services}
+                        onChange={handleChange}
+                        className={clsx(
+                          "block bg-gray-900 w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6",
+                          errors.services && "border-red-500 bg-red-100"
+                        )}
+                      >
+                        <option>--Choose A Service--</option>
+                        <option>Web Development</option>
+                        <option>App Development</option>
+                        <option>Graphic Designing</option>
+                      </select>
+                      {errors.services && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.services}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -131,24 +248,39 @@ export default function HomePage() {
                 <div className="mt-6 flex items-center justify-center w-full">
                   <button
                     type="submit"
-                    className=" rounded-md bg-custom-blue px-8 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="w-full px-4 py-2 flex justify-center font-bold text-white bg-custom-blue rounded hover:bg-blue-700"
                   >
                     Send
+                    <PaperAirplaneIcon className="h-6 w-6 text-gray-50 ml-2" />
                   </button>
                 </div>
+
+                {sentSuccess && (
+                  <p className="mt-4 text-center text-green-500">
+                    Form submitted successfully!
+                  </p>
+                )}
+                {sentError && (
+                  <p className="mt-4 text-center text-red-500">{sentError}</p>
+                )}
               </form>
             </div>
           </div>
           <div className="homeFormBack block absolute bottom-0 right-0  sm:max-w-2xl w-full sm:h-full">
-            <Image className="img" width={672} height={463} src="/Assets/fiber-tech-service-home-bg.png" alt="Fiber-tech-services-bg" />
+            <Image
+              className="img"
+              width={672}
+              height={463}
+              src="/Assets/fiber-tech-service-home-bg.png"
+              alt="Fiber-tech-services-bg"
+            />
           </div>
         </div>
       </section>
       {/* cover section end */}
 
-
-       {/* Services area start */}
-       <section className=" bg-white pt-16 ">
+      {/* Services area start */}
+      <section className=" bg-white pt-16 ">
         <div
           className="section-title text-center py-16  animate__fadeInUp animate__delay-2s animate__animated"
           style={{ visibility: "visible", animationName: "fadeInUp" }}
@@ -175,8 +307,10 @@ export default function HomePage() {
                   width={64}
                   height={64}
                   alt="Digital Consulting"
-                  style={{filter:" brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)"}}
-
+                  style={{
+                    filter:
+                      " brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)",
+                  }}
                 />
               </div>
               <div>
@@ -189,7 +323,12 @@ export default function HomePage() {
                   </Link>
                 </h4>
                 <p className="text-gray-800 text-start">
-                Digital consulting encompasses a diverse array of services, including website design and development, advertising, social media marketing, content creation, and email marketing. These services empower companies to establish a strong online presence, effectively engage their target audience, and drive significant business growth.
+                  Digital consulting encompasses a diverse array of services,
+                  including website design and development, advertising, social
+                  media marketing, content creation, and email marketing. These
+                  services empower companies to establish a strong online
+                  presence, effectively engage their target audience, and drive
+                  significant business growth.
                 </p>
               </div>
             </div>
@@ -208,8 +347,10 @@ export default function HomePage() {
                   width={64}
                   height={64}
                   alt="Design & Development"
-                  style={{filter:" brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)"}}
-
+                  style={{
+                    filter:
+                      " brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)",
+                  }}
                 />
               </div>
               <div>
@@ -222,7 +363,12 @@ export default function HomePage() {
                   </Link>
                 </h4>
                 <p className="text-gray-800 text-start">
-                Design & Development is a collaborative process that requires seamless communication and coordination between design and development teams. The focus is on creating a final product that not only meets client expectations but also delivers an outstanding user experience, ensuring both functionality and visual appeal.
+                  Design & Development is a collaborative process that requires
+                  seamless communication and coordination between design and
+                  development teams. The focus is on creating a final product
+                  that not only meets client expectations but also delivers an
+                  outstanding user experience, ensuring both functionality and
+                  visual appeal.
                 </p>
               </div>
             </div>
@@ -241,7 +387,10 @@ export default function HomePage() {
                   width={64}
                   height={64}
                   alt="app-development"
-                  style={{filter:" brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)"}}
+                  style={{
+                    filter:
+                      " brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)",
+                  }}
                 />
               </div>
               <div>
@@ -254,26 +403,31 @@ export default function HomePage() {
                   </Link>
                 </h4>
                 <p className="text-gray-800 text-start">
-                Mobile app solutions aim to provide users with a convenient and accessible way to interact with a company{"\’"}s products or services. These solutions are essential for enhancing customer engagement, increasing brand visibility, and driving revenue growth by offering a user-friendly mobile experience.
+                  Mobile app solutions aim to provide users with a convenient
+                  and accessible way to interact with a company{"’"}s products
+                  or services. These solutions are essential for enhancing
+                  customer engagement, increasing brand visibility, and driving
+                  revenue growth by offering a user-friendly mobile experience.
                 </p>
               </div>
             </div>
           </div>
           <div className="md:w-1/2 lg:w-1/4 px-2 py-3">
-            <div className="animate__delay-2s animate__fadeInUp animate__animated border-2 border-custom-blue/80 rounded-xl p-6 h-full flex flex-col items-center"
+            <div
+              className="animate__delay-2s animate__fadeInUp animate__animated border-2 border-custom-blue/80 rounded-xl p-6 h-full flex flex-col items-center"
               style={{ visibility: "visible", animationName: "fadeInUp" }}
             >
-              <div  style={{ width: "64px", height: "64px" }}>
+              <div style={{ width: "64px", height: "64px" }}>
                 <Image
                   src={"/Assets/icons/png/logo.png"}
                   width={64}
                   height={64}
                   class="w-full h-auto"
-                  style={{filter:" brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)"}}
-
-                 
+                  style={{
+                    filter:
+                      " brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)",
+                  }}
                 />
-             
               </div>
               <div>
                 <h4 className="text-center">
@@ -285,7 +439,11 @@ export default function HomePage() {
                   </Link>
                 </h4>
                 <p className="text-gray-800 text-start">
-                UX/UI design strategy is dedicated to crafting products that are intuitive, visually appealing, and provide a seamless user experience. The ultimate goal is to ensure that users find the product easy to navigate and enjoyable to use, leading to higher satisfaction and continued engagement.
+                  UX/UI design strategy is dedicated to crafting products that
+                  are intuitive, visually appealing, and provide a seamless user
+                  experience. The ultimate goal is to ensure that users find the
+                  product easy to navigate and enjoyable to use, leading to
+                  higher satisfaction and continued engagement.
                 </p>
               </div>
             </div>
@@ -293,7 +451,8 @@ export default function HomePage() {
         </div>
         <div className="flex justify-center pt-12">
           <Link
-          href={"/services"} className="block w-max rounded-full bg-custom-blue border-2 border-custom-blue px-8 py-3 font-medium text-white transition hover:bg-transparent hover:text-gray-900"
+            href={"/services"}
+            className="block w-max rounded-full bg-custom-blue border-2 border-custom-blue px-8 py-3 font-medium text-white transition hover:bg-transparent hover:text-gray-900"
             type="submit"
           >
             View All Services
@@ -413,7 +572,6 @@ export default function HomePage() {
             </div>
           </div>
 
-        
           <div className="about-images p-6 m-auto">
             <div className="top-part">
               <img
@@ -447,8 +605,6 @@ export default function HomePage() {
         </div>
       </section>
       {/* About Company section end */}
-
-     
 
       {/* Work process section start */}
 
@@ -512,7 +668,8 @@ export default function HomePage() {
               </div>
             </div>
             <div className="w-full sm:w-1/2 md:w-1/3 xl:w-1/5 px-2 mt-8 overflow-hidden">
-              <div  className="work-process-item h-full animate__fadeInUp animate__delay-2s animate__animated"
+              <div
+                className="work-process-item h-full animate__fadeInUp animate__delay-2s animate__animated"
                 style={{ visibility: "visible", animationName: "fadeInUp" }}
               >
                 <div className="number">03</div>
@@ -521,7 +678,7 @@ export default function HomePage() {
                     Design &amp; Dev
                   </h4>
                   <p className="text-gray-600">
-                    It{"\’"}s a collaborative process that involves close
+                    It{"’"}s a collaborative process that involves close
                     communication and coordination between the design and
                     development teams to ensure that the end product meets the
                     needs of the client and delivers a positive user experience.
@@ -714,7 +871,8 @@ export default function HomePage() {
 
       {/* Testimonial section section end */}
 
-      {/* <ScrollAnimationComponent /> */}
+      {/* looking for quote form */}
+      <QuoteForm />
     </div>
   );
 }

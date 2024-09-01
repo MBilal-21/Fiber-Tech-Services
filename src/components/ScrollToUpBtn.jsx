@@ -35,7 +35,7 @@ const ScrollToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="bg-custom-green rounded text-dark "
+          className="bg-white rounded text-dark "
           style={{
             position:"fixed",
             bottom: "50px",
@@ -50,7 +50,7 @@ const ScrollToTop = () => {
           onMouseOver={(e) => (e.currentTarget.style.opacity = "1")}
           onMouseOut={(e) => (e.currentTarget.style.opacity = "0.7")}
         >
-          <ChevronDoubleUpIcon className="h-6 w-6 text-gray-500" />
+          <ChevronDoubleUpIcon className="h-6 w-6 text-gray-900" />
         </button>
       )}
     </div>

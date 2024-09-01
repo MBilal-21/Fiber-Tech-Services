@@ -1,3 +1,4 @@
+import QuoteForm from "@/components/QuoteForm";
 import TopPage from "@/components/TopPage";
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
@@ -211,6 +212,8 @@ const Projects = () => {
           </div>
         </section>
       </div>
+        {/* looking for quote form */}
+        <QuoteForm/>
     </div>
   );
 };

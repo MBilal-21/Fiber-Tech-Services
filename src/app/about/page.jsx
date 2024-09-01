@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Tabs, Tab } from "@/components/Tabs";
 import { CheckIcon } from "@heroicons/react/24/outline";
 import Testimonials from "@/components/Testimonials";
+import QuoteForm from "@/components/QuoteForm";
 
 const AboutPage = () => {
   return (
@@ -879,6 +880,8 @@ const AboutPage = () => {
       </section>
       {/* why choose us end */}
       <Testimonials />
+        {/* looking for quote form */}
+        <QuoteForm/>
     </div>
   );
 };

@@ -19,15 +19,21 @@ import {
 
 import {
   ArrowPathIcon,
-  Bars3Icon,
   ChartPieIcon,
   CursorArrowRaysIcon,
   FingerPrintIcon,
   SquaresPlusIcon,
+  Bars3Icon,
   XMarkIcon,
   EnvelopeIcon,
   PhoneIcon,
   ClockIcon,
+  LightBulbIcon,
+  CodeBracketSquareIcon,
+  ChartBarIcon,
+  DocumentMagnifyingGlassIcon,
+  ChatBubbleOvalLeftEllipsisIcon,
+  CpuChipIcon,
 } from "@heroicons/react/24/outline";
 import {
   ChevronDownIcon,
@@ -38,45 +44,33 @@ import {
 const products = [
   {
     name: "Product Design",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, beatae.",
-    href: "/services",
-    icon: ChartPieIcon,
+    href: "/service-details",
+    icon: LightBulbIcon,
   },
   {
     name: "Design & Development",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, beatae.",
-    href: "/services",
-    icon: CursorArrowRaysIcon,
+    href: "/service-details",
+    icon: CodeBracketSquareIcon,
   },
   {
     name: "UX/UI Strategy",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, beatae.",
-    href: "/services",
-    icon: FingerPrintIcon,
+    href: "/service-details",
+    icon: ChartBarIcon,
   },
   {
     name: "Search Engine",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, beatae.",
-    href: "/services",
-    icon: SquaresPlusIcon,
+    href: "/service-details",
+    icon: DocumentMagnifyingGlassIcon,
   },
   {
     name: "IT Consulting",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, beatae.",
-    href: "/services",
-    icon: ArrowPathIcon,
+    href: "/service-details",
+    icon: ChatBubbleOvalLeftEllipsisIcon,
   },
   {
     name: "Software Development",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, beatae.",
-    href: "/services",
-    icon: ArrowPathIcon,
+    href: "/service-details",
+    icon: CpuChipIcon,
   },
 ];
 const callsToAction = [

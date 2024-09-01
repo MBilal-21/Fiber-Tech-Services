@@ -5,6 +5,7 @@ import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import { PhoneIcon, ChevronDoubleRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
+import QuoteForm from "@/components/QuoteForm";
 
 
 const AccordionItem = ({ title, children, isOpen, onToggle }) => {
@@ -461,6 +462,8 @@ const Page = () => {
         </section>
         {/* service details section end */}
       </div>
+        {/* looking for quote form */}
+        <QuoteForm/>
     </div>
   );
 };

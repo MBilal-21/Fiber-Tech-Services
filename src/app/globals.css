@@ -2797,7 +2797,7 @@ body {
 
 .footer-btn:hover,
 .footer-btn:hover span {
-  color: var(--secondray-color);
+  color: var(--logo-color-1);
 }
 
 .footer-btn-2 {
@@ -2813,7 +2813,7 @@ body {
 }
 
 .footer-btn-2:hover {
-  color: var(--secondray-color);
+  color: rgb(79, 79, 247);
 
   &>span {
     max-width: 1.5rem;

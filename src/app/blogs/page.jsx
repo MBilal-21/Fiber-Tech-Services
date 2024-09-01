@@ -1,4 +1,5 @@
 import BlogCard from "@/components/BlogCard";
+import QuoteForm from "@/components/QuoteForm";
 import TopPage from "@/components/TopPage";
 const Blogs = () => {
   const blogs = [
@@ -91,6 +92,8 @@ const Blogs = () => {
           ))}
         </div>
       </div>
+        {/* looking for quote form */}
+        <QuoteForm/>
     </div>
   );
 };
