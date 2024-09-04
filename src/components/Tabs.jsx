@@ -26,6 +26,7 @@ const Tabs = ({ children }) => {
               <div className="h-12 w-12 mt-auto flex">
                 <Image
                   src={`/Assets/icons/png/${child.props.iconName}`}
+                  alt={`${child.props.iconName}`}
                   width={32}
                   height={32}
                   className="object-contain"

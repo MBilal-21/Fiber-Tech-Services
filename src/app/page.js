@@ -422,7 +422,8 @@ export default function HomePage() {
                   src={"/Assets/icons/png/logo.png"}
                   width={64}
                   height={64}
-                  class="w-full h-auto"
+                  className="w-full h-auto"
+                  alt="icon"
                   style={{
                     filter:
                       " brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)",
@@ -484,7 +485,7 @@ export default function HomePage() {
                 {" "}
                 Learn More <span aria-hidden="true">&rarr;</span>{" "}
               </button>
-              <div className="flex gap-4">
+              <div className="flex gap-4 grow">
                 <PhoneIcon
                   className="h-12 w-12 text-custom-blue border-2 border-gray-500  "
                   style={{ borderRadius: "50%", padding: "5px" }}
@@ -513,6 +514,10 @@ export default function HomePage() {
                       width={60}
                       height={60}
                       layout="intrinsic"
+                      style={{
+                        filter:
+                          " brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)",
+                      }}
                     />
                   </div>
                   <h4 className="pt-4">
@@ -546,6 +551,10 @@ export default function HomePage() {
                       layout="intrinsic"
                       width={60}
                       height={60}
+                      style={{
+                        filter:
+                          " brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)",
+                      }}
                     />
                   </div>
                   <h4 className="pt-4">
@@ -574,30 +583,38 @@ export default function HomePage() {
 
           <div className="about-images p-6 m-auto">
             <div className="top-part">
-              <img
+              <Image
                 className=" animate__fadeInRight animate__delay-2s animate__animated"
                 src="/Assets/fiber-tech-service-about1.jpg"
                 alt="fiber-tech-service-about1"
+                width={410}
+                height={495}
                 style={{ visibility: "visible", animationName: " fadeInRight" }}
               />
-              <img
+              <Image
                 className=" animate__zoomIn animate__delay-2s  animate__animated"
                 src="/Assets/design-images/fiber-tech-service-about-logo.png"
                 alt="fiber-tech-service-about-logo"
+                width={167}
+                height={184}
                 style={{ visibility: "visible", animationName: "zoomIn" }}
               />
             </div>
             <div className="bottom-part">
-              <img
+              <Image
                 className=" animate__fadeInDown animate__delay-2s animate__animated"
                 src="/Assets/design-images/fiber-tech-service-about-dots.png"
                 alt="fiber-tech-service-about-dots"
+                width={187}
+                height={86}
                 style={{ visibility: "visible", animationName: "fadeInDown" }}
               />
-              <img
+              <Image
                 className=" animate__fadeInDown animate__delay-2s animate__animated"
                 src="/Assets/fiber-tech-service-about2.jpg"
                 alt="About"
+                width={410}
+                height={360}
                 style={{ visibility: "visible", animationName: "fadeInDown" }}
               />
             </div>
@@ -845,22 +862,28 @@ export default function HomePage() {
                 className="testimonial-right-part wow fadeInRight delay-0-2s animated"
                 style={{ visibility: "visible", animationName: "fadeInRight" }}
               >
-                <img
+                <Image
                   src="/Assets/testi-img/testimonial.jpg"
                   alt="Testimonial"
+                  width={490}
+                  height={647}
                 />
-                <div className="testi-image-over">
+                <div className="testi-image-over text-white">
                   <h3>We Have More 3248+ Reviews From Global Clients</h3>
-                  <img src="/Assets/testi-img/signature.png" alt="Signature" />
+                  <Image src="/Assets/testi-img/signature.png" alt="Signature" width={184} height={85} style={{filter: "brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2921%) hue-rotate(179deg) brightness(121%) contrast(106%)"}}/>
                 </div>
                 <div className="dot-shapes">
-                  <img
+                  <Image
                     src="/Assets/testi-img/testimonial-dots.png"
                     alt="Dots"
+                    width={187}
+                    height={86}
                   />
-                  <img
+                  <Image
                     src="/Assets/testi-img/testimonial-dots.png"
                     alt="Dots"
+                    width={187}
+                    height={86}
                   />
                 </div>
               </div>

@@ -54,6 +54,10 @@ const CompanyStatistic = () => {
                       width={64}
                       height={64}
                       alt="fiber-tech-target"
+                      style={{
+                        filter:
+                          " brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)",
+                      }}
                     />
                   </i>
                   <span
@@ -84,6 +88,10 @@ const CompanyStatistic = () => {
                       width={64}
                       height={64}
                       alt="fiber-tech-target-audience"
+                      style={{
+                        filter:
+                          " brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)",
+                      }}
                     />
                   </i>
                   <span
@@ -117,6 +125,10 @@ const CompanyStatistic = () => {
                       width={64}
                       height={64}
                       alt="fiber-tech-customer-review"
+                      style={{
+                        filter:
+                          " brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)",
+                      }}
                     />
                   </i>
                   <span
@@ -147,6 +159,10 @@ const CompanyStatistic = () => {
                       width={64}
                       height={64}
                       alt="fiber-tech-badge"
+                      style={{
+                        filter:
+                          " brightness(0) saturate(100%) invert(33%) sepia(14%) saturate(3486%) hue-rotate(178deg) brightness(97%) contrast(93%)",
+                      }}
                     />
                   </i>
                   <span

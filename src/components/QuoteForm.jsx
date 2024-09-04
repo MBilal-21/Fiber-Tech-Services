@@ -226,7 +226,7 @@ const [sentError, setSentError] = useState(null);
         <div className="flex justify-center items-center px-4">
           <button
             type="submit"
-            className="w-full px-4 py-2 flex justify-center font-bold text-white bg-custom-blue rounded hover:bg-blue-700"
+            className="w-full px-4 py-2 flex justify-center font-bold text-white bg-custom-blue rounded hover:bg-indigo-600"
           >
             Send
             <PaperAirplaneIcon className="h-6 w-6 text-gray-50 ml-2" />

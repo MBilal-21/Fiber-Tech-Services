@@ -227,7 +227,8 @@ const ServiceItem = ({ index, imgSrc, title, description, link, iconName }) => {
         <div className="top-part mb-4">
           <span className="number text-lg font-bold text-gray-500">{`0${index}`}</span>
           <div className="icon text-blue-500 text-2xl mb-2">
-            <Image className='brightness-[5.5] md:brightness-[1] group-hover:brightness-[5.5]' src={`/Assets/icons/png/${iconName}`} width={64} height={64}/>
+            <Image className='brightness-[5.5] md:brightness-[1] group-hover:brightness-[5.5]' src={`/Assets/icons/png/${iconName}`}
+            alt={`${iconName}`} width={64} height={64}/>
           </div>
           <h4 className="text-xl font-semibold">
             <Link href={link}>

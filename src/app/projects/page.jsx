@@ -1,6 +1,7 @@
 import QuoteForm from "@/components/QuoteForm";
 import TopPage from "@/components/TopPage";
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
+import Image from "next/image";
 import Link from "next/link";
 
 const Projects = () => {
@@ -35,9 +36,11 @@ const Projects = () => {
                   style={{ visibility: "visible", animationName: "fadeInUp" }}
                 >
                   <div className="image">
-                    <img
+                    <Image
                       src="/Assets/projects/project-grid1.jpg"
                       alt="Project Grid"
+                      width={410}
+                      height={395}
                     />
                     <a
                       className="plus"
@@ -63,9 +66,11 @@ const Projects = () => {
                   style={{ visibility: "visible", animationName: "fadeInUp" }}
                 >
                   <div className="image">
-                    <img
+                    <Image
                       src="/Assets/projects/project-grid2.jpg"
                       alt="Project Grid"
+                      width={410}
+                      height={395}
                     />
                     <a
                       className="plus"
@@ -91,9 +96,11 @@ const Projects = () => {
                   style={{ visibility: "visible", animationName: "fadeInUp" }}
                 >
                   <div className="image">
-                    <img
+                    <Image
                       src="/Assets/projects/project-grid3.jpg"
                       alt="Project Grid"
+                      width={410}
+                      height={395}
                     />
                     <a
                       className="plus"
@@ -119,9 +126,11 @@ const Projects = () => {
                   style={{ visibility: "visible", animationName: "fadeInUp" }}
                 >
                   <div className="image">
-                    <img
+                    <Image
                       src="/Assets/projects/project-grid4.jpg"
                       alt="Project Grid"
+                      width={410}
+                      height={395}
                     />
                     <a
                       className="plus"
@@ -147,9 +156,11 @@ const Projects = () => {
                   style={{ visibility: "visible", animationName: "fadeInUp" }}
                 >
                   <div className="image">
-                    <img
+                    <Image
                       src="/Assets/projects/project-grid5.jpg"
                       alt="Project Grid"
+                      width={410}
+                      height={395}
                     />
                     <a
                       className="plus"
@@ -175,9 +186,11 @@ const Projects = () => {
                   style={{ visibility: "visible", animationName: "fadeInUp" }}
                 >
                   <div className="image">
-                    <img
+                    <Image
                       src="/Assets/projects/project-grid6.jpg"
                       alt="Project Grid"
+                      width={410}
+                      height={395}
                     />
                     <a
                       className="plus"

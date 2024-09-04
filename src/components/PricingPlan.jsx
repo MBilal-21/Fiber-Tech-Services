@@ -3,6 +3,7 @@
 import React from "react";
 import { PlayIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from "next/image";
 
 const PricingPlan = () => {
   return (
@@ -180,17 +181,19 @@ const PricingPlan = () => {
           </div>
         </div>
       </div>
-      <div className="price-shapes z-2">
-        <img
+      <div className="price-shapes">
+        {/* <img
           className="shape one wow fadeInLeft delay-0-5s animated"
           src="/Assets/design-images/price-left.png"
           alt="Shape"
           style={{ visibility: "visible", animationName: "fadeInLeft" }}
-        />
-        <img
+        /> */}
+        <Image
           className="shape two"
           src="/Assets/design-images/price-right.png"
           alt="Shape"
+          width={1080}
+          height={1115}
         />
       </div>
     </section>

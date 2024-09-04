@@ -41,37 +41,119 @@ import {
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
 
-const products = [
+const servicesList = [
   {
     name: "Product Design",
     href: "/service-details",
     icon: LightBulbIcon,
+    subServices: [
+      {
+        name: "Product Design",
+        href: "/service-details",
+        icon: LightBulbIcon,
+      },
+      {
+        name: "Design & Development",
+        href: "/service-details",
+        icon: CodeBracketSquareIcon,
+      },
+      {
+        name: "UX/UI Strategy",
+        href: "/service-details",
+        icon: ChartBarIcon,
+      },
+      {
+        name: "Search Engine",
+        href: "/service-details",
+        icon: DocumentMagnifyingGlassIcon,
+      },
+      {
+        name: "IT Consulting",
+        href: "/service-details",
+        icon: ChatBubbleOvalLeftEllipsisIcon,
+      },
+      {
+        name: "Software Development",
+        href: "/service-details",
+        icon: CpuChipIcon,
+      },
+    ]
   },
   {
     name: "Design & Development",
     href: "/service-details",
     icon: CodeBracketSquareIcon,
+    subServices: [
+      {
+        name: "Product Design",
+        href: "/service-details",
+        icon: LightBulbIcon,
+      },
+      {
+        name: "Design & Development",
+        href: "/service-details",
+        icon: CodeBracketSquareIcon,
+      },
+      {
+        name: "UX/UI Strategy",
+        href: "/service-details",
+        icon: ChartBarIcon,
+      },
+      {
+        name: "Search Engine",
+        href: "/service-details",
+        icon: DocumentMagnifyingGlassIcon,
+      },
+      {
+        name: "IT Consulting",
+        href: "/service-details",
+        icon: ChatBubbleOvalLeftEllipsisIcon,
+      },
+      {
+        name: "Software Development",
+        href: "/service-details",
+        icon: CpuChipIcon,
+      },
+    ]
   },
   {
     name: "UX/UI Strategy",
     href: "/service-details",
     icon: ChartBarIcon,
+    subServices: [
+      {
+        name: "Product Design",
+        href: "/service-details",
+        icon: LightBulbIcon,
+      },
+      {
+        name: "Design & Development",
+        href: "/service-details",
+        icon: CodeBracketSquareIcon,
+      },
+      {
+        name: "UX/UI Strategy",
+        href: "/service-details",
+        icon: ChartBarIcon,
+      },
+      {
+        name: "Search Engine",
+        href: "/service-details",
+        icon: DocumentMagnifyingGlassIcon,
+      },
+      {
+        name: "IT Consulting",
+        href: "/service-details",
+        icon: ChatBubbleOvalLeftEllipsisIcon,
+      },
+      {
+        name: "Software Development",
+        href: "/service-details",
+        icon: CpuChipIcon,
+      },
+    ]
   },
-  {
-    name: "Search Engine",
-    href: "/service-details",
-    icon: DocumentMagnifyingGlassIcon,
-  },
-  {
-    name: "IT Consulting",
-    href: "/service-details",
-    icon: ChatBubbleOvalLeftEllipsisIcon,
-  },
-  {
-    name: "Software Development",
-    href: "/service-details",
-    icon: CpuChipIcon,
-  },
+ 
 ];
 const callsToAction = [
   { name: "view all serices", href: "/services", icon: PlayCircleIcon },
@@ -89,17 +171,17 @@ export default function Navbar() {
           <ul className="flex justify-center items-center gap-6">
             <li className="flex justify-center items-center gap-2">
               {" "}
-              <EnvelopeIcon className="h-5 w-5 text-custom-green" />
+              <span className="rounded-full border-2 border-custom-blue p-1"><EnvelopeIcon className="h-4 w-4 text-custom-blue " /></span>
               <a href="mailto:support@fibertechservices.net">
                 support@fibertechservices.net
               </a>
             </li>
             <li className="flex justify-center items-center gap-2">
-              <PhoneIcon className="h-5 w-5 text-custom-green" />
+              <span className="rounded-full border-2 border-custom-blue p-1"><PhoneIcon className="h-4 w-4 text-custom-blue " /></span>
               <a href="callto:8885729311">888 572 9311</a>
             </li>
             <li className="hidden lg:flex justify-center items-center gap-2">
-              <ClockIcon className="h-5 w-5 text-custom-green" /> Working Hours:
+              <span className="rounded-full border-2 border-custom-blue p-1"><ClockIcon className="h-4 w-4 text-custom-blue " /></span> Working Hours:
               Monday- Saturday, 7:00 AM to 11:00 PM
             </li>
           </ul>
@@ -174,7 +256,10 @@ export default function Navbar() {
             </button>
           </div>
           <PopoverGroup className="hidden lg:flex lg:gap-4">
-            <Link href="/"  className="text-sm font-semibold leading-6 text-white linkhover p-4" >
+            <Link
+              href="/"
+              className="text-sm font-semibold leading-6 text-white linkhover p-4"
+            >
               Home
             </Link>
             <div>
@@ -198,7 +283,44 @@ export default function Navbar() {
                   className=" absolute left-2/4 pb-4 -translate-x-2/4 top-14 z-10 mt-3 rounded bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                 >
                   <div className="p-4 grid grid-cols-3 gap-2">
-                    {products.map((item) => (
+                    {servicesList.map((item) => (
+                      <div
+                        key={item.name}
+                        href={item.href}
+                        className=" hover:bg-custom-blue/5 relative flex items-start flex-col gap-2  text-sm leading-6 py-2"
+                      >
+                        <div className="flex flex-none justify-between gap-4 rounded-lg  ">
+                          <item.icon
+                            aria-hidden="true"
+                            className="h-6 w-6 text-custom-dark "
+                          />
+                        <div className=" block font-semibold text-custom-dark">
+                          {item.name}
+                        </div>
+                        </div>
+                        {/* sub services */}
+                        <div>
+                          {item.subServices.map((item) => (
+                            <Link
+                              key={item.name}
+                              href={item.href}
+                              className=" hover:bg-custom-blue/30 relative flex items-center gap-2  text-sm leading-6 "
+                            >
+                              <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg  ">
+                                <item.icon
+                                  aria-hidden="true"
+                                  className="h-6 w-6 text-custom-dark "
+                                />
+                              </div>
+                              <div className=" block  text-custom-dark">
+                                {item.name}
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                    {/* {servicesList.map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
@@ -214,11 +336,10 @@ export default function Navbar() {
                           {item.name}
                         </div>
                       </Link>
-                    ))}
+                    ))} */}
                   </div>
                   <div className=" bg-white rounded-b-lg py-4 text-center">
                     <Link
-                      type="button"
                       href={"/services"}
                       className="rounded bg-blue-600 p-3 text-sm font-semibold leading-6 text-white hover:bg-blue-500"
                     >
@@ -357,7 +478,7 @@ export default function Navbar() {
                           />
                         </DisclosureButton>
                         <DisclosurePanel className="mt-2 space-y-2">
-                          {[...products, ...callsToAction].map((item) => (
+                          {[...servicesList, ...callsToAction].map((item) => (
                             <DisclosureButton
                               key={item.name}
                               as={Link}
@@ -403,7 +524,7 @@ export default function Navbar() {
                     <Link
                       href="/contact"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white bg-green "
+                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white bg-blue"
                     >
                       Get A Quote
                     </Link>

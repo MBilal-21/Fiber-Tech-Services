@@ -16,7 +16,7 @@ const slides = [
           World.
         </p>
         <div className=" flex gap-4 items-center justify-start">
-            <Image src={"/Assets/testi-img/quotes.png"} width={32} height={32}/>
+            <Image src={"/Assets/testi-img/quotes.png"} width={32} height={32} alt="``"/>
             <div>
           <span className="font-bold text-lg lg:text-2xl text-black">Waleed</span> <br />
           <span>CEO &amp; Founder</span>
@@ -37,7 +37,7 @@ const slides = [
           App Development.
         </p>
         <div className=" flex gap-4 items-center justify-start">
-            <Image src={"/Assets/testi-img/quotes.png"} width={32} height={32}/>
+            <Image src={"/Assets/testi-img/quotes.png"} width={32} height={32} alt="``"/>
             <div>
           <span className=" font-bold text-lg lg:text-2xl text-black">Andrew D. Bricker</span> <br />
           <span>VP</span>
@@ -57,7 +57,7 @@ const slides = [
           not underpay them. Do not look elsewhere.
         </p>
         <div className="flex gap-4 items-center justify-start">
-            <Image src={"/Assets/testi-img/quotes.png"} width={32} height={32}/>
+            <Image src={"/Assets/testi-img/quotes.png"} width={32} height={32} alt="``"/>
             <div>
           <span className=" font-bold text-lg lg:text-2xl text-black"></span> <br />
           <span>CEO &amp; Founder</span>
@@ -92,7 +92,7 @@ const ImageSlider = () => {
             <div
               key={index}
               className={`p-1 rounded-full cursor-pointer ${
-                currentSlide === index ? "bg-custom-green shadow-lg scale-110" : "bg-white"
+                currentSlide === index ? "bg-custom-blue/30 shadow-2xl scale-110" : "bg-white"
               }`}
               onClick={() => goToSlide(index)}
             >

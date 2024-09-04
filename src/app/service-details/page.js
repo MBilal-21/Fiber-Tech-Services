@@ -145,9 +145,11 @@ const Page = () => {
                       }}
                     >
                       <div className="image">
-                        <img
+                        <Image
                           src="/Assets/service-middle.jpg"
                           alt="Service"
+                          width={385}
+                          height={350}
                         />
                       </div>
                     </div>
@@ -193,7 +195,7 @@ const Page = () => {
                       }}
                     >
                       <div className="image">
-                        <img src="/Assets/fiber-tech-partner-2.png" alt="fiber-tech-service-global" />
+                        <Image src="/Assets/fiber-tech-partner-2.png" alt="fiber-tech-service-global" width={225} height={225}/>
                       </div>
                     </div>
                   </div>
@@ -448,10 +450,12 @@ const Page = () => {
                       <PhoneIcon className="h-6 w-6 text-custom-green" /> 888
                       572 9311
                     </a>
-                    <img
+                    <Image
                       className="absolute top-8 -right-16 -z-10"
                       src="/Assets/design-images/footer-bg-line-shape.png"
                       alt="Shape"
+                      width={533}
+                      height={434}
                     />
                   </div>
                   </div>
