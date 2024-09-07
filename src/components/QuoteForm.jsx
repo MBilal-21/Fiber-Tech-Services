@@ -5,10 +5,10 @@ import clsx from "clsx";
 
 const QuoteForm = () => {
   const [formData, setFormData] = useState({
-    iAmA: "",
+    firstName: "",
     practiceOrCompany: "",
     Budget: "",
-    name: "",
+    lastName: "",
     email: "",
     phone: "",
     subject: "",
@@ -22,7 +22,8 @@ const [sentError, setSentError] = useState(null);
   const validate = () => {
     const newErrors = {};
 
-    if (!formData.name) newErrors.name = "Please enter your name";
+    if (!formData.firstName) newErrors.firstName = "Please enter your first name";
+    if (!formData.lastName) newErrors.lastName = "Please enter your last name";
     if (!formData.email) {
       newErrors.email = "Please enter your email";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -145,19 +146,13 @@ const [sentError, setSentError] = useState(null);
           {" "}
           Looking for Fiber Tech Services Quote?
         </h2>
-        {/* <p className="text-gray-500">
-            customers can reach out for support, ask questions, or provide
-            feedback
-          </p> */}
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="flex flex-wrap justify-center items-center">
           {[
-            "iAmA",
-            "practiceOrCompany",
-            "Budget",
-            "name",
+            "firstName",
+            "lastName",
             "email",
             "phone",
           ].map((field) => (

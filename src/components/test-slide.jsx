@@ -1,7 +1,6 @@
 // components/ImageSlider.js
 import Image from "next/image";
 import React, { useState } from "react";
-import './Style/test-slide.css'
 
 const slides = [
   {

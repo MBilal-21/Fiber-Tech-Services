@@ -113,9 +113,11 @@ export default function HomePage() {
                 <br />
                 Services.
               </p>
+              <Link href={"/contact"}>
               <Button className="block rounded bg-custom-blue px-8 py-3 font-medium text-white transition hover:bg-indigo-700">
                 Let gets Started <span aria-hidden="true">&rarr;</span>
               </Button>
+              </Link>
             </div>
             <div className="column-6 backdrop-blur-sm animate__animated animate__lightSpeedInRight">
               <form onSubmit={handleSubmit} className="from-bg mt-6 md:mt-0">
@@ -143,8 +145,8 @@ export default function HomePage() {
                         value={formData.firstName}
                         onChange={handleChange}
                         className={clsx(
-                          "block bg-transparent w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6",
-                          errors.firstName && "border-red-500 bg-red-100"
+                          "block bg-gray-900 w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6",
+                          errors.firstName && "border-red-500 "
                         )}
                       />
                       {errors.firstName && (
@@ -172,8 +174,8 @@ export default function HomePage() {
                         value={formData.lastName}
                         onChange={handleChange}
                         className={clsx(
-                          "block bg-transparent w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6",
-                          errors.lastName && "border-red-500 bg-red-100"
+                          "block bg-gray-900 w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6",
+                          errors.lastName && "border-red-500 "
                         )}
                       />
                       {errors.lastName && (
@@ -201,8 +203,8 @@ export default function HomePage() {
                         value={formData.email}
                         onChange={handleChange}
                         className={clsx(
-                          "block bg-transparent w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6",
-                          errors.email && "border-red-500 bg-red-100"
+                          "block bg-gray-900 w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6",
+                          errors.email && "border-red-500 "
                         )}
                       />
                       {errors.email && (
@@ -228,7 +230,7 @@ export default function HomePage() {
                         onChange={handleChange}
                         className={clsx(
                           "block bg-gray-900 w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6",
-                          errors.services && "border-red-500 bg-red-100"
+                          errors.services && "border-red-500 "
                         )}
                       >
                         <option>--Choose A Service--</option>
