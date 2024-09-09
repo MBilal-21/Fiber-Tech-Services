@@ -14,7 +14,7 @@ const Contact = () => {
     <div>
       <TopPage cureentText={"Contact"} />
 
-      <section className="py-16 relative z-1">
+      <section className="py-16 relative">
         <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
           <div
             className="flex flex-wrap text-center justify-center wow fadeInUp delay-0-2s animated"
@@ -60,14 +60,14 @@ const Contact = () => {
                 </div>
                 <h4 className="text-2xl font-semibold py-4">Email Us</h4>
                 <a
-                  className="text-lg text-gray-500 hover:text-custom-green transition-all"
+                  className="text-lg text-gray-500 hover:text-custom-blue transition-all"
                   href="mailto:support@fibertechservices.net"
                 >
                   support@fibertechservices.net
                 </a>
                 <br />
                 <a
-                  className="text-lg text-gray-500 hover:text-custom-green transition-all"
+                  className="text-lg text-gray-500 hover:text-custom-blue transition-all"
                   href="http://www.fibertechservices.net"
                 >
                   www.fibertechservices.net
@@ -87,7 +87,7 @@ const Contact = () => {
                   Mobile :{" "}
                   <a
                     href="callto:8885729311"
-                    className="text-lg text-gray-500 hover:text-custom-green transition-all"
+                    className="text-lg text-gray-500 hover:text-custom-blue transition-all"
                   >
                     +888 572 9311
                   </a>

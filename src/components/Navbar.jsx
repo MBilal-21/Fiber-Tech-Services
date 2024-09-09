@@ -43,18 +43,18 @@ import {
 
 const servicesList = [
   {
-    name: "Product Design",
+    name: "Web Development",
     href: "/service-details",
-    icon: LightBulbIcon,
+    icon: CodeBracketSquareIcon,
     subServices: [
       {
-        name: "Product Design",
-        href: "/service-details",
-        icon: LightBulbIcon,
+        name: "Custom Web Development",
+        href: "/custom-web-development-service",
+        icon: CodeBracketSquareIcon,
       },
       {
-        name: "Design & Development",
-        href: "/service-details",
+        name: "Custom Web App Development",
+        href: "/custom-web-app-development-service",
         icon: CodeBracketSquareIcon,
       },
       {
@@ -287,7 +287,7 @@ export default function Navbar() {
                       <div
                         key={item.name}
                         href={item.href}
-                        className=" hover:bg-custom-blue/5 relative flex items-start flex-col gap-2  text-sm leading-6 py-2"
+                        className="relative flex items-start flex-col gap-2  text-sm leading-6 py-2"
                       >
                         <div className="flex flex-none justify-between gap-4 rounded-lg  ">
                           <item.icon
@@ -304,14 +304,14 @@ export default function Navbar() {
                             <Link
                               key={item.name}
                               href={item.href}
-                              className=" hover:bg-custom-blue/30 relative flex items-center gap-2  text-sm leading-6 "
+                              className=" hover:bg-custom-blue/30 relative flex items-center  gap-2 text-sm leading-6 p-2 "
                             >
-                              <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg  ">
+                              {/* <div className="flex h-6 w-6 flex-none items-center justify-center rounded-lg  ">
                                 <item.icon
                                   aria-hidden="true"
                                   className="h-6 w-6 text-custom-dark "
                                 />
-                              </div>
+                              </div> */}
                               <div className=" block  text-custom-dark">
                                 {item.name}
                               </div>
@@ -387,7 +387,7 @@ export default function Navbar() {
                 // className={"rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700"}
               >
                 {" "}
-                Get A Qoute <span aria-hidden="true">&rarr;</span>
+                Get Free Qoute <span aria-hidden="true">&rarr;</span>
               </Button>
             </Link>
           </div>
