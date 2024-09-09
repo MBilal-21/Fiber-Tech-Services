@@ -37,14 +37,14 @@ const WebDev = () => {
               Tailored Solutions for Your Unique Business Needs
             </h2>
             <p className=" text-gray-900 text-lg">
-              In today's competitive digital landscape, having a
+              In today{"\'"}s competitive digital landscape, having a
               well-structured, functional, and a captivating website is a
               necessity for any business. However, just like not all businesses
               are the same, websites cannot be the same either. A website must
               reflect your unique brand identity, objectives, and what you
               really offer. This is where custom web development comes in. Our
               company offers custom web development services to design
-              custom-made websites that meet your business's specific
+              custom-made websites that meet your business{"\'"}s specific
               requirements. This allows your website to stand out from the
               over-crowding market of your competitors.
             </p>
@@ -103,7 +103,7 @@ const WebDev = () => {
           experience, or expand your online presence, we build our plan around
           your goals. Clear and Transparent We believe in being open about our
           costs. We provide clear estimates and detailed rate breakdowns, so you
-          always know what you're paying for exactly. No hidden fees, no
+          always know what you{"\'"}re paying for exactly. No hidden fees, no
           surprises. Building Strong Relationships We value genuine, long-term
           relationships with our clients. We take a human approach, working
           closely with you throughout the project. This creates an environment
@@ -125,7 +125,7 @@ const WebDev = () => {
           operating in or targeting the U.S. market, we offer specialized custom
           web development services in the USA. These services are tailored to
           comply with U.S. standards and are supported by a dedicated team
-          familiar with the local market. Whether you're launching a new product
+          familiar with the local market. Whether you{"\'"}re launching a new product
           or expanding your digital footprint, our custom web development
           services USA package is designed to ensure your online presence
           resonates with your audience. Frontend Web Development Technologies We
