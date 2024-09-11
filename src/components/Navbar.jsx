@@ -34,7 +34,10 @@ import {
   DocumentMagnifyingGlassIcon,
   ChatBubbleOvalLeftEllipsisIcon,
   CpuChipIcon,
+  MegaphoneIcon,
+  ServerIcon,
 } from "@heroicons/react/24/outline";
+// import {  } from '@heroicons/react/solid';
 import {
   ChevronDownIcon,
   // PhoneIcon,
@@ -44,116 +47,110 @@ import {
 const servicesList = [
   {
     name: "Web Development",
-    href: "/service-details",
     icon: CodeBracketSquareIcon,
     subServices: [
       {
         name: "Custom Web Development",
-        href: "/custom-web-development-service",
+        href: "/services/custom-web-development-service",
         icon: CodeBracketSquareIcon,
       },
       {
         name: "Custom Web App Development",
-        href: "/custom-web-app-development-service",
+        href: "/services/custom-web-app-development-service",
         icon: CodeBracketSquareIcon,
       },
-      {
-        name: "UX/UI Strategy",
-        href: "/service-details",
-        icon: ChartBarIcon,
-      },
-      {
-        name: "Search Engine",
-        href: "/service-details",
-        icon: DocumentMagnifyingGlassIcon,
-      },
-      {
-        name: "IT Consulting",
-        href: "/service-details",
-        icon: ChatBubbleOvalLeftEllipsisIcon,
-      },
-      {
-        name: "Software Development",
-        href: "/service-details",
-        icon: CpuChipIcon,
-      },
-    ]
+      // {
+      //   name: "UX/UI Strategy",
+      //   href: "/services/",
+      //   icon: ChartBarIcon,
+      // },
+      // {
+      //   name: "Search Engine",
+      //   href: "/services/",
+      //   icon: DocumentMagnifyingGlassIcon,
+      // },
+      // {
+      //   name: "IT Consulting",
+      //   href: "/services/",
+      //   icon: ChatBubbleOvalLeftEllipsisIcon,
+      // },
+      // {
+      //   name: "Software Development",
+      //   href: "/services/",
+      //   icon: CpuChipIcon,
+      // },
+    ],
   },
   {
-    name: "Design & Development",
-    href: "/service-details",
-    icon: CodeBracketSquareIcon,
+    name: "Information Technology",
+    icon: ServerIcon,
     subServices: [
       {
-        name: "Product Design",
-        href: "/service-details",
-        icon: LightBulbIcon,
+        name: "Cyber Security Services",
+        href: "/services/cyber-security-services",
       },
-      {
-        name: "Design & Development",
-        href: "/service-details",
-        icon: CodeBracketSquareIcon,
-      },
-      {
-        name: "UX/UI Strategy",
-        href: "/service-details",
-        icon: ChartBarIcon,
-      },
-      {
-        name: "Search Engine",
-        href: "/service-details",
-        icon: DocumentMagnifyingGlassIcon,
-      },
-      {
-        name: "IT Consulting",
-        href: "/service-details",
-        icon: ChatBubbleOvalLeftEllipsisIcon,
-      },
-      {
-        name: "Software Development",
-        href: "/service-details",
-        icon: CpuChipIcon,
-      },
-    ]
+      // {
+      //   name: "Design & Development",
+      //   href: "/services/",
+      //   icon: CodeBracketSquareIcon,
+      // },
+      // {
+      //   name: "UX/UI Strategy",
+      //   href: "/services/",
+      //   icon: ChartBarIcon,
+      // },
+      // {
+      //   name: "Search Engine",
+      //   href: "/services/",
+      //   icon: DocumentMagnifyingGlassIcon,
+      // },
+      // {
+      //   name: "IT Consulting",
+      //   href: "/services/",
+      //   icon: ChatBubbleOvalLeftEllipsisIcon,
+      // },
+      // {
+      //   name: "Software Development",
+      //   href: "/services/",
+      //   icon: CpuChipIcon,
+      // },
+    ],
   },
   {
-    name: "UX/UI Strategy",
-    href: "/service-details",
-    icon: ChartBarIcon,
+    name: " Digital Marketing Services",
+    icon: MegaphoneIcon,
     subServices: [
       {
-        name: "Product Design",
-        href: "/service-details",
-        icon: LightBulbIcon,
+        name: "Email Marketing Services",
+        href: "/services/email-marketing-services",
       },
-      {
-        name: "Design & Development",
-        href: "/service-details",
-        icon: CodeBracketSquareIcon,
-      },
-      {
-        name: "UX/UI Strategy",
-        href: "/service-details",
-        icon: ChartBarIcon,
-      },
-      {
-        name: "Search Engine",
-        href: "/service-details",
-        icon: DocumentMagnifyingGlassIcon,
-      },
-      {
-        name: "IT Consulting",
-        href: "/service-details",
-        icon: ChatBubbleOvalLeftEllipsisIcon,
-      },
-      {
-        name: "Software Development",
-        href: "/service-details",
-        icon: CpuChipIcon,
-      },
-    ]
+      // {
+      //   name: "Design & Development",
+      //   href: "/services/",
+      //   icon: CodeBracketSquareIcon,
+      // },
+      // {
+      //   name: "UX/UI Strategy",
+      //   href: "/services/",
+      //   icon: ChartBarIcon,
+      // },
+      // {
+      //   name: "Search Engine",
+      //   href: "/services/",
+      //   icon: DocumentMagnifyingGlassIcon,
+      // },
+      // {
+      //   name: "IT Consulting",
+      //   href: "/services/",
+      //   icon: ChatBubbleOvalLeftEllipsisIcon,
+      // },
+      // {
+      //   name: "Software Development",
+      //   href: "/services/",
+      //   icon: CpuChipIcon,
+      // },
+    ],
   },
- 
 ];
 const callsToAction = [
   { name: "view all serices", href: "/services", icon: PlayCircleIcon },
@@ -171,18 +168,24 @@ export default function Navbar() {
           <ul className="flex justify-center items-center gap-6">
             <li className="flex justify-center items-center gap-2">
               {" "}
-              <span className="rounded-full border-2 border-custom-blue p-1"><EnvelopeIcon className="h-4 w-4 text-custom-blue " /></span>
+              <span className="rounded-full border-2 border-custom-blue p-1">
+                <EnvelopeIcon className="h-4 w-4 text-custom-blue " />
+              </span>
               <a href="mailto:support@fibertechservices.net">
                 support@fibertechservices.net
               </a>
             </li>
             <li className="flex justify-center items-center gap-2">
-              <span className="rounded-full border-2 border-custom-blue p-1"><PhoneIcon className="h-4 w-4 text-custom-blue " /></span>
+              <span className="rounded-full border-2 border-custom-blue p-1">
+                <PhoneIcon className="h-4 w-4 text-custom-blue " />
+              </span>
               <a href="callto:8885729311">888 572 9311</a>
             </li>
             <li className="hidden lg:flex justify-center items-center gap-2">
-              <span className="rounded-full border-2 border-custom-blue p-1"><ClockIcon className="h-4 w-4 text-custom-blue " /></span> Working Hours:
-              Monday- Saturday, 7:00 AM to 11:00 PM
+              <span className="rounded-full border-2 border-custom-blue p-1">
+                <ClockIcon className="h-4 w-4 text-custom-blue " />
+              </span>{" "}
+              Working Hours: Monday- Saturday, 7:00 AM to 11:00 PM
             </li>
           </ul>
         </div>
@@ -294,9 +297,9 @@ export default function Navbar() {
                             aria-hidden="true"
                             className="h-6 w-6 text-custom-dark "
                           />
-                        <div className=" block font-semibold text-custom-dark">
-                          {item.name}
-                        </div>
+                          <div className=" block font-semibold text-custom-dark">
+                            {item.name}
+                          </div>
                         </div>
                         {/* sub services */}
                         <div>

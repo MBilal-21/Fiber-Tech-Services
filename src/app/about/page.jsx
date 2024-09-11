@@ -9,6 +9,7 @@ import QuoteForm from "@/components/QuoteForm";
 
 const AboutPage = () => {
   return (
+    <>
     <div>
       <TopPage cureentText={"About us"} />
 
@@ -57,7 +58,7 @@ const AboutPage = () => {
                     <Image src={"/Assets/icons/png/trophy.png"} width={64} height={64} alt="trophy-icon"/>
                     </div>
                       <Link
-                        href="/service-details"
+                        href="/services"
                         className="text-gray-900 font-bold text-xl pb-4 hover:text-custom-green"
                         >
                         <h4 className="py-2">
@@ -75,7 +76,7 @@ const AboutPage = () => {
                       being an award-winning company!
                     </p>
                     <Link
-                      href="/service-details"
+                      href="/services"
                       className="footer-btn rounded-full mt-6 font-semibold text-gray-900 transition "
                     >
                       Read More <span aria-hidden="true">&rarr;</span>
@@ -89,7 +90,7 @@ const AboutPage = () => {
            
                     </div>
                     <Link
-                      href="/service-details"
+                      href="/services"
                       className="text-gray-900 font-bold text-xl pb-4 hover:text-custom-green py-2"
                     >
                       <h4 className="py-2">
@@ -114,7 +115,7 @@ const AboutPage = () => {
                       and business development aspects.
                     </p>
                     <Link
-                      href="/service-details"
+                      href="/services"
                       className="footer-btn rounded-full mt-6 font-semibold text-gray-900 transition "
                     >
                       Read More <span aria-hidden="true">&rarr;</span>
@@ -143,7 +144,7 @@ const AboutPage = () => {
                 </div>
                 <h4 className="py-4">
                   <Link
-                    href="/service-details"
+                    href="/services"
                     className="hover:text-custom-green font-bold text-2xl text-black py-4"
                   >
                     Simplicity
@@ -177,7 +178,7 @@ const AboutPage = () => {
                 </div>
                 <h4 className="py-4">
                   <Link
-                    href="/service-details"
+                    href="/services"
                     className="hover:text-custom-green font-bold text-2xl text-black"
                   >
                     Social Good
@@ -214,7 +215,7 @@ const AboutPage = () => {
                 </div>
                 <h4 className="py-4">
                   <Link
-                    href="/service-details"
+                    href="/services"
                     className="hover:text-custom-green font-bold text-2xl text-black"
                   >
                     Trust Partner
@@ -883,6 +884,7 @@ const AboutPage = () => {
         {/* looking for quote form */}
         <QuoteForm/>
     </div>
+    </>
   );
 };
 

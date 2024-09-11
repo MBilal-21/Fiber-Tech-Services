@@ -1,4 +1,4 @@
-"use client";
+
 import Map from "@/components/Map";
 import TopPage from "@/components/TopPage";
 import {

@@ -31,6 +31,7 @@ const ScrollToTop = () => {
   }, []);
 
   return (
+    <>
     <div className="scroll-to-top">
       {isVisible && (
         <button
@@ -54,6 +55,7 @@ const ScrollToTop = () => {
         </button>
       )}
     </div>
+    </>
   );
 };
 

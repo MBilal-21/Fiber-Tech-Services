@@ -63,7 +63,7 @@ export default function HomePage() {
   
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_KEY}/quote`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -235,7 +235,10 @@ export default function HomePage() {
                       >
                         <option>--Choose A Service--</option>
                         <option>Web Development</option>
+                        <option>Web App Development</option>
                         <option>App Development</option>
+                        <option>Information Security</option>
+                        <option>Digital Marketting</option>
                         <option>Graphic Designing</option>
                       </select>
                       {errors.services && (

@@ -4,6 +4,7 @@ import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 
 const QuoteForm = () => {
+  
   const [formData, setFormData] = useState({
     firstName: "",
     practiceOrCompany: "",
@@ -56,7 +57,7 @@ const [sentError, setSentError] = useState(null);
     if (Object.keys(validationErrors).length === 0) {
       try {
         // Simulate form submission to an API
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_KEY}/quote`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -94,7 +95,7 @@ const [sentError, setSentError] = useState(null);
     <section className="mx-auto  max-w-5xl  px-6  lg:px-8 py-16">
      {sentError && <div
         id="toast-simple"
-        className="z-50 fixed top-24 left-2/4 -translate-x-2/4 flex items-center w-full max-w-xs p-4 space-x-4  text-gray-50 bg-red-300/80 divide-x  divide-gray-200 rounded-lg shadow "
+        className="z-50 fixed top-24 left-2/4 -translate-x-2/4 flex items-center w-full max-w-xs p-4 space-x-4  text-gray-70 bg-red-300/80 divide-x  divide-gray-200 rounded-lg shadow "
         role="alert"
       >
         <svg
@@ -118,7 +119,7 @@ const [sentError, setSentError] = useState(null);
       </div>}
      {sentSuccess && <div
         id="toast-simple"
-        className="z-50 fixed top-24 left-2/4 -translate-x-2/4 flex items-center w-full max-w-xs p-4 space-x-4  text-gray-50 bg-green-300/80 divide-x  divide-gray-200 rounded-lg shadow "
+        className="z-50 fixed top-24 left-2/4 -translate-x-2/4 flex items-center w-full max-w-xs p-4 space-x-4  text-gray-70 bg-green-300/80 divide-x  divide-gray-200 rounded-lg shadow "
         role="alert"
       >
         <svg

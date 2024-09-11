@@ -7,22 +7,20 @@ import Loading from "@/components/Loading"; // Import Loading component
 import { Suspense } from "react"; // Import Suspense
 import Head from "next/head";
 import Script from "next/script";
+import IconWhatsappFill from "@/components/Icons/IconWhatsapp";
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = {
-  title: "Fiber Tech Services",
-  description: "Fiber Tech Services",
-};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
+        <title>Fiber Tech Services</title>
+        <meta name="description" content="Fiber Tech Services" />
         <meta
           name="google-site-verification"
           content="GXW489isAHnbMmnIQk2Zk7PhY4HUMtgpBKffVJGbLKI"
         />
-      </Head>
+      </head>
       <body className={inter.className}>
         <ScrollToTop />
         <Navbar />
@@ -32,6 +30,24 @@ export default function RootLayout({ children }) {
           <main className="overflow-x-hidden">{children}</main>
         </Suspense>
 
+        <button
+          style={{
+            position: "fixed",
+            bottom: "90px",
+            right: "30px",
+            border: "none",
+            zIndex: 1000,
+            cursor: "pointer",
+          }}
+          
+        >
+        <div className="relative">
+          <span className="absolute -top-8 -left-12 w-24 sr-only">Contact-us</span>
+        <a href="https://wa.me/14438126432" target="_blank">
+         <IconWhatsappFill fill="#32b646" className="w-12 h-12" />
+         </a> 
+        </div>
+        </button>
         <Footer />
 
         <Script

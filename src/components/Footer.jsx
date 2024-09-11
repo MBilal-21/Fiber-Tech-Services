@@ -125,7 +125,7 @@ const Footer = () => {
                   Hold tight as we get our working robots together and produce
                   the most astonishing product ever.
                 </p>
-                <div className="w-max">
+                <div className="w-max pt-8">
                 <ul className="mt-4 flex justify-center gap-6 sm:mt-0 sm:justify-start">
               <li>
                 <a
@@ -306,51 +306,58 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-
-            <div className="text-left order-4">
+{/* our services */}
+            <div className="text-left order-4 ">{/*  md:col-span-4 lg:col-span-3 */}
               <p className="text-lg font-medium text-white ">Our Services</p>
+                    {/* <div className="flex flex-wrap gap-4">
+                      <div>
+                      <p className="text-lg font-medium text-white ">Web Develope</p>
+                      <ul>
 
+                      </ul>
+                      </div>
+                    </div> */}
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
                   <Link
                     className="footer-btn-2 text-gray-400 transition  "
-                    href="/service-details"
+                    href="/services"
                   >
                     <span>
                       {" "}
                       <ChevronDoubleUpIcon className="rotate-90 inline px-0 h-6 w-6 text-custom-blue" />
                     </span>
-                    Product Design
+                    Web Development
                   </Link>
                 </li>
 
                 <li>
                   <Link
                     className="footer-btn-2 text-gray-400 transition  "
-                    href="/service-details"
+                    href="/services"
                   >
                     <span>
                       {" "}
                       <ChevronDoubleUpIcon className="rotate-90 inline px-0 h-6 w-6 text-custom-blue" />
                     </span>
-                    Design & Development
+                    Information Technology
                   </Link>
                 </li>
 
                 <li>
                   <Link
                     className="footer-btn-2 text-gray-400 transition  "
-                    href="/service-details"
+                    href="/services"
                   >
                     <span>
                       {" "}
                       <ChevronDoubleUpIcon className="rotate-90 inline px-0 h-6 w-6 text-custom-blue" />
                     </span>
-                    UX/UI Strategy
+                    Digital Marketing Services
                   </Link>
                 </li>
 
-                <li>
+                {/* <li>
                   <Link
                     className="footer-btn-2 text-gray-400 transition  "
                     href="/service-details"
@@ -397,7 +404,7 @@ const Footer = () => {
                     </span>
                     Business Analysis
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
