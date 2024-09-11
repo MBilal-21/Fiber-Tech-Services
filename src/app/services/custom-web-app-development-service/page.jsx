@@ -24,7 +24,7 @@ const WebAppDev = () => {
               Custom Web Applications are the solution to that. Businesses must
               stay ahead with their efficient, scalable, and easy-to-use web
               applications that will help them grow and get more conversions.
-              That's where our custom web app development services come in. We
+              That{"'"}s where our custom web app development services come in. We
               create business-specific solutions for each of our clients
               according to their requirements. Our approach is understanding and
               implementing your business with our expertise, providing you with

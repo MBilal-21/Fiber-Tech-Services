@@ -127,7 +127,7 @@ const Page = () => {
             emailing, you can easily promote your products, share updates, and
             engage large groups of customers in one go. Our advanced targeting
             ensures that even mass emails feel personal and relevant to each
-            recipient. Either you're a small business looking to expand your
+            recipient. Either you{"\'"}re a small business looking to expand your
             reach or a large company in need of strategic direction, our email
             marketing service provider team is ready to help.
           </p>
@@ -179,7 +179,7 @@ const Page = () => {
           </h3>
           <p>
             Our detailed analytics and reporting tools give you insight into
-            your campaigns' performance. Track open rates, click-throughs, and
+            your campaigns{"'"} performance. Track open rates, click-throughs, and
             conversions to continuously improve your strategy.
           </p>
         </div>
