@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="GXW489isAHnbMmnIQk2Zk7PhY4HUMtgpBKffVJGbLKI"
         />
+        <link rel="icon" type="image/png" href="/favicon-32x32.png"/>
       </head>
       <body className={inter.className}>
         <ScrollToTop />

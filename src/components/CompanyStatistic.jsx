@@ -6,7 +6,7 @@ import Link from "next/link";
 const CompanyStatistic = () => {
   return (
     <section className="statistics-area  mx-auto  max-w-9xl mt-4 px-6 lg:px-8">
-      <div className="statistics-inner bgs-cover text-white  bg-[url('/Assets/fiber-tech-services-statistics.jpg')] bg-no-repeat bg-cover  p-8 ">
+      <div className="statistics-inner bgs-cover text-white  bg-[url('/Assets/fiber-tech-services-statistics.webp')] bg-no-repeat bg-cover  p-8 ">
         <div className="flex flex-wrap items-center xl:items-start  mx-auto  max-w-7xl ">
           <div className="w-full lg:w-1/2 xl:w-5/12 p-2">
             <div

@@ -8,13 +8,13 @@ const services = [
     name: "Web Development",
     subServices: [
       {
-        imageSrc: "/Assets/services-images/web-development-by-fiber-tech.png",
+        imageSrc: "/Assets/services-images/web-development-by-fiber-tech.webp",
         imageAlt: "Custom Web Development",
         name: "Custom Web Development",
         link: "/services/custom-web-development-service",
       },
       {
-        imageSrc: "/Assets/services-images/custom-web-app-development0.jpg",
+        imageSrc: "/Assets/services-images/custom-web-app-development0.webp",
         imageAlt: "Custom Web App Development",
         name: "Custom Web App Development",
         link: "/services/custom-web-development-app-service",

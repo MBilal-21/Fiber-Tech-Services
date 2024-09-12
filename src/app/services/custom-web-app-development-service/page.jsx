@@ -32,7 +32,7 @@ const WebAppDev = () => {
             </p>
           </div>
           <div className="w-full lg:w-1/2 px-4">{/* image */}
-          <Image src={"/Assets/services-images/custom-web-app-development0.jpg"} width={617} height={480} alt="custom-web-app-development"/>
+          <Image src={"/Assets/services-images/custom-web-app-development0.webp"} width={617} height={480} alt="custom-web-app-development"/>
           </div>
         </div>
         <div className="flex flex-wrap justify-center items-center py-4">

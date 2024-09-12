@@ -48,6 +48,7 @@ const servicesList = [
   {
     name: "Web Development",
     icon: CodeBracketSquareIcon,
+    href: "/services",
     subServices: [
       {
         name: "Custom Web Development",
@@ -84,6 +85,7 @@ const servicesList = [
   {
     name: "Information Technology",
     icon: ServerIcon,
+    href: "/services",
     subServices: [
       {
         name: "Cyber Security Services",
@@ -118,6 +120,7 @@ const servicesList = [
   },
   {
     name: " Digital Marketing Services",
+    href: "/services",
     icon: MegaphoneIcon,
     subServices: [
       {
@@ -481,12 +484,12 @@ export default function Navbar() {
                           />
                         </DisclosureButton>
                         <DisclosurePanel className="mt-2 space-y-2">
-                          {[...servicesList, ...callsToAction].map((item) => (
+                          {servicesList.map((item, i) => (
                             <DisclosureButton
-                              key={item.name}
+                              key={i}
                               as={Link}
-                              href={item.href}
-                              onClick={() => setMobileMenuOpen(false)}
+                              href={"/services"}
+                              // onClick={() => setMobileMenuOpen(false)}
                               className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white "
                             >
                               {item.name}

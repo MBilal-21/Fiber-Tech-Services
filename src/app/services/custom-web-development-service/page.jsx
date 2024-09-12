@@ -40,7 +40,7 @@ const WebDev = () => {
           </div>
           <div className="w-full lg:w-1/2 px-4">
             <Image
-              src={"/Assets/services-images/web-development-by-fiber-tech.png"}
+              src={"/Assets/services-images/web-development-by-fiber-tech.webp"}
               width={2898}
               height={2163}
               className="max-w-1/2 w-full h-auto"

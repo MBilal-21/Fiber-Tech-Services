@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FolderIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-const BlogCard = ({ title, category, date, author, imageSrc,shortDiscription }) => {
+const BlogCard = ({ title, category, date, author, imageSrc,shortDiscription ,slug}) => {
   return (
     <div className="p-2 md:w-1/3">
       <div className="group h-full border-2 border-gray-200 border-opacity-60 rounded-lg ">
@@ -28,7 +28,7 @@ const BlogCard = ({ title, category, date, author, imageSrc,shortDiscription }) 
           <p className="leading-relaxed mb-3">{shortDiscription}</p>
           <div className="flex items-center flex-wrap">
             <Link
-              href={`/blogs/post/${title}`}
+              href={`/blogs/post/${slug}`}
               className="text-indigo-500 items-center md:mb-2 lg:mb-0"
             >
               <button

@@ -12,6 +12,7 @@ const Blogs = () => {
       author: "name",
       imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
+      slug: "scope-of-medical-billing-in-pakistan", 
     },
     {
       title:
@@ -21,6 +22,7 @@ const Blogs = () => {
       author: "name",
       imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
+      slug: "scope-of-medical-billing-in-pakistan", 
     },
     {
       title:
@@ -30,6 +32,7 @@ const Blogs = () => {
       author: "name",
       imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
+      slug: "scope-of-medical-billing-in-pakistan", 
     },
     {
       title:
@@ -39,6 +42,7 @@ const Blogs = () => {
       author: "name",
       imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
+      slug: "scope-of-medical-billing-in-pakistan", 
     },
     {
       title:
@@ -48,6 +52,7 @@ const Blogs = () => {
       author: "name",
       imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
+      slug: "scope-of-medical-billing-in-pakistan", 
     },
     {
       title:
@@ -57,6 +62,7 @@ const Blogs = () => {
       author: "name",
       imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
+      slug: "scope-of-medical-billing-in-pakistan", 
     },
     {
       title:
@@ -66,6 +72,7 @@ const Blogs = () => {
       author: "name",
       imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
+      slug: "scope-of-medical-billing-in-pakistan", 
     },
     {
       title:
@@ -75,6 +82,7 @@ const Blogs = () => {
       author: "name",
       imageSrc:"/Assets/blog-images/Why-You-Choose-Zee-Medical-Billing-Services-in-Illinois.webp",
       shortDiscription:"Short description of the blog post...",
+      slug: "scope-of-medical-billing-in-pakistan", 
     },
     // Add more blog entries...
   ];
