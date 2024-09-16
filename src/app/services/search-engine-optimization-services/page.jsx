@@ -161,7 +161,7 @@ const Page = () => {
             <p>
               We use artificial intelligence (AI) to make your SEO strategy even
               smarter. Using these tools, we can keep improving your SEO to
-              match the latest trends online and keep your website's ranking
+              match the latest trends online and keep your website{"'"}s ranking
               high.
               <ul>
                 <p>AI helps us:</p>
@@ -205,7 +205,7 @@ const Page = () => {
             Let Fiber Tech Services Help You Grow
           </h2>
           <p>
-            Whether you're searching for top SEO services in the USA or just
+            Whether you{"'"}re searching for top SEO services in the USA or just
             want your business to be seen locally, Fiber Tech Services has the
             right solution. Get in touch today to learn how our affordable SEO
             services can help grow your business!

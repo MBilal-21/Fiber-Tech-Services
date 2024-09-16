@@ -146,7 +146,7 @@ const Page = () => {
           Custom Campaigns
           </h3>
           <p>
-          Every business is different, so we create tailored campaigns that fit your specific goals. Whether you're looking to grow your brand, drive traffic, or increase sales, we’ll build a strategy that works best for you, from the ad copy to the landing page.
+          Every business is different, so we create tailored campaigns that fit your specific goals. Whether you{"'"}re looking to grow your brand, drive traffic, or increase sales, we’ll build a strategy that works best for you, from the ad copy to the landing page.
           </p>
           <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
           Ongoing Optimization
