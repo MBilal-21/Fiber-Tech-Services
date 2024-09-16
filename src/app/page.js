@@ -321,7 +321,7 @@ export default function HomePage() {
               <div>
                 <h4 className="text-center">
                   <Link
-                    href="/service-details"
+                    href="/services"
                     className="leading-8 text-lg font-semibold hover:text-custom-blue transition-all duration-1000"
                   >
                     Digital Consulting
@@ -361,7 +361,7 @@ export default function HomePage() {
               <div>
                 <h4 className="text-center">
                   <Link
-                    href="/service-details"
+                    href="/services"
                     className="leading-8 text-lg font-semibold hover:text-custom-blue transition-all duration-1000"
                   >
                     Design &amp; Development
@@ -401,7 +401,7 @@ export default function HomePage() {
               <div>
                 <h4 className="text-center">
                   <Link
-                    href="/service-details"
+                    href="/services"
                     className="leading-8 text-lg font-semibold hover:text-custom-blue transition-all duration-1000"
                   >
                     Mobile App Solutions
@@ -438,7 +438,7 @@ export default function HomePage() {
               <div>
                 <h4 className="text-center">
                   <Link
-                    href="/service-details"
+                    href="/services"
                     className="leading-8 text-lg font-semibold hover:text-custom-blue transition-all duration-1000"
                   >
                     UX/UI Design Strategy
@@ -527,7 +527,7 @@ export default function HomePage() {
                   </div>
                   <h4 className="pt-4">
                     <Link
-                      href="/service-details"
+                      href="/services"
                       className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
                     >
                       IT Consulting
@@ -564,7 +564,7 @@ export default function HomePage() {
                   </div>
                   <h4 className="pt-4">
                     <Link
-                      href="/service-details"
+                      href="/services"
                       className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
                     >
                       Business Growth

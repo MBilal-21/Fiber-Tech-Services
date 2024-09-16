@@ -252,7 +252,7 @@ const Footer = () => {
             <div className="text-left order-3">
               <p className="text-lg font-medium text-white">Quick Links</p>
 
-              <ul className="mt-8 space-y-4 text-sm">
+              <ul className="mt-8 space-y-2 text-sm">
                 <li>
                   <Link
                     className="footer-btn-2 text-gray-400 transition  "
@@ -317,7 +317,7 @@ const Footer = () => {
                       </ul>
                       </div>
                     </div> */}
-              <ul className="mt-8 space-y-4 text-sm">
+              <ul className="mt-8 space-y-2 text-sm">
                 <li>
                   <Link
                     className="footer-btn-2 text-gray-400 transition  "
@@ -411,7 +411,7 @@ const Footer = () => {
             <div className="text-left order-5">
               <p className="text-lg font-medium text-white ">Support</p>
 
-              <ul className="mt-8 space-y-4 text-sm">
+              <ul className="mt-8 space-y-2 text-sm">
                 <li>
                   <Link
                     className="footer-btn-2 text-gray-400 transition  "

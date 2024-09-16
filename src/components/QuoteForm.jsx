@@ -30,11 +30,11 @@ const [sentError, setSentError] = useState(null);
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Email is invalid";
     }
-    if (!formData.phone) {
-      newErrors.phone = "Please enter your Phone number";
-    } else if (!/^\d{10}$/.test(formData.phone)) {
-      newErrors.phone = "Phone number must be 10 digits";
-    }
+    // if (!formData.phone) {
+    //   newErrors.phone = "Please enter your Phone number";
+    // } else if (!/^\d{10}$/.test(formData.phone)) {
+    //   newErrors.phone = "Phone number must be 10 digits";
+    // }
     // if (!formData.subject) newErrors.subject = "Please enter your subject";
     if (!formData.message) newErrors.message = "Please enter your message";
 
@@ -168,7 +168,7 @@ const [sentError, setSentError] = useState(null);
                   htmlFor={field}
                   className="mb-1 font-medium text-gray-700 capitalize"
                 >
-                  {field.replace(/([A-Z])/g, " $1").trim()}{" "}
+                  {field.replace(/([A-Z])/g, " $1").trim()}{" "}{field === "phone" && "(optional)"}
                   {/* Convert camelCase to Title Case */}
                 </label>
                 <input

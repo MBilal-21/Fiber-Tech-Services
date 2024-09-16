@@ -127,6 +127,19 @@ const servicesList = [
         name: "Email Marketing Services",
         href: "/services/email-marketing-services",
       },
+      {
+        name: "SMS Marketing Services",
+        href: "/services/sms-marketing-services",
+      },
+      {
+        name: "PPC Ads Services",
+        href: "/services/ppc-sds-services",
+      },
+      {
+        name: "Search Engine Optimization (SEO) Services",
+        href: "/services/search-engine-optimization-services",
+      },
+      
       // {
       //   name: "Design & Development",
       //   href: "/services/",
@@ -310,7 +323,7 @@ export default function Navbar() {
                             <Link
                               key={item.name}
                               href={item.href}
-                              className=" hover:bg-custom-blue/30 relative flex items-center  gap-2 text-sm leading-6 p-2 "
+                              className=" hover:bg-custom-blue/30 relative flex items-center  gap-2 text-sm  p-2 "
                             >
                               {/* <div className="flex h-6 w-6 flex-none items-center justify-center rounded-lg  ">
                                 <item.icon
@@ -489,7 +502,7 @@ export default function Navbar() {
                               key={i}
                               as={Link}
                               href={"/services"}
-                              // onClick={() => setMobileMenuOpen(false)}
+                              onClick={() => setMobileMenuOpen(false)}
                               className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white "
                             >
                               {item.name}

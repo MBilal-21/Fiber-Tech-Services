@@ -1725,82 +1725,15 @@ body {
   top: -35%;
 }
 
-.cs-image-part {
-  position: relative;
-  padding-left: 40px;
-}
 
-@media only screen and (min-width: 992px) {
-  .cs-image-part {
-    margin-left: -15px;
-  }
-}
 
-@media only screen and (max-width: 575px) {
-  .cs-image-part {
-    padding-left: 20px;
-  }
-}
 
-.cs-image-part .video-play {
-  left: 0;
-  position: absolute;
-  top: calc(50% - 40px);
-}
 
-.cs-image-part .image {
-  max-width: 75%;
-}
 
-.cs-image-part .experience-years {
-  position: absolute;
-  right: 0;
-  top: 13%;
-  max-width: 260px;
-  padding: 35px 40px 40px;
-  background: var(--secondray-color);
-}
 
-@media only screen and (max-width: 767px) {
-  .cs-image-part .experience-years {
-    padding: 20px 25px 25px;
-  }
-}
 
-@media only screen and (max-width: 479px) {
-  .cs-image-part .experience-years {
-    top: 25%;
-    max-width: 180px;
-    padding-bottom: 5px;
-  }
-}
 
-.cs-image-part .experience-years h4 {
-  line-height: 1.54;
-  margin-bottom: 18px;
-}
 
-@media only screen and (min-width: 768px) {
-  .cs-image-part .experience-years h4 {
-    font-size: 26px;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .cs-image-part .experience-years h4 {
-    font-size: 18px;
-  }
-}
-
-.cs-image-part .experience-years img {
-  border-radius: 50%;
-}
-
-@media only screen and (max-width: 479px) {
-  .cs-image-part .experience-years img {
-    display: none;
-  }
-}
 
 /* Why Choose Us */
 .why-choose-tab .nav .nav-link {
@@ -2121,7 +2054,8 @@ body {
   top: 13%;
   max-width: 235px;
   padding: 30px 40px 15px;
-  background: var(--secondray-color);
+  background: var(--secondary-color-2);
+  color: white;
 }
 
 @media only screen and (max-width: 991px) {

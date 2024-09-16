@@ -41,6 +41,24 @@ const services = [
         name: "Email Marketing Services",
         link: "/services/email-marketing-services",
       },
+      {
+        imageSrc: "/Assets/services-images/sms-marketing-services.webp",
+        imageAlt: "SMS Marketing Services",
+        name: "SMS Marketing Services",
+        link: "/services/sms-marketing-services",
+      },
+      {
+        imageSrc: "/Assets/services-images/ppc-adds-services.webp",
+        imageAlt: "PPC Ads Services",
+        name: "PPC Ads Services",
+        link: "/services/ppc-sds-services",
+      },
+      {
+        imageSrc: "/Assets/services-images/seo.webp",
+        imageAlt: "Search Engine Optimization (SEO) Services",
+        name: "Search Engine Optimization (SEO) Services",
+        link: "/services/search-engine-optimization-services",
+      },
     ],
   },
 ];
@@ -89,7 +107,7 @@ const OurServives = () => {
                     className="group"
                   >
                     {" "}
-                    <div className="text-center pt-4 font-bold text-lg group-hover:text-custom-blue">
+                    <div className="text-center pt-4 font-bold text-lg text-custom-blue">
                       {s.name}
                     </div>
                   </Link>
