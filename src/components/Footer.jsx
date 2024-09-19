@@ -307,7 +307,7 @@ const Footer = () => {
               </ul>
             </div>
 {/* our services */}
-            <div className="text-left order-4 ">{/*  md:col-span-4 lg:col-span-3 */}
+            <div className="text-left order-4 md:col-span-1">{/*  md:col-span-4 lg:col-span-3 */}
               <p className="text-lg font-medium text-white ">Our Services</p>
                     {/* <div className="flex flex-wrap gap-4">
                       <div>
@@ -426,16 +426,36 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-
-            {/* <div className="text-left md:col-span-4 lg:col-span-2 order-2 md:order-last">
+{/*  */}
+             <div className="text-left md:col-span-4 lg:col-span-2 order-2 md:order-last">
               <p className="text-lg font-medium text-white ">Stay in Touch</p>
 
               <div className=" mt-8 max-w-md sm:ms-0">
-                <p className="text-start leading-relaxed text-gray-400 ">
+                {/* <p className="text-start leading-relaxed text-gray-400 ">
                   Enter you e-mail to get latest updates
-                </p>
+                </p> */}
+               <div>
+               <span className="text-lg text-gray-500">
+                  Mobile :{" "}
+                  <a
+                    href="callto:8885729311"
+                    className="text-lg text-gray-500 hover:text-custom-blue transition-all"
+                  >
+                    +888 572 9311
+                  </a>
+                </span></div>
+               <div>
+               <span className="text-lg text-gray-500">
+                 
+                  <a
+                  className="text-lg text-gray-500 hover:text-custom-blue transition-all"
+                  href="mailto:support@fibertechservices.net"
+                >
+                  support@fibertechservices.net
+                </a>
+                </span></div>
 
-                <form className="mt-4">
+                {/* <form className="mt-4">
                   <div className="flex flex-col gap-4 sm:flex-row lg:flex-col lg:items-start">
                     <input
                       className="w-full rounded-full border-gray-200 bg-white px-6 py-3 shadow-sm  "
@@ -451,9 +471,10 @@ const Footer = () => {
                       Subscribe
                     </button>
                   </div>
-                </form>
+                </form> */}
               </div>
-            </div> */}
+            </div> 
+            {/*  */}
           </div>
           <div className="mt-16 border-t border-gray-100 pt-6 sm:flex sm:items-center sm:justify-center ">
             <p className="text-center text-sm text-gray-400 sm:text-left ">

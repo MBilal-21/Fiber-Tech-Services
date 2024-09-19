@@ -7,12 +7,9 @@ const QuoteForm = () => {
   
   const [formData, setFormData] = useState({
     firstName: "",
-    practiceOrCompany: "",
-    Budget: "",
     lastName: "",
     email: "",
     phone: "",
-    subject: "",
     message: "",
   });
 const [sentSuccess, setSentSuccess] = useState(false);
@@ -57,7 +54,7 @@ const [sentError, setSentError] = useState(null);
     if (Object.keys(validationErrors).length === 0) {
       try {
         // Simulate form submission to an API
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_KEY}/quote`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_KEY}/get-quote`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

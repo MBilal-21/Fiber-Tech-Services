@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToUpBtn";
 import Loading from "@/components/Loading"; // Import Loading component
 import { Suspense } from "react"; // Import Suspense
-import Head from "next/head";
 import Script from "next/script";
 import IconWhatsappFill from "@/components/Icons/IconWhatsapp";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="GXW489isAHnbMmnIQk2Zk7PhY4HUMtgpBKffVJGbLKI"
         />
-        <link rel="icon" type="image/png" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" />
       </head>
       <body className={inter.className}>
         <ScrollToTop />
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <Suspense fallback={<Loading />}>
           <main className="overflow-x-hidden">{children}</main>
         </Suspense>
-
+        {/* <WhatsAppIcon/> */}
         <button
           style={{
             position: "fixed",
@@ -40,14 +40,15 @@ export default function RootLayout({ children }) {
             zIndex: 1000,
             cursor: "pointer",
           }}
-          
         >
-        <div className="relative">
-          <span className="absolute -top-8 -left-12 w-24 sr-only">Contact-us</span>
-        <a href="https://wa.me/14438126432" target="_blank">
-         <IconWhatsappFill fill="#32b646" className="w-12 h-12" />
-         </a> 
-        </div>
+          <div className="relative">
+            <span className="absolute -top-8 -left-12 w-24 sr-only">
+              Contact-us
+            </span>
+            <a href="https://wa.me/14438126432" target="_blank">
+              <IconWhatsappFill fill="#32b646" className="w-12 h-12" />
+            </a>
+          </div>
         </button>
         <Footer />
 

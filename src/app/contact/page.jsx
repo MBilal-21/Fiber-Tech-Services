@@ -118,7 +118,11 @@ const Contact = () => {
       </section>
       {/* google map start  */}
       <section className="w-full" style={{ height: "400px" }}>
-        <Map address="1600 Amphitheatre Parkway, Mountain View, CA" />
+        {/* <Map address="1600 Amphitheatre Parkway, Mountain View, CA" /> */}
+        <div ><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=30%20N%20Gould%20St,%20Ste%2020128,%20Sheridan,%20WY%2082801+(Fiber%20Tech%20Services)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        </iframe>
+        {/* <a href="https://www.gps.ie/">gps devices</a> */}
+        </div>
       </section>
       {/* google map end */}
       {/* contact form start */}

@@ -52,34 +52,15 @@ const servicesList = [
     subServices: [
       {
         name: "Custom Web Development",
-        href: "/services/custom-web-development-service",
+        href: "/services/custom-web-development",
         icon: CodeBracketSquareIcon,
       },
       {
         name: "Custom Web App Development",
-        href: "/services/custom-web-app-development-service",
+        href: "/services/custom-web-app-development",
         icon: CodeBracketSquareIcon,
       },
-      // {
-      //   name: "UX/UI Strategy",
-      //   href: "/services/",
-      //   icon: ChartBarIcon,
-      // },
-      // {
-      //   name: "Search Engine",
-      //   href: "/services/",
-      //   icon: DocumentMagnifyingGlassIcon,
-      // },
-      // {
-      //   name: "IT Consulting",
-      //   href: "/services/",
-      //   icon: ChatBubbleOvalLeftEllipsisIcon,
-      // },
-      // {
-      //   name: "Software Development",
-      //   href: "/services/",
-      //   icon: CpuChipIcon,
-      // },
+     
     ],
   },
   {
@@ -88,83 +69,37 @@ const servicesList = [
     href: "/services",
     subServices: [
       {
-        name: "Cyber Security Services",
-        href: "/services/cyber-security-services",
+        name: "Cyber Security ",
+        href: "/services/cyber-security",
       },
-      // {
-      //   name: "Design & Development",
-      //   href: "/services/",
-      //   icon: CodeBracketSquareIcon,
-      // },
-      // {
-      //   name: "UX/UI Strategy",
-      //   href: "/services/",
-      //   icon: ChartBarIcon,
-      // },
-      // {
-      //   name: "Search Engine",
-      //   href: "/services/",
-      //   icon: DocumentMagnifyingGlassIcon,
-      // },
-      // {
-      //   name: "IT Consulting",
-      //   href: "/services/",
-      //   icon: ChatBubbleOvalLeftEllipsisIcon,
-      // },
-      // {
-      //   name: "Software Development",
-      //   href: "/services/",
-      //   icon: CpuChipIcon,
-      // },
+     
+    
+     
     ],
   },
   {
-    name: " Digital Marketing Services",
+    name: " Digital Marketing ",
     href: "/services",
     icon: MegaphoneIcon,
     subServices: [
       {
-        name: "Email Marketing Services",
-        href: "/services/email-marketing-services",
+        name: "Email Marketing ",
+        href: "/services/email-marketing",
       },
       {
-        name: "SMS Marketing Services",
-        href: "/services/sms-marketing-services",
+        name: "SMS Marketing ",
+        href: "/services/sms-marketing",
       },
       {
-        name: "PPC Ads Services",
-        href: "/services/ppc-sds-services",
+        name: "PPC Ads ",
+        href: "/services/ppc-sds",
       },
       {
-        name: "Search Engine Optimization (SEO) Services",
-        href: "/services/search-engine-optimization-services",
+        name: "Search Engine Optimization (SEO) ",
+        href: "/services/search-engine-optimization",
       },
       
-      // {
-      //   name: "Design & Development",
-      //   href: "/services/",
-      //   icon: CodeBracketSquareIcon,
-      // },
-      // {
-      //   name: "UX/UI Strategy",
-      //   href: "/services/",
-      //   icon: ChartBarIcon,
-      // },
-      // {
-      //   name: "Search Engine",
-      //   href: "/services/",
-      //   icon: DocumentMagnifyingGlassIcon,
-      // },
-      // {
-      //   name: "IT Consulting",
-      //   href: "/services/",
-      //   icon: ChatBubbleOvalLeftEllipsisIcon,
-      // },
-      // {
-      //   name: "Software Development",
-      //   href: "/services/",
-      //   icon: CpuChipIcon,
-      // },
+    
     ],
   },
 ];
@@ -498,16 +433,19 @@ export default function Navbar() {
                         </DisclosureButton>
                         <DisclosurePanel className="mt-2 space-y-2">
                           {servicesList.map((item, i) => (
-                            <DisclosureButton
-                              key={i}
+                           item.subServices.map((item2, index)=>( <DisclosureButton
+                              key={i+""+index}
                               as={Link}
-                              href={"/services"}
+                               href={item2.href}
+                              className="block rounded-lg pl-6 pr-3 text-sm font-semibold leading-7 text-white "
                               onClick={() => setMobileMenuOpen(false)}
-                              className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white "
+                              
                             >
-                              {item.name}
-                            </DisclosureButton>
+                              {item2.name}
+                              
+                            </DisclosureButton>))
                           ))}
+                          <div><Link href={"/services"}  onClick={() => setMobileMenuOpen(false)} className="block rounded-lg pl-6 pr-3 text-sm font-semibold leading-7 text-white " >View all Services</Link></div>
                         </DisclosurePanel>
                       </Disclosure>
                       <Link

@@ -14,41 +14,41 @@ import { useState } from "react";
 import clsx from "clsx";
 export default function HomePage() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    services: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    services: "",
   });
-  
+
   const [errors, setErrors] = useState({});
   const [isShaking, setIsShaking] = useState(false);
   const [sentSuccess, setSentSuccess] = useState(false);
   const [sentError, setSentError] = useState(null);
-  
+
   const validate = () => {
     const errors = {};
-  
+
     if (!formData.firstName.trim()) {
-      errors.firstName = 'First name is required';
+      errors.firstName = "First name is required";
     }
-  
+
     if (!formData.lastName.trim()) {
-      errors.lastName = 'Last name is required';
+      errors.lastName = "Last name is required";
     }
-  
+
     if (!formData.email) {
-      errors.email = 'Email address is required';
+      errors.email = "Email address is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'Email address is invalid';
+      errors.email = "Email address is invalid";
     }
-  
-    if (!formData.services || formData.services === '--Choose A Service--') {
-      errors.services = 'Please select a service';
+
+    if (!formData.services || formData.services === "--Choose A Service--") {
+      errors.services = "Please select a service";
     }
-  
+
     return errors;
   };
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -60,33 +60,36 @@ export default function HomePage() {
     e.preventDefault();
     const validationErrors = validate();
     setErrors(validationErrors);
-  
+
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_KEY}/quote`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-  
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_KEY}/services-quote`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
+
         if (response.ok) {
           const data = await response.json();
-          console.log('Form submitted successfully:', data);
-          setSentSuccess(true); 
-        setTimeout(() => setSentSuccess(false), 4000);
+          console.log("Form submitted successfully:", data);
+          setSentSuccess(true);
+          setTimeout(() => setSentSuccess(false), 4000);
 
           setSentError(null);
-          setFormData({ firstName: '', lastName: '', email: '', services: '' });
+          setFormData({ firstName: "", lastName: "", email: "", services: "" });
         } else {
-          setSentError('Failed to submit the form. Please try again.');
+          setSentError("Failed to submit the form. Please try again.");
           setTimeout(() => setSentError(null), 4000);
 
           setSentSuccess(false);
         }
       } catch (error) {
-        setSentError('An unexpected error occurred. Please try again.');
+        setSentError("An unexpected error occurred. Please try again.");
         setTimeout(() => setSentError(null), 4000);
         setSentSuccess(false);
       }
@@ -95,7 +98,7 @@ export default function HomePage() {
       setTimeout(() => setIsShaking(false), 500);
     }
   };
-  
+
   return (
     <div>
       {/* cover section start */}
@@ -114,9 +117,9 @@ export default function HomePage() {
                 Services.
               </p>
               <Link href={"/contact"}>
-              <Button className="block rounded bg-custom-blue px-8 py-3 font-medium text-white transition hover:bg-indigo-700">
-                Let gets Started <span aria-hidden="true">&rarr;</span>
-              </Button>
+                <Button className="block rounded bg-custom-blue px-8 py-3 font-medium text-white transition hover:bg-indigo-700">
+                  Let gets Started <span aria-hidden="true">&rarr;</span>
+                </Button>
               </Link>
             </div>
             <div className="column-6 backdrop-blur-sm animate__animated animate__lightSpeedInRight">
@@ -875,7 +878,16 @@ export default function HomePage() {
                 />
                 <div className="testi-image-over text-white">
                   <h3>We Have More 3248+ Reviews From Global Clients</h3>
-                  <Image src="/Assets/testi-img/signature.png" alt="Signature" width={184} height={85} style={{filter: "brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2921%) hue-rotate(179deg) brightness(121%) contrast(106%)"}}/>
+                  <Image
+                    src="/Assets/testi-img/signature.png"
+                    alt="Signature"
+                    width={184}
+                    height={85}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2921%) hue-rotate(179deg) brightness(121%) contrast(106%)",
+                    }}
+                  />
                 </div>
                 <div className="dot-shapes">
                   <Image

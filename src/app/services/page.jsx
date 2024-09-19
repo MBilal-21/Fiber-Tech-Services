@@ -11,13 +11,13 @@ const services = [
         imageSrc: "/Assets/services-images/web-development-by-fiber-tech.webp",
         imageAlt: "Custom Web Development",
         name: "Custom Web Development",
-        link: "/services/custom-web-development-service",
+        link: "/services/custom-web-development",
       },
       {
         imageSrc: "/Assets/services-images/custom-web-app-development0.webp",
         imageAlt: "Custom Web App Development",
         name: "Custom Web App Development",
-        link: "/services/custom-web-development-app-service",
+        link: "/services/custom-web-development-app",
       },
     ],
   },
@@ -28,7 +28,7 @@ const services = [
         imageSrc: "/Assets/services-images/cyber-security-services.webp",
         imageAlt: "Cyber Security Services",
         name: "Cyber Security Services",
-        link: "/services/cyber-security-services",
+        link: "/services/cyber-security",
       },
     ],
   },
@@ -45,19 +45,19 @@ const services = [
         imageSrc: "/Assets/services-images/sms-marketing-services.webp",
         imageAlt: "SMS Marketing Services",
         name: "SMS Marketing Services",
-        link: "/services/sms-marketing-services",
+        link: "/services/sms-marketing",
       },
       {
         imageSrc: "/Assets/services-images/ppc-adds-services.webp",
         imageAlt: "PPC Ads Services",
         name: "PPC Ads Services",
-        link: "/services/ppc-sds-services",
+        link: "/services/ppc-sds",
       },
       {
         imageSrc: "/Assets/services-images/seo.webp",
         imageAlt: "Search Engine Optimization (SEO) Services",
         name: "Search Engine Optimization (SEO) Services",
-        link: "/services/search-engine-optimization-services",
+        link: "/services/search-engine-optimization",
       },
     ],
   },
@@ -103,7 +103,7 @@ const OurServives = () => {
                     </Link>
                   </div>
                   <Link
-                    href={"/services/custom-web-development-service"}
+                    href={"/services/custom-web-development"}
                     className="group"
                   >
                     {" "}
