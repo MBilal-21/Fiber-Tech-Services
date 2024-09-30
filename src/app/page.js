@@ -10,30 +10,64 @@ import ImageSlider from "@/components/test-slide";
 import CompanyStatistic from "@/components/CompanyStatistic";
 import PricingPlan from "@/components/PricingPlan";
 import QuoteForm from "@/components/QuoteForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 export default function HomePage() {
+  const [servicesList, setServicesList] = useState([]);
+  const [getServiceLoading, setGetServiceLoading] = useState(true);
+  const [getServiceError, setGetServiceError] = useState(null);
+  
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     email: "",
-    services: "",
+    service_id: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const [errors, setErrors] = useState({});
   const [isShaking, setIsShaking] = useState(false);
   const [sentSuccess, setSentSuccess] = useState(false);
   const [sentError, setSentError] = useState(null);
 
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_KEY}/service/select`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch services');
+        }
+        const data = await response.json();
+        
+        setServicesList(data);
+        console.log(data);
+      } catch (error) {
+        setGetServiceError(error.message);
+      } finally {
+        setGetServiceLoading(false);
+      }
+    };
+
+    fetchServices();
+    // const intervalId = setInterval(fetchServices, 5000);  // Fetch every 5 seconds
+
+    // Clean up the interval on component unmount
+    // return () => clearInterval(intervalId);
+  }, []);
+
+ 
+
+
+
   const validate = () => {
     const errors = {};
 
-    if (!formData.firstName.trim()) {
-      errors.firstName = "First name is required";
+    if (!formData.first_name.trim()) {
+      errors.first_name = "First name is required";
     }
 
-    if (!formData.lastName.trim()) {
-      errors.lastName = "Last name is required";
+    if (!formData.last_name.trim()) {
+      errors.last_name = "Last name is required";
     }
 
     if (!formData.email) {
@@ -42,8 +76,8 @@ export default function HomePage() {
       errors.email = "Email address is invalid";
     }
 
-    if (!formData.services || formData.services === "--Choose A Service--") {
-      errors.services = "Please select a service";
+    if (!formData.service_id || formData.service_id === "--Choose A Service--") {
+      errors.service_id = "Please select a service";
     }
 
     return errors;
@@ -62,9 +96,13 @@ export default function HomePage() {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
+      setLoading(true);
+
       try {
+       
+        
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_KEY}/services-quote`,
+          `${process.env.NEXT_PUBLIC_API_KEY}/get-quote`,
           {
             method: "POST",
             headers: {
@@ -81,17 +119,23 @@ export default function HomePage() {
           setTimeout(() => setSentSuccess(false), 4000);
 
           setSentError(null);
-          setFormData({ firstName: "", lastName: "", email: "", services: "" });
+          setFormData({ first_name: "", last_name: "", email: "", service_id: "" });
+          setLoading(false);
+
         } else {
           setSentError("Failed to submit the form. Please try again.");
           setTimeout(() => setSentError(null), 4000);
 
           setSentSuccess(false);
+          setLoading(false);
+
         }
       } catch (error) {
         setSentError("An unexpected error occurred. Please try again.");
         setTimeout(() => setSentError(null), 4000);
         setSentSuccess(false);
+        setLoading(false);
+
       }
     } else {
       setIsShaking(true);
@@ -133,7 +177,7 @@ export default function HomePage() {
                 <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                   <div className="sm:col-span-3">
                     <label
-                      htmlFor="firstName"
+                      htmlFor="first_name"
                       className="block text-sm font-medium leading-6 text-white"
                     >
                       First name
@@ -141,20 +185,20 @@ export default function HomePage() {
                     <div className="mt-2">
                       <input
                         id="first-name"
-                        name="firstName"
+                        name="first_name"
                         type="text"
                         autoComplete="given-name"
                         placeholder="First Name"
-                        value={formData.firstName}
+                        value={formData.first_name}
                         onChange={handleChange}
                         className={clsx(
                           "block bg-gray-900 w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6",
-                          errors.firstName && "border-red-500 "
+                          errors.first_name && "border-red-500 "
                         )}
                       />
-                      {errors.firstName && (
+                      {errors.first_name && (
                         <p className="mt-1 text-sm text-red-600">
-                          {errors.firstName}
+                          {errors.first_name}
                         </p>
                       )}
                     </div>
@@ -162,7 +206,7 @@ export default function HomePage() {
 
                   <div className="sm:col-span-3">
                     <label
-                      htmlFor="lastName"
+                      htmlFor="last_name"
                       className="block text-sm font-medium leading-6 text-white"
                     >
                       Last name
@@ -170,20 +214,20 @@ export default function HomePage() {
                     <div className="mt-2">
                       <input
                         id="last-name"
-                        name="lastName"
+                        name="last_name"
                         type="text"
                         placeholder="Last Name"
                         autoComplete="family-name"
-                        value={formData.lastName}
+                        value={formData.last_name}
                         onChange={handleChange}
                         className={clsx(
                           "block bg-gray-900 w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6",
-                          errors.lastName && "border-red-500 "
+                          errors.last_name && "border-red-500 "
                         )}
                       />
-                      {errors.lastName && (
+                      {errors.last_name && (
                         <p className="mt-1 text-sm text-red-600">
-                          {errors.lastName}
+                          {errors.last_name}
                         </p>
                       )}
                     </div>
@@ -220,33 +264,36 @@ export default function HomePage() {
 
                   <div className="sm:col-span-3">
                     <label
-                      htmlFor="services"
+                      htmlFor="service_id"
                       className="block text-sm font-medium leading-6 text-white"
                     >
                       Services
                     </label>
                     <div className="mt-2">
                       <select
-                        id="services"
-                        name="services"
-                        value={formData.services}
+                        id="service_id"
+                        name="service_id"
+                        value={formData.service_id}
                         onChange={handleChange}
                         className={clsx(
                           "block bg-gray-900 w-full rounded-md border-0 py-1.5 text-gray-50 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6",
-                          errors.services && "border-red-500 "
+                          errors.service_id && "border-red-500 "
                         )}
                       >
                         <option>--Choose A Service--</option>
-                        <option>Web Development</option>
+                        {getServiceLoading ? <option value={-1}>loading services..</option>:
+                        servicesList.map((s)=><option key={s.id} value={s.id}>{s.title}</option>)}
+                        {getServiceError && <option>Other</option>}
+                        {/* <option>Web Development</option>
                         <option>Web App Development</option>
                         <option>App Development</option>
                         <option>Information Security</option>
                         <option>Digital Marketting</option>
-                        <option>Graphic Designing</option>
+                        <option>Graphic Designing</option> */}
                       </select>
-                      {errors.services && (
+                      {errors.service_id && (
                         <p className="mt-1 text-sm text-red-600">
-                          {errors.services}
+                          {errors.service_id}
                         </p>
                       )}
                     </div>
@@ -256,7 +303,8 @@ export default function HomePage() {
                 <div className="mt-6 flex items-center justify-center w-full">
                   <button
                     type="submit"
-                    className="w-full px-4 py-2 flex justify-center font-bold text-white bg-custom-blue rounded hover:bg-blue-700"
+                    disabled = {loading}
+                    className={`${loading &&"opacity-50 cursor-not-allowed"} w-full px-4 py-2 flex justify-center font-bold text-white bg-custom-blue rounded hover:bg-blue-700`}
                   >
                     Send
                     <PaperAirplaneIcon className="h-6 w-6 text-gray-50 ml-2" />
@@ -531,7 +579,7 @@ export default function HomePage() {
                   <h4 className="pt-4">
                     <Link
                       href="/services"
-                      className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
+                      className="leading-8 text-lg font-semibold hover:text-custom-blue transition-all duration-1000"
                     >
                       IT Consulting
                     </Link>
@@ -568,7 +616,7 @@ export default function HomePage() {
                   <h4 className="pt-4">
                     <Link
                       href="/services"
-                      className="leading-8 text-lg font-semibold hover:text-custom-green transition-all duration-1000"
+                      className="leading-8 text-lg font-semibold hover:text-custom-blue transition-all duration-1000"
                     >
                       Business Growth
                     </Link>

@@ -1,6 +1,14 @@
 import ServicePageTop from "@/components/ServicePageTop";
 import Image from "next/image";
 import Link from "next/link";
+export const metadata = {
+  title: "Best Search Engine Optimization (SEO) Services In USA",
+  description:
+    "Enhance your online presence with our Search Engine Optimization (SEO) Services in USA. Drive traffic and boost rankings with our expert SEO strategies!",
+    alternates: {
+      canonical: "https://fibertechservices.net/services/search-engine-optimization", // Add your canonical URL here
+    },
+};
 
 const Page = () => {
   return (
@@ -9,8 +17,8 @@ const Page = () => {
       <div className="mx-auto  max-w-7xl  px-6  lg:px-8 py-6">
         <div className="flex flex-wrap justify-center items-center py-4">
           <div className="w-full lg:w-1/2 px-4">
-          <h2 className="text-gray-900 font-bold text-xl md:text-3xl py-4 ">
-          Search Engine Optimization (SEO) Services
+            <h2 className="text-gray-900 font-bold text-xl md:text-3xl py-4 ">
+              Search Engine Optimization (SEO) Services
             </h2>
             Attracting organic traffic as compared to paid Ads and campaigns
             always proves to be beneficial for local businesses as they get
@@ -67,7 +75,9 @@ const Page = () => {
             <div className="w-full lg:w-1/2 px-4">
               {/* image */}
               <Image
-                src={"/Assets/services-images/Why-Choose-Us-For-Your-SEO-Services.jpg"}
+                src={
+                  "/Assets/services-images/Why-Choose-Us-For-Your-SEO-Services.jpg"
+                }
                 width={2000}
                 height={2000}
                 className="max-w-1/2 w-full max-h-96 object-cover overflow-hidden h-auto"
@@ -104,12 +114,34 @@ const Page = () => {
               rank your site properly.
             </p>
             <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
+              Local SEO Services
+            </h3>
+            <p>
+              Boost your business visibility with{" "}
+              <Link
+                href="https://en.wikipedia.org/wiki/Local_search_engine_optimisation"
+                className=" text-indigo-600 hover:text-custom-blue"
+              >
+                {" "}
+                Local SEO.
+              </Link>{" "}
+              Reach nearby customers easily, rank higher on Google, and grow
+              your sales. Let customers find you first with our expert local SEO
+              services!
+            </p>
+            <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
               Keyword Research
             </h3>
             <p>
-              We used advanced keyword hunting tools like SEMrush and Google
-              Keyword Planner to hunt down the keywords that will get your site
-              more traction.
+              We used advanced keyword hunting tools like SEMrush, Ahref and{" "}
+              <Link
+                href="https://www.youtube.com/watch?app=desktop&v=-pYDTAN3vH8"
+                className=" text-indigo-600 hover:text-custom-blue"
+              >
+                {" "}
+                Google Keyword Planner
+              </Link>{" "}
+              to hunt down the keywords that will get your site more traction.
             </p>
           </div>
           <div>
@@ -135,29 +167,33 @@ const Page = () => {
               website works. We work on improving all these areas to make sure
               your site loads fast, responds quickly, and doesn’t have annoying
               shifts, giving users a smooth experience. <br />
-              <br />
-              Largest Contentful Paint (LCP): How fast your site loads. <br />
-              First Input Delay (FID): How quickly users can interact with your
-              site. <br />
-              Cumulative Layout Shift (CLS): How stable your layout is while it
-              loads.
-            </p>
+               </p>
+              <p>• Largest Contentful Paint (LCP): How fast your site loads. </p>
+             <p> • First Input Delay (FID): How quickly users can interact with
+              your site. </p>
+              <p>• Cumulative Layout Shift (CLS): How stable your layout
+              is while it loads.</p>
+           
             <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
               3. E-A-T (Expertise, Authoritativeness, Trustworthiness)
             </h3>
             <p>
-              Google wants to show trustworthy websites, and E-A-T is all about
+              Google wants to show trustworthy websites, and <Link
+                href="https://www.youtube.com/watch?v=QEH1gVUt68E"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > E-A-T</Link> is all about
               building that trust. The more Google trusts your site, the higher
               it ranks. We help you:
-              <ul>
-                <li>● By creating high-quality content.</li>
-                <li>● Through getting backlinks from reliable websites.</li>
-                <li>
-                  ● Making sure your site has security features and honest
-                  information about your business.
-                </li>
-              </ul>
             </p>
+            <ul>
+              <li>● By creating high-quality content.</li>
+              <li>● Through getting backlinks from reliable websites.</li>
+              <li>
+                ● Making sure your site has security features and honest
+                information about your business.
+              </li>
+            </ul>
+
             <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
               4. AI and Machine Learning
             </h3>
@@ -166,16 +202,16 @@ const Page = () => {
               smarter. Using these tools, we can keep improving your SEO to
               match the latest trends online and keep your website{"'"}s ranking
               high.
-              <ul>
-                <p>AI helps us:</p>
-                <li>● Find the best keywords for your business.</li>
-                <li>● Create content that matches searching trends.</li>
-                <li>
-                  ● Predict future trends so your site always stays ahead of the
-                  competition.
-                </li>
-              </ul>
             </p>
+            <ul>
+              <p>AI helps us:</p>
+              <li>● Find the best keywords for your business.</li>
+              <li>● Create content that matches searching trends.</li>
+              <li>
+                ● Predict future trends so your site always stays ahead of the
+                competition.
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -183,24 +219,28 @@ const Page = () => {
           <h2 className="text-gray-900 font-bold text-xl md:text-3xl py-4 ">
             Why Choose Fiber Tech Services?
           </h2>
-          <p>
+         
             <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
               {" "}
               Understanding Local Market
             </h3>
-            We understand the local market and offer the best local SEO
-            services, which help people nearby find you more easily.
+            We understand the local market and offer the <Link
+                href="/services"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Best Local SEO Services,</Link> which help people nearby find you more easily.
             <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
               Identifying Potential Customers
             </h3>
-            Our services help your website and brand reach the right audience,
-            getting you more traction and more buyers.
+            <Link
+                href="/"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Fiber Tech Services</Link> help your website and brand reach the right audience, getting you more traction and more buyers.
             <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
               Affordable SEO Services
             </h3>
             We know budgets can be tight, so we offer affordable SEO services
             that really work and give you value for your money.
-          </p>
+        
         </div>
 
         <div>
@@ -208,10 +248,10 @@ const Page = () => {
             Let Fiber Tech Services Help You Grow
           </h2>
           <p>
-            Whether you{"'"}re searching for top SEO services in the USA or just
-            want your business to be seen locally, Fiber Tech Services has the
-            right solution. Get in touch today to learn how our affordable SEO
-            services can help grow your business!
+          Whether you{"'"}re searching for top SEO services in the USA or just want your business to be seen locally, Fiber Tech Services has the right solution. <Link
+                href="/contact"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Get In Touch Today </Link>to learn how our affordable SEO services can help grow your business!
           </p>
           <div className="text-center py-4">
             <button className="my-4">

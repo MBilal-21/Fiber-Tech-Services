@@ -4,24 +4,25 @@ import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 
 const QuoteForm = () => {
-  
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     email: "",
     phone: "",
     message: "",
   });
-const [sentSuccess, setSentSuccess] = useState(false);
-const [sentError, setSentError] = useState(null);
+  const [sentSuccess, setSentSuccess] = useState(false);
+  const [sentError, setSentError] = useState(null);
   const [errors, setErrors] = useState({});
   const [isShaking, setIsShaking] = useState(false);
 
   const validate = () => {
     const newErrors = {};
 
-    if (!formData.firstName) newErrors.firstName = "Please enter your first name";
-    if (!formData.lastName) newErrors.lastName = "Please enter your last name";
+    if (!formData.first_name)
+      newErrors.first_name = "Please enter your first name";
+    if (!formData.last_name) newErrors.last_name = "Please enter your last name";
     if (!formData.email) {
       newErrors.email = "Please enter your email";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -47,39 +48,47 @@ const [sentError, setSentError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     const validationErrors = validate();
     setErrors(validationErrors);
-  
+
     if (Object.keys(validationErrors).length === 0) {
+      setLoading(true);
       try {
         // Simulate form submission to an API
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_KEY}/get-quote`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-  
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_KEY}/services-quote`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
+
         if (response.ok) {
           const data = await response.json();
-          console.log('Form submitted successfully:', data);
+          console.log("Form submitted successfully:", data);
           setSentSuccess(true); // Set success state
+
           setTimeout(() => setSentSuccess(false), 4000);
-          setSentError(null);   // Clear any previous error
+          setSentError(null); // Clear any previous error
+          setLoading(false);
           // Optionally, reset the form
         } else {
-          console.error('Form submission failed:', response.statusText);
-          setSentError('Failed to submit the form. Please try again.');
+          console.error("Form submission failed:", response.statusText);
+          setSentError("Failed to submit the form. Please try again.");
           setTimeout(() => setSentError(null), 4000);
           setSentSuccess(false);
+          setLoading(false);
         }
       } catch (error) {
-        console.error('An error occurred during form submission:', error);
-        setSentError('An unexpected error occurred. Please try again.');
+        console.error("An error occurred during form submission:", error);
+        setSentError("An unexpected error occurred. Please try again.");
         setTimeout(() => setSentError(null), 4000);
         setSentSuccess(false);
+        setLoading(false);
       }
     } else {
       // If form is invalid, trigger the shaking effect
@@ -87,57 +96,59 @@ const [sentError, setSentError] = useState(null);
       setTimeout(() => setIsShaking(false), 500);
     }
   };
-  
+
   return (
     <section className="mx-auto  max-w-5xl  px-6  lg:px-8 py-16">
-     {sentError && <div
-        id="toast-simple"
-        className="z-50 fixed top-24 left-2/4 -translate-x-2/4 flex items-center w-full max-w-xs p-4 space-x-4  text-gray-70 bg-red-300/80 divide-x  divide-gray-200 rounded-lg shadow "
-        role="alert"
-      >
-        <svg
-          className="w-5 h-5 text-blue-600 dark:text-blue-500 rotate-45"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 18 20"
+      {sentError && (
+        <div
+          id="toast-simple"
+          className="z-50 fixed top-24 left-2/4 -translate-x-2/4 flex items-center w-full max-w-xs p-4 space-x-4  text-gray-70 bg-red-300/80 divide-x  divide-gray-200 rounded-lg shadow "
+          role="alert"
         >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
-          />
-        </svg>
-        <div className="ps-4 text-sm font-normal">
-        {sentError}
+          <svg
+            className="w-5 h-5 text-blue-600 dark:text-blue-500 rotate-45"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 18 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
+            />
+          </svg>
+          <div className="ps-4 text-sm font-normal">{sentError}</div>
         </div>
-      </div>}
-     {sentSuccess && <div
-        id="toast-simple"
-        className="z-50 fixed top-24 left-2/4 -translate-x-2/4 flex items-center w-full max-w-xs p-4 space-x-4  text-gray-70 bg-green-300/80 divide-x  divide-gray-200 rounded-lg shadow "
-        role="alert"
-      >
-        <svg
-          className="w-5 h-5 text-blue-600 dark:text-blue-500 rotate-45"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 18 20"
+      )}
+      {sentSuccess && (
+        <div
+          id="toast-simple"
+          className="z-50 fixed top-24 left-2/4 -translate-x-2/4 flex items-center w-full max-w-xs p-4 space-x-4  text-gray-70 bg-green-300/80 divide-x  divide-gray-200 rounded-lg shadow "
+          role="alert"
         >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
-          />
-        </svg>
-        <div className="ps-4 text-sm font-normal">
-        Message Send Successfull.
+          <svg
+            className="w-5 h-5 text-blue-600 dark:text-blue-500 rotate-45"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 18 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
+            />
+          </svg>
+          <div className="ps-4 text-sm font-normal">
+            Message Send Successfull.
+          </div>
         </div>
-      </div>}
+      )}
 
       <div className="text-center ">
         <h2 className="text-custom-blue font-bold text-2xl md:text-5xl pb-4">
@@ -148,12 +159,7 @@ const [sentError, setSentError] = useState(null);
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="flex flex-wrap justify-center items-center">
-          {[
-            "firstName",
-            "lastName",
-            "email",
-            "phone",
-          ].map((field) => (
+          {["first_name", "last_name", "email", "phone"].map((field) => (
             <div
               key={field}
               className={
@@ -165,7 +171,8 @@ const [sentError, setSentError] = useState(null);
                   htmlFor={field}
                   className="mb-1 font-medium text-gray-700 capitalize"
                 >
-                  {field.replace(/([A-Z])/g, " $1").trim()}{" "}{field === "phone" && "(optional)"}
+                  {field.replace(/([A-Z])/g, " $1").trim()}{" "}
+                  {field === "phone" && "(optional)"}
                   {/* Convert camelCase to Title Case */}
                 </label>
                 <input
@@ -219,7 +226,10 @@ const [sentError, setSentError] = useState(null);
         <div className="flex justify-center items-center px-4">
           <button
             type="submit"
-            className="w-full px-4 py-2 flex justify-center font-bold text-white bg-custom-blue rounded hover:bg-indigo-600"
+            disabled={loading}
+            className={`${
+              loading && "opacity-50 cursor-not-allowed"
+            } w-full px-4 py-2 flex justify-center font-bold text-white bg-custom-blue rounded hover:bg-indigo-600`}
           >
             Send
             <PaperAirplaneIcon className="h-6 w-6 text-gray-50 ml-2" />

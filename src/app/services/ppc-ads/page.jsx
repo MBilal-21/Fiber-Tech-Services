@@ -1,16 +1,23 @@
 import ServicePageTop from "@/components/ServicePageTop";
 import Image from "next/image";
 import Link from "next/link";
-
+export const metadata = {
+  title: 'Best PPC (Pay Per Click) Ads Services In USA',
+  description: 'Maximize your ROI with our PPC Ads Services in USA. Target the right audience and boost your results with expert pay-per-click management. Get started now!',
+  keywords: 'ppc ads services usa, pay per click ads services usa, ppc management',
+  alternates: {
+    canonical: "https://fibertechservices.net/services/ppc-ads", // Add your canonical URL here
+  },
+}
 const Page = () => {
   return (
     <div>
-      <ServicePageTop heading={"PPC Ads - Services"} />
+      <ServicePageTop heading={"PPC (Pay Per Click) Ads Services"} />
       <div className="mx-auto  max-w-7xl  px-6  lg:px-8 py-6">
         <div className="flex flex-wrap justify-center items-center py-4">
           <div className="w-full lg:w-1/2 px-4">
           <h2 className="text-gray-900 font-bold text-xl md:text-3xl py-4 ">
-          PPC Ads Services
+          PPC (Pay Per Click) Ads Services
           </h2>
           Are you looking to increase your online visibility and drive more traffic to your website? You are at the right place! Fiber Tech Services’ PPC ads are designed to help your business grow by targeting the right audience and giving you the required results. With years of experience and a dedicated team at hand, we clearly understand how to create targeted and effective pay-per-click campaigns that generate real results. Either you are just getting started with PPC or looking to optimize your existing campaigns, our comprehensive solutions are designed to drive success.
           </div>
@@ -67,13 +74,19 @@ const Page = () => {
           Campaign Setup
           </h3>
           <p>
-          We increase your reach by setting up the PPC campaign on platforms like Google Ads, including choosing the right ad format and targeting options.
+          We increase your reach by setting up the PPC campaign on platforms like <Link
+                href="https://en.wikipedia.org/wiki/Google_Ads"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Google Ads,</Link> including choosing the right ad format and targeting options.
           </p>
           <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
           Bid Management
           </h3>
           <p>
-          FTS optimizes your bids to get the best possible results within your budget, ensuring a good return on investment (ROI).
+          FTS optimizes your bids to get the best possible results within your budget, ensuring a good return on investment (<Link
+                href="https://en.wikipedia.org/wiki/Return_on_investment"
+                className=" text-indigo-600 hover:text-custom-blue"
+              >ROI</Link>).
           </p>
           <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
           Conversion Tracking
@@ -91,7 +104,10 @@ const Page = () => {
           Social Media PPC Services
           </h3>
           <p>
-          Looking to grow your business through social media? An average person spends four hours a day on their mobile, scrolling through their social media. Our PPC services make sure your ads appear when potential customers are searching for products or services like yours on different platforms, including TikTok, Facebook, Instagram, and more.
+          Looking to grow your business through social media? An average person spends four hours a day on their mobile, scrolling through their social media. <Link
+                href="/services"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Our PPC Services</Link> make sure your ads appear when potential customers are searching for products or services like yours on different platforms, including TikTok, Facebook, Instagram, and more.
           </p>
         </div>
 
@@ -166,7 +182,10 @@ const Page = () => {
           1. Immediate Results
           </h3>
           <p>
-          Unlike SEO, which can take time to show results, PPC advertising can drive traffic to your website immediately after launching your campaign.
+          Unlike SEO, which can take time to show results, <Link
+                href="https://en.wikipedia.org/wiki/Pay-per-click"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Pay Per Click</Link> advertising can drive traffic to your website immediately after launching your campaign.
           </p>
           <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
           2. Targeted Audience
@@ -195,7 +214,10 @@ const Page = () => {
           Ready to Grow Your Business?
           </h2>
             <em>
-            If you are looking for a reliable partner to help you with PPC advertising and management services, look no further. Contact Fiber Tech Services today to learn more about how our PPC services can drive growth and success for your business.
+            If you are looking for a reliable partner to help you with PPC advertising and management services, look no further. <Link
+                href="/contact"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Contact Us</Link> today to learn more about how our PPC services can drive growth and success for your business.
             </em>{" "}
             <br />
             <button className="my-4">

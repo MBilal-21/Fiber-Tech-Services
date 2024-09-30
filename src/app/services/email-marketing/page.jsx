@@ -1,7 +1,16 @@
 import ServicePageTop from "@/components/ServicePageTop";
 import Image from "next/image";
 import Link from "next/link";
+export const metadata = {
+  title: 'Best Email Marketing Services In The USA - Fiber Tech Services',
+  description: 'Boost your brand with our Email Marketing Services in the USA. Expert strategies to engage your audience and boost your success. So, let’s Start now Today!',
+  keywords: 'Email Marketing Services, Email Marketing Agency, Email Marketing Company, Email Marketing Services ',
+  robots: 'index, follow',
+  alternates: {
+    canonical: "https://fibertechservices.net/services/email-marketing", // Add your canonical URL here
+  },
 
+}
 const Page = () => {
   return (
     <div>
@@ -58,7 +67,10 @@ const Page = () => {
             Affordable Solutions
           </h3>
           <p>
-            Whether you’re looking for email marketing services in the USA or
+            Whether you’re looking for <Link
+                href="/services"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Email Marketing Services In The USA</Link> or
             worldwide, we provide cost-effective solutions that fit your budget.
             Even small businesses can benefit from our flexible plans.
           </p>
@@ -125,7 +137,10 @@ const Page = () => {
             Mass Email Marketing Service for Bigger Reach
           </h2>
           <p>
-            If your goal is to reach a broader audience, Fiber Tech Services’
+            If your goal is to reach a broader audience, <Link
+                href="/"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Fiber Tech Services</Link>’
             mass email marketing service is the perfect solution. With mass
             emailing, you can easily promote your products, share updates, and
             engage large groups of customers in one go. Our advanced targeting
@@ -146,7 +161,10 @@ const Page = () => {
             deep knowledge of the American market, and we tailor our campaigns
             to make sure they resonate with your audience. Whether you’re
             seeking help with a single campaign or looking for ongoing support,
-            FTS’s email marketing agency in the USA is here to help. Our online
+            FTS’s <Link
+                href="https://en.wikipedia.org/wiki/Email_marketing"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Email Marketing </Link>agency in the USA is here to help. Our online
             email marketing services ensure you’re always ahead of the game.
           </p>
         </div>
@@ -198,7 +216,10 @@ const Page = () => {
           </p>
           <div className="text-center py-4">
             <em>
-              Contact us today to find out how our top-tier email marketing
+            <Link
+                href="/contact"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Contact Us </Link>today to find out how our top-tier email marketing
               services can make a real difference in your business!
             </em>{" "}
             <br />

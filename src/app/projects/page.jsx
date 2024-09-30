@@ -3,6 +3,13 @@ import TopPage from "@/components/TopPage";
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
 import Link from "next/link";
+export const metadata = {
+  title: 'Our Projects - Fiber Tech Services',
+  description: 'Check out our successful projects at Fiber Tech Services! See how we have helped clients achieve their goals with our expert digital marketing solutions.',
+  alternates: {
+    canonical: "https://fibertechservices.net/projects", // Add your canonical URL here
+  },
+}
 
 const Projects = () => {
   return (
@@ -42,21 +49,23 @@ const Projects = () => {
                       width={410}
                       height={395}
                     />
-                    <a
+                    <Link
                       className="plus"
                       href="/Assets/projects/project-grid1.jpg"
-                    ></a>
+                    >
+                      <span className="sr-only">+</span>
+                    </Link>
                   </div>
                   <div className="content">
                     <h4>
-                      <a href="/service-details">Web Development</a>
+                      <Link href="/services">Web Development</Link>
                     </h4>
-                    <a
-                      href="/service-details"
+                    <Link
+                      href="/services"
                       className="detail-btn flex justify-center items-center"
                     >
                       <ArrowLongRightIcon className="h-6 w-6 text-gray-500" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -72,21 +81,23 @@ const Projects = () => {
                       width={410}
                       height={395}
                     />
-                    <a
+                    <Link
                       className="plus"
                       href="/Assets/projects/project-grid2.jpg"
-                    ></a>
+                    >
+                      <span className="sr-only">+</span>
+                    </Link>
                   </div>
                   <div className="content">
                     <h4>
-                      <a href="/service-details">Mobile Applications</a>
+                      <Link href="/services">Mobile Applications</Link>
                     </h4>
-                    <a
-                      href="/service-details"
+                    <Link
+                      href="/services"
                       className="detail-btn flex justify-center items-center"
                     >
                       <ArrowLongRightIcon className="h-6 w-6 text-gray-500" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -102,21 +113,24 @@ const Projects = () => {
                       width={410}
                       height={395}
                     />
-                    <a
+                    <Link
                       className="plus"
                       href="/Assets/projects/project-grid3.jpg"
-                    ></a>
+                    >
+                      <span className="sr-only">+</span>
+
+                    </Link>
                   </div>
                   <div className="content">
                     <h4>
-                      <a href="/service-details">IT Consulting</a>
+                      <Link href="/services">IT Consulting</Link>
                     </h4>
-                    <a
-                      href="/service-details"
+                    <Link
+                      href="/services"
                       className="detail-btn flex justify-center items-center"
                     >
                       <ArrowLongRightIcon className="h-6 w-6 text-gray-500" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -132,21 +146,24 @@ const Projects = () => {
                       width={410}
                       height={395}
                     />
-                    <a
+                    <Link
                       className="plus"
                       href="/Assets/projects/project-grid4.jpg"
-                    ></a>
+                    >
+                      <span className="sr-only">+</span>
+
+                    </Link>
                   </div>
                   <div className="content">
                     <h4>
-                      <a href="/service-details">Business Analysis</a>
+                      <Link href="/services">Business Analysis</Link>
                     </h4>
-                    <a
-                      href="/service-details"
+                    <Link
+                      href="/services"
                       className="detail-btn flex justify-center items-center"
                     >
                       <ArrowLongRightIcon className="h-6 w-6 text-gray-500" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -162,21 +179,24 @@ const Projects = () => {
                       width={410}
                       height={395}
                     />
-                    <a
+                    <Link
                       className="plus"
                       href="/Assets/projects/project-grid5.jpg"
-                    ></a>
+                    >
+                      <span className="sr-only">+</span>
+
+                    </Link>
                   </div>
                   <div className="content">
                     <h4>
-                      <a href="/service-details">UX/UI Strategy</a>
+                      <Link href="/services">UX/UI Strategy</Link>
                     </h4>
-                    <a
-                      href="/service-details"
+                    <Link
+                      href="/services"
                       className="detail-btn flex justify-center items-center"
                     >
                       <ArrowLongRightIcon className="h-6 w-6 text-gray-500" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -192,21 +212,24 @@ const Projects = () => {
                       width={410}
                       height={395}
                     />
-                    <a
+                    <Link
                       className="plus"
                       href="/Assets/projects/project-grid6.jpg"
-                    ></a>
+                    >
+                      <span className="sr-only">+</span>
+
+                    </Link>
                   </div>
                   <div className="content">
                     <h4>
-                      <a href="/service-details">Cyber Security</a>
+                      <Link href="/services">Cyber Security</Link>
                     </h4>
-                    <a
-                      href="/service-details"
+                    <Link
+                      href="/services"
                       className="detail-btn flex justify-center items-center"
                     >
                       <ArrowLongRightIcon className="h-6 w-6 text-gray-500" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

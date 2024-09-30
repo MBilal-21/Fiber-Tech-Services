@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://fibertechservices.net
+
+# Sitemaps
+Sitemap: https://fibertechservices.net/sitemap.xml

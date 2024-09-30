@@ -1,7 +1,13 @@
 import ServicePageTop from "@/components/ServicePageTop";
 import Image from "next/image";
 import Link from "next/link";
-
+export const metadata = {
+  title: 'Best SMS Marketing Services In USA - Fiber Tech Services',
+  description: 'Unlock the power of SMS with our SMS Marketing Services in USA. Reach your audience instantly and drive engagement with effective campaigns. Let’s Start now!',
+  alternates: {
+    canonical: "https://fibertechservices.net/services/sms-marketing", // Add your canonical URL here
+  },
+}
 const Page = () => {
   return (
     <div>
@@ -69,10 +75,10 @@ const Page = () => {
             Smart SMS Marketing for Small Businesses
           </h3>
           <p>
-            Smart SMS Marketing for Small Businesses FTS is known for providing
-            the best SMS marketing services in the industry. Our services are
-            perfect for small business owners who cannot afford pricey marketing
-            campaigns. You do not have to overpay just to be recognized anymore.
+          FTS is known for providing the <Link
+                href="/services"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Best SMS Marketing Services</Link> in the industry. Our services are perfect for small business owners who cannot afford pricey marketing campaigns. You do not have to overpay just to be recognized anymore.
           </p>
           <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
             Affordable Solution
@@ -105,9 +111,10 @@ const Page = () => {
               Safe and Reliable Messaging with FTS
             </h3>
             <p>
-              Send millions of messages that reach their destination! Don’t risk
-              it with poor quality routes – trust FTS for reliable delivery
-              every time.
+            Send millions of messages that reach their destination! Don’t risk it with poor quality routes – trust <Link
+                href="/"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Fiber Tech Services</Link> for reliable delivery every time.
             </p>
             <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">
               Keep Your Contacts Updated
@@ -164,10 +171,10 @@ const Page = () => {
               SMS Marketing for Businesses
             </h2>
             <p>
-              SMS marketing is undoubtedly a great way of marketing for
-              businesses of all sizes. Whether you’re an eCommerce store or a
-              service provider, SMS marketing ensures that you can reach your
-              customers where they are on their phones.
+            SMS marketing is undoubtedly a great way of marketing for businesses of all sizes. Whether you’re an eCommerce store or a service provider, <Link
+                href="https://en.wikipedia.org/wiki/Direct_text_marketing"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > SMS Marketing</Link> ensures that you can reach your customers where they are on their phones.
             </p>
           </div>
           <div className="w-full lg:w-1/2 px-4">
@@ -241,20 +248,17 @@ const Page = () => {
             SMS Marketing For International Clients
           </h2>
           <p>
-            FTS provides SMS marketing services even for USA clients. Our expert
-            team understands the US market and strategizes campaigns that are
-            truly made for them, giving you lots of leads and sales. Whether you
-            are looking to market in the USA or globally, FTS make it sure that
-            your messages are delivered without delays or disruptions.
+          FTS provides SMS marketing services even for USA clients. Our expert team understands the US market and strategizes campaigns that are truly made for them, giving you lots of leads and sales. Whether you are looking to market in the USA or globally, FTS make it sure that your messages are delivered without delays or disruptions.
            
           </p>
           
          
           <div className="text-center py-4">
           <em>
-              Whether you are a business just starting out or an established
-              brand, Fiber Tech Services has got you covered. Get started today
-              and watch your business grow!
+          Whether you are a business just starting out or an established brand, Fiber Tech Services has got you covered. <Link
+                href="/contact"
+                className=" text-indigo-600 hover:text-custom-blue"
+              >Get Started</Link>  Today and watch your business grow!
             </em>{" "}
             <br />
             <button className="my-4">

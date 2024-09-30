@@ -8,11 +8,15 @@ import MSSQLServer from "@/components/Icons/MSSQLServer";
 import { CloudIcon } from "@heroicons/react/24/outline";
 import ServicePageTop from "@/components/ServicePageTop";
 import Express from "@/components/Icons/Express";
+import Link from "next/link";
 
 export const metadata = {
-  title: "Custom Web Development - Services",
+  title: "Best Custom Web Development Services In The USA",
   description:
-    "Custom Web Development - Services Tailored Solutions for Your Unique Business Needs",
+    "Get top-notch Custom Web Development Services in the USA. We build tailored websites designed to meet your business goals, ensuring flexibility, scalability, and security.",
+    alternates: {
+      canonical: "https://fibertechservices.net/services/custom-web-development", // Add your canonical URL here
+    },
 };
 const WebDev = () => {
   return (
@@ -88,8 +92,11 @@ const WebDev = () => {
             <p className="text-gray-800 text-lg">
               {" "}
               We understand that every business has different goals and
-              challenges. That’s why we focus on offering web development
-              solutions that fit perfectly with your specific needs, as client
+              challenges. That’s why we focus on offering <Link
+                href="/services"
+                className=" text-indigo-600 hover:text-custom-blue"
+              >Web Development
+              Solutions</Link> that fit perfectly with your specific needs, as client
               satisfaction is our top-most priority.
             </p>
             <div className="max-h-96 overflow-hidden">
@@ -159,8 +166,10 @@ const WebDev = () => {
         specialized custom web development services in the USA. These services
         are tailored to comply with U.S. standards and are supported by a
         dedicated team familiar with the local market. Whether you{"'"}re
-        launching a new product or expanding your digital footprint, our custom
-        web development services USA package is designed to ensure your online
+        launching a new product or expanding your digital footprint, <Link
+                href="/services"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Our Custom Web Development Services Package</Link> is designed to ensure your online
         presence resonates with your audience.
         {/* -----------------Frontend Web Development Technologies------------------- */}
         <div>
@@ -369,7 +378,10 @@ const WebDev = () => {
             {/* ●  ●  ● 
           ●  ●  ●   */}
           </div>
-          Our team also specializes in Cloud DevOps tools, ensuring that your
+          Our team also specializes in Cloud <Link
+                href="https://en.wikipedia.org/wiki/DevOps"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > DevOps</Link> tools, ensuring that your
           web applications are built and deployed efficiently across cloud
           environments.
         </div>
@@ -415,10 +427,14 @@ const WebDev = () => {
           building a unique, flexible, and scalable online presence. Our expert
           team of developers and designers will work with you every step of the
           way to ensure your website meets the highest standards of quality and
-          user experience. So, are you ready to take your business to the next
-          level with a custom website? Contact us today for more information on
+          user experience. <br />
+          <em className="pt-4 text-center block"> So, are you ready to take your business to the next
+          level with a custom website? <Link
+                href="/contact"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Contact Us</Link> today for more information on
           our custom web development and custom web development services in the
-          USA.
+          USA.</em>
         </div>
       </div>
     </>

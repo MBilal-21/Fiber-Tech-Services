@@ -7,6 +7,13 @@ import { CheckIcon } from "@heroicons/react/24/outline";
 import Testimonials from "@/components/Testimonials";
 import QuoteForm from "@/components/QuoteForm";
 
+export const metadata = {
+  title: 'About Us – Fiber Tech Services',
+  description: 'Learn about Fiber Tech Services and how we deliver exceptional digital marketing solutions. Discover our commitment to your success and innovative approach.',
+  alternates: {
+    canonical: "https://fibertechservices.net/about", // Add your canonical URL here
+  },
+}
 const AboutPage = () => {
   return (
     <>
@@ -80,7 +87,7 @@ const AboutPage = () => {
                       </div>
                       <Link
                         href="/services"
-                        className="text-gray-900 font-bold text-xl pb-4 hover:text-custom-green"
+                        className="text-gray-900 font-bold text-xl pb-4 hover:text-custom-blue"
                       >
                         <h4 className="py-2">Awards Winning Company</h4>
                       </Link>
@@ -118,7 +125,7 @@ const AboutPage = () => {
                       </div>
                       <Link
                         href="/services"
-                        className="text-gray-900 font-bold text-xl pb-4 hover:text-custom-green py-2"
+                        className="text-gray-900 font-bold text-xl pb-4 hover:text-custom-blue py-2"
                       >
                         <h4 className="py-2">
                           Startup IT Solution &amp; Business Dev
@@ -180,7 +187,7 @@ const AboutPage = () => {
                   <h4 className="py-4">
                     <Link
                       href="/services"
-                      className="hover:text-custom-green font-bold text-2xl text-black py-4"
+                      className="hover:text-custom-blue font-bold text-2xl text-black py-4"
                     >
                       Simplicity
                     </Link>
@@ -223,7 +230,7 @@ const AboutPage = () => {
                   <h4 className="py-4">
                     <Link
                       href="/services"
-                      className="hover:text-custom-green font-bold text-2xl text-black"
+                      className="hover:text-custom-blue font-bold text-2xl text-black"
                     >
                       Social Good
                     </Link>
@@ -269,7 +276,7 @@ const AboutPage = () => {
                   <h4 className="py-4">
                     <Link
                       href="/services"
-                      className="hover:text-custom-green font-bold text-2xl text-black"
+                      className="hover:text-custom-blue font-bold text-2xl text-black"
                     >
                       Trust Partner
                     </Link>

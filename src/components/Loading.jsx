@@ -1,7 +1,7 @@
 // src/components/Loading.js
-export default function Loading() {
+export default function Loading({className}) {
   return (
-    <div className="loading-screen flex flex-col justify-center items-center h-screen">
+    <div className={`loading-screen flex flex-col justify-center items-center ${className}`}>
       {/* <div className="spinner"></div> */}
       <div>
         <svg

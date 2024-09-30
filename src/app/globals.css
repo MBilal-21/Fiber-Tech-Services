@@ -2749,10 +2749,10 @@ body {
 .footer-btn-2:hover {
   color: var(--logo-color-1);
 
-  &>span {
+  /* &>span {
     max-width: 1.5rem;
     opacity: 1;
-  }
+  } */
 }
 
 /* footer style end */
@@ -2928,6 +2928,22 @@ body {
   /* top: 0;
   left: 0; */
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   z-index: 9999; /* To ensure it's always on top */
+}
+
+
+.service-cart div{
+  border: 2px solid var(--logo-color-1);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.wA-icon{
+  position: "fixed" ;
+  bottom: "100px";
+  right: "90px";
+  border: "none";
+  z-index: 1000;
+  cursor: "pointer";
 }

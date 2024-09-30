@@ -2,6 +2,15 @@ import ServicePageTop from "@/components/ServicePageTop";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: 'Best Cyber Security Services In The USA - Fiber Tech Services',
+  description: 'Protect your business with top-tier Cyber Security Services in the USA. Get tailored solutions, 24/7 monitoring, and expert guidance to safeguard your data and systems.',
+  keywords: 'cyber security services, usa, fiber tech services, data protection, system security',
+  alternates: {
+    canonical: "https://fibertechservices.net/services/cyber-security", // Add your canonical URL here
+  },
+}
+
 const Page = () => {
   return (
     <div>
@@ -41,13 +50,19 @@ const Page = () => {
         </div>
         <div className="w-full lg:w-1/2 px-4">
         <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">Cyber Security for Small Businesses</h3>
-        <p>Small businesses are often prime targets for cyberattacks due to limited resources and security. That’s why FTS provide specialized cyber security services for small business owners. Our solutions offer the protection you need without breaking your budget. With our cybersecurity monitoring services, small businesses can rest easy knowing their networks are watched 24/7. We detect and respond to threats before they can even cause harm.</p>
+        <p>Small businesses are often prime targets for cyberattacks due to limited resources and security. That’s why <Link
+                href="/"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Fiber Tech Services</Link>  provide specialized cyber security services for small business owners. Our solutions offer the protection you need without breaking your budget. With our cybersecurity monitoring services, small businesses can rest easy knowing their networks are watched 24/7. We detect and respond to threats before they can even cause harm.</p>
         <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">Personal Cyber Security Services</h3>
         <p>Your personal data is valuable, and hackers know it. That is why we offer personal cybersecurity services to protect your sensitive information from the cyber intruders. Our home cyber security services make sure that your connected devices and home networks are protected. We put the right safeguards in your devices to protect your data and your privacy.</p>
         <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">Professional Cyber Security Services</h3>
         <p>FTS understand that businesses of all sizes require expert guidance to manage their security needs. Our cybersecurity consulting services offer professional advice and solutions according to your business objectives. Either you need help developing a security strategy or improving your defenses, we are here to assist. Our cyber consulting services offer deep insights into the latest cyber threats and how you can prevent them. </p>
         <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">Cyber Security for Individuals</h3>
-        <p>Individuals are just as vulnerable to cyberattacks as any other business. FTS’ cybersecurity services for individuals are designed to safeguard your personal data and online identity. Focused on delivering top-level protection, we make sure all your security concerns are addressed effectively.</p>
+        <p>Individuals are just as vulnerable to cyberattacks as any other business. FTS’ <Link
+                href="/services"
+                className=" text-indigo-600 hover:text-custom-blue"
+              >Cyber Security Services</Link> for individuals are designed to safeguard your personal data and online identity. Focused on delivering top-level protection, we make sure all your security concerns are addressed effectively.</p>
         </div>
         </div>
         {/*Top Cyber Security Services in the USA  */}
@@ -61,7 +76,10 @@ const Page = () => {
         <div>
         <h2 className="text-gray-900 font-bold text-xl md:text-3xl py-4 ">Why Choose Our Cyber Security Services?</h2>
         <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">Custom Solutions</h3>
-Every business is different, so we offer tailored cybersecurity services designed specifically for your needs. Whether you need cyber security services company expertise or support for a small business, we provide custom solutions that work for you.
+Every business is different, so we offer tailored cybersecurity services designed specifically for your needs. Whether you need <Link
+                href="https://www.youtube.com/watch?v=inWWhr5tnEA"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Cyber Security</Link> services company expertise or support for a small business, we provide custom solutions that work for you.
 <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">24/7 Monitoring  </h3>
 Our cybersecurity monitoring services protect your business round the clock. We identify threats in real-time, respond swiftly, and kill the evil in the bud so you never have to worry about your network’s safety.
 <h3 className="text-custom-blue font-semibold text-lg md:text-xl pt-4 pb-2">Expert Guidance</h3>
@@ -100,7 +118,10 @@ We utilize the most advanced cybersecurity tools and techniques to safeguard you
         </div>
 
         <div className="py-8 text-center">
-          <em>Let us handle your security while you focus on what matters most. Contact Fiber Tech Services today to learn more about how our cybersecurity services can protect your organization.</em>
+          <em>Let us handle your security while you focus on what matters most. <Link
+                href="/contact"
+                className=" text-indigo-600 hover:text-custom-blue"
+              > Contact Fiber Tech Services</Link> today to learn more about how our cybersecurity services can protect your organization.</em>
         </div>
         <div className="text-center">
         <button className="my-2"><Link href={"/contact"} className="p-2 px-4 w-1/2 rounded-full bg-custom-blue text-white hover:bg-indigo-600">Contact Us</Link> </button></div>
