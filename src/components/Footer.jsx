@@ -251,7 +251,7 @@ const Footer = () => {
               <ul className="mt-8 space-y-2 text-sm">
                {servicesList.map((services)=>{
                return services.subServices.map((s)=>{
-                return <li>
+                return <li key={s.href}>
                   <Link
                     className="footer-btn-2 text-gray-400 transition  "
                     href={s.href}
