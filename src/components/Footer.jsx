@@ -1,61 +1,17 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { ChevronDoubleUpIcon, PhoneIcon } from "@heroicons/react/20/solid";
+import { ChevronDoubleUpIcon, PhoneIcon ,EnvelopeOpenIcon, MapPinIcon} from "@heroicons/react/20/solid";
 import "animate.css";
 import Image from "next/image";
+import { servicesList } from "./Navbar";
 
 const Footer = () => {
   // bg-white dark:bg-gray-900
   // border-t border-gray-100
   return (
     <footer className=" z-10">
-      {/* <div className=" mx-auto  max-w-9xl px-6 lg:px-8 relative -mb-16 z-20">
-        <div className="bg-cover  bg-[url('/Assets/design-images/footer-cta-bg.jpg')]">
-          <div className=" bg-custom-blue/90 px-8 py-8 md:py-16 flex flex-wrap justify-center items-center">
-            <div
-              className="fadeInLeft animate__animated text-center md:text-left w-full md:w-7/12 lg:w-8/12"
-              style={{ visibility: "visible", animationName: "fadeInLeft" }}
-            >
-              <span className="text-lg font-semibold text-white">
-                Need Any Consultations ?
-              </span>
-              <h2 className="text-white font-bold text-2xl md:text-5xl py-2">
-                We’re Ready to Growth IT Business
-              </h2>
-            </div>
-            <div className="w-full md:w-5/12 lg:w-4/12">
-              <div className="flex flex-wrap gap-4 justify-center items-center">
-                <Link
-                  href="/contact"
-                  className="theme-btn bg-transparent border-2 border-black text-white after:bg-black hover:text-white  animate__fadeInRight animate__animated p-4 "
-                  style={{
-                    visibility: "visible",
-                    animationName: "fadeInRight",
-                  }}
-                >
-                  Get Free Quote <span aria-hidden="true">&rarr;</span>
-                </Link>
-                <div className="flex gap-4">
-                  <PhoneIcon
-                    className="h-12 w-12 text-white border-2 border-white "
-                    style={{ borderRadius: "50%", padding: "5px" }}
-                  />
-                  <div>
-                    <p className="text-white font-semibold">Hotline</p>
-                    <a
-                      className="text-white hover:text-black transition-all ease-in-out font-bold  duration-300"
-                      href="callto:888 572 9311"
-                    >
-                      888 572 9311
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+     
       <div className="bg-custom-dark relative overflow-hidden">
         <div className="footer-shapes">
           <Image
@@ -72,16 +28,11 @@ const Footer = () => {
             width={533}
             height={434}
           />
-          {/* <img
-          className="shape three wow fadeInRight delay-0-8s animated"
-          src="/Assets/design-images/footer-right.png"
-          alt="Shape"
-          style={{ visibility: " visible", animationName: "fadeInRight" }}
-        /> */}
+         
         </div>
         <div className="mx-auto  max-w-7xl  px-6  lg:px-8 pb-6  sm:px-6 lg:px-8 relative z-3">
-          <div className=" grid grid-cols-1 gap-8  pt-16 md:grid-cols-4 lg:grid-cols-7 ">
-            <div className="text-left md:col-span-4 lg:col-span-2 order-1">
+          <div className=" grid grid-cols-1 gap-8  pt-16 md:grid-cols-4 lg:grid-cols-12 ">
+            <div className="text-left md:col-span-4 lg:col-span-3 order-1">
               {/* fiber tech logo svg */}
               <span className="sr-only">Fiber tech Logo</span>
              <svg width="120" height="120" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -229,7 +180,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="text-left order-2">
+            <div className="text-left lg:col-span-2 order-3">
               <p className="text-lg font-medium text-white">Quick Links</p>
 
               <ul className="mt-8 space-y-2 text-sm">
@@ -287,7 +238,7 @@ const Footer = () => {
               </ul>
             </div>
 {/* our services */}
-            <div className="text-left order-3 md:col-span-1">{/*  md:col-span-4 lg:col-span-3 */}
+            <div className="text-left order-2 lg:col-span-3">{/*  md:col-span-4 lg:col-span-3 */}
               <p className="text-lg font-medium text-white ">Our Services</p>
                     {/* <div className="flex flex-wrap gap-4">
                       <div>
@@ -298,20 +249,22 @@ const Footer = () => {
                       </div>
                     </div> */}
               <ul className="mt-8 space-y-2 text-sm">
-                <li>
+               {servicesList.map((services)=>{
+               return services.subServices.map((s)=>{
+                return <li>
                   <Link
                     className="footer-btn-2 text-gray-400 transition  "
-                    href="/services"
+                    href={s.href}
                   >
                     <span>
                       {" "}
                       <ChevronDoubleUpIcon className="rotate-90 inline px-0 h-6 w-6 text-custom-blue" />
                     </span>
-                    Web Development
+                    {s.name}
                   </Link>
-                </li>
+                </li>})})}
 
-                <li>
+                {/* <li>
                   <Link
                     className="footer-btn-2 text-gray-400 transition  "
                     href="/services"
@@ -335,60 +288,13 @@ const Footer = () => {
                     </span>
                     Digital Marketing Services
                   </Link>
-                </li>
-
-                {/* <li>
-                  <Link
-                    className="footer-btn-2 text-gray-400 transition  "
-                    href="/service-details"
-                  >
-                    <span>
-                      {" "}
-                      <ChevronDoubleUpIcon className="rotate-90 inline px-0 h-6 w-6 text-custom-blue" />
-                    </span>
-                    Search Engine
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="footer-btn-2 text-gray-400 transition  "
-                    href="/service-details"
-                  >
-                    <span>
-                      {" "}
-                      <ChevronDoubleUpIcon className="rotate-90 inline px-0 h-6 w-6 text-custom-blue" />
-                    </span>
-                    IT Consulting
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="footer-btn-2 text-gray-400 transition  "
-                    href="/service-details"
-                  >
-                    <span>
-                      {" "}
-                      <ChevronDoubleUpIcon className="rotate-90 inline px-0 h-6 w-6 text-custom-blue" />
-                    </span>
-                    Software Development
-                  </Link>
-                </li>
-                <li>
-                  <a
-                    className="footer-btn-2 text-gray-400 transition  "
-                    href="/service-details"
-                  >
-                    <span>
-                      {" "}
-                      <ChevronDoubleUpIcon className="rotate-90 inline px-0 h-6 w-6 text-custom-blue" />
-                    </span>
-                    Business Analysis
-                  </a>
                 </li> */}
+
+              
               </ul>
             </div>
 
-            <div className="text-left order-4">
+            {/* <div className="text-left order-4">
               <p className="text-lg font-medium text-white ">Support</p>
 
               <ul className="mt-8 space-y-2 text-sm">
@@ -410,44 +316,44 @@ const Footer = () => {
                  
                   <a
                   className=" text-gray-400 hover:text-custom-blue transition-all"
-                  href="mailto:support@fibertechservices.net"
+                  href="mailto:contactus@fibertechsrrvices.net"
                 >
                   Email US
                 </a>
                 </span>
                 </li>
               </ul>
-            </div>
+            </div> */}
 {/*  */}
-             <div className="text-left md:col-span-4 lg:col-span-2 order-5 md:order-last">
+             <div className="text-left md:col-span-4 lg:col-span-3 order-5 md:order-last">
               <p className="text-lg font-medium text-white ">Stay in Touch</p>
 
               <div className=" mt-8 max-w-md sm:ms-0">
                 {/* <p className="text-start leading-relaxed text-gray-400 ">
                   Enter you e-mail to get latest updates
                 </p> */}
-               <div>
+               <div className=" py-2 md:py-4">
                <span className="text-gray-400">
-                  Mobile :{" "}
                   <a
-                    href="callto:8885729311"
-                    className=" text-gray-400 hover:text-custom-blue transition-all"
+                    href="tel:+1 (307) 203-3450"
+                    className=" text-gray-400 hover:text-custom-blue transition-all  flex gap-2"
                   >
-                    +888 572 9311
+                 <PhoneIcon className="h-6 w-6 text-white"/>
+                    +1 (307) 203-3450
                   </a>
                 </span></div>
-               <div>
+               <div  className="py-2 md:py-4">
                <span className=" text-gray-400">
                  
                   <a
-                  className=" text-gray-400 hover:text-custom-blue transition-all"
-                  href="mailto:support@fibertechservices.net"
+                  className=" text-gray-400 hover:text-custom-blue transition-all flex gap-2"
+                  href="mailto:contactus@fibertechsrrvices.net"
                 >
-                  support@fibertechservices.net
+                <EnvelopeOpenIcon className="w-6 h-6 text-white"/>  contactus@fibertechsrrvices.net
                 </a>
                 </span></div>
-                <div>
-                  <p className=" text-gray-400">30 N Gould St, Ste 20128, Sheridan, WY 82801</p>
+                <div  className="py-2 md:py-4">
+                  <p className=" text-gray-400 flex gap-2"><MapPinIcon className="w-8 h-8 text-white"/>  30 N Gould St, Ste 20128, Sheridan, WY 82801</p>
                 </div>
 
                 {/* <form className="mt-4">

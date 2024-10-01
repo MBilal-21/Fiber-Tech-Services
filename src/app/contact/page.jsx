@@ -21,7 +21,9 @@ const Contact = () => {
   return (
     <div>
       <TopPage cureentText={"Contact"} />
-
+ {/* contact form start */}
+ <QuoteForm />
+      {/* contact form end */}
       <section className="py-16 relative">
         <div className="mx-auto  max-w-7xl  px-6  lg:px-8">
           <div
@@ -69,9 +71,9 @@ const Contact = () => {
                 <h4 className="text-2xl font-semibold py-4">Email Us</h4>
                 <a
                   className="text-gray-500 hover:text-custom-blue transition-all"
-                  href="mailto:support@fibertechservices.net"
+                  href="mailto:contactus@fibertechsrrvices.net"
                 >
-                  support@fibertechservices.net
+                  contactus@fibertechsrrvices.net
                 </a>
                 <br />
                 <a
@@ -94,11 +96,13 @@ const Contact = () => {
                 <span className=" text-gray-500">
                   Mobile :{" "}
                   <a
-                    href="callto:8885729311"
+                  href="tel:+1 (307) 203-3450"
+                    
                     className="text-gray-500 hover:text-custom-blue transition-all"
                   >
-                    +888 572 9311
+                   +1 (307) 203-3450
                   </a>
+                  
                 </span>
                 {/* <!--                            <span>Teliphone : <a href="callto:+1234566">+1234566</a></span>--> */}
               </div>
@@ -127,15 +131,13 @@ const Contact = () => {
       {/* google map start  */}
       <section className="mx-auto  max-w-7xl  px-6  lg:px-8" style={{ height: "400px" }}>
         {/* <Map address="1600 Amphitheatre Parkway, Mountain View, CA" /> */}
-        <div ><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=30%20N%20Gould%20St,%20Ste%2020128,%20Sheridan,%20WY%2082801+(Fiber%20Tech%20Services)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        <div ><iframe width="100%" height="400" className="bg-gray-200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=30%20N%20Gould%20St,%20Ste%2020128,%20Sheridan,%20WY%2082801+(Fiber%20Tech%20Services)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
         </iframe>
         {/* <a href="https://www.gps.ie/">gps devices</a> */}
         </div>
       </section>
       {/* google map end */}
-      {/* contact form start */}
-      <QuoteForm />
-      {/* contact form end */}
+      
     </div>
   );
 };

@@ -550,9 +550,9 @@ export default function HomePage() {
                   <p>Hotline</p>
                   <a
                     className="text-gray-500 hover:text-custom-blue transition-all ease-in-out font-bold  duration-300"
-                    href="callto:888 572 9311"
+                   href="tel:+1 (307) 203-3450"
                   >
-                    888 572 9311
+                    +1 (307) 203-3450
                   </a>
                 </div>
               </div>

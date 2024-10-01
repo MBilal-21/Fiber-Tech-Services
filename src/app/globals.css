@@ -2749,10 +2749,10 @@ body {
 .footer-btn-2:hover {
   color: var(--logo-color-1);
 
-  /* &>span {
+  &>span {
     max-width: 1.5rem;
     opacity: 1;
-  } */
+  }
 }
 
 /* footer style end */
